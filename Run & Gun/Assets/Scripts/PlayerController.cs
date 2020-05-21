@@ -7,17 +7,19 @@ public class PlayerController : MonoBehaviour
     public float runSpeed;
     public float jumpSpeed;
     private bool isJumping;
-    
+    private Vector2 mouseDirection;
     private Rigidbody2D rb;
     private float move;
     private bool facingRight = true;
     public Animator animator;
+    public GameObject gameOverText, restartButton;
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        restartButton.SetActive(false);
+        gameOverText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,15 +46,24 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
             animator.SetBool("isJumping", true);
         }
+        
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D col)
     {
-        // Indicate no longer jumping
-        if (other.gameObject.CompareTag("Ground"))
+        // Indicate no longer jumping if hit ground
+        if (col.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
             animator.SetBool("isJumping", false); 
+        }
+        
+        // game over player touches enemy
+        if (col.gameObject.tag.Equals("Enemy"))
+        {
+            gameOverText.SetActive(true);
+            restartButton.SetActive(true);
+            gameObject.SetActive(false);
         }
     }
     

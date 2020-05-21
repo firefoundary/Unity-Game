@@ -28,14 +28,14 @@ public class RopeScript : MonoBehaviour
     // Update is called once per frame
     void Update() 
     { 
-        // hook moves to where the mouse pos when right mb was clicked
+        // hook travels from gun to mouse position
         transform.position = Vector2.MoveTowards(transform.position, destiny, speed);
 
         if ((Vector2) transform.position != destiny)
         {
 			if (Vector2.Distance (gun.transform.position, lastNode.transform.position) > distance) {
 				
-				CreateNode ();
+				CreateNode (); // makes a series of nodes between gun and hook
 			
 			}
 
@@ -43,7 +43,9 @@ public class RopeScript : MonoBehaviour
         } else if (done == false) {
 				done = true;
 				while(Vector2.Distance (gun.transform.position, lastNode.transform.position) > distance) {	
-					CreateNode ();
+					
+					CreateNode (); // makes a series of nodes between gun and hook
+					
 				}
                 lastNode.GetComponent<HingeJoint2D>().connectedBody = gun.GetComponent<Rigidbody2D>();
             }
@@ -53,9 +55,9 @@ public class RopeScript : MonoBehaviour
 
 	void RenderLine() {
 		lr.positionCount = vertexCount;
-		
 		int i;
-		for (i = 0; i < Nodes.Count; i++) {
+		
+		for (i = 0; i < Nodes.Count; i++) { //renders a line between every node
 
 			lr.SetPosition (i, Nodes [i].transform.position);
 
@@ -67,6 +69,7 @@ public class RopeScript : MonoBehaviour
 
     void CreateNode()
     {
+	    // creates nodes at an offset from the last node created
         Vector2 posCreate = gun.transform.position - lastNode.transform.position;
         posCreate.Normalize();
 		posCreate *= distance;
@@ -75,6 +78,7 @@ public class RopeScript : MonoBehaviour
         
 		go.transform.SetParent(transform);
 
+		// adds created node to existing list of nodes 
         lastNode.GetComponent<HingeJoint2D>().connectedBody = go.gameObject.GetComponent<Rigidbody2D>();
  		lastNode = go;
 		Nodes.Add(lastNode);

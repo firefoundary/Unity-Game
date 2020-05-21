@@ -8,19 +8,14 @@ public class shootHookScript : MonoBehaviour
     private GameObject curHook;
     public bool ropeActive;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(1))
         {
             if (ropeActive == false) {
-
+                // creates new hook and sets destiny to mouse position
                 Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 curHook = (GameObject) Instantiate(hook, transform.position, Quaternion.identity);
                 curHook.GetComponent<RopeScript>().destiny = destiny;

@@ -6,13 +6,14 @@ public class WeaponScript : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
-    private Vector2 lookDirection;
+    private Vector2 bulletDirection;
     public float bulletSpeed = 5;
 
     // Update is called once per frame
     void Update()
     {
-        lookDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        bulletDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        // shoots bullet
         if (Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -21,8 +22,8 @@ public class WeaponScript : MonoBehaviour
 
     void Shoot()
     {
-        
+        // bullet shoots in lookDirection
         GameObject firedbullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        firedbullet.GetComponent<Rigidbody2D>().velocity = lookDirection * bulletSpeed;
+        firedbullet.GetComponent<Rigidbody2D>().velocity = bulletDirection * bulletSpeed;
     }
 }
