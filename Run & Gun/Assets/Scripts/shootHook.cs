@@ -5,10 +5,8 @@ using UnityEngine;
 public class shootHook : MonoBehaviour
 {
     public GameObject hook;
-
     private GameObject curHook;
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +21,8 @@ public class shootHook : MonoBehaviour
             Vector2 destiny = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             curHook = (GameObject) Instantiate(hook, transform.position, Quaternion.identity);
             curHook.GetComponent<RopeScript>().destiny = destiny;
-
+            
         }
     }
+
 }
