@@ -10,10 +10,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Bullet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Weapon.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/Bullet.cs" />
       </list>
     </option>
   </component>
@@ -45,7 +51,7 @@
       <workItem from="1590024325194" duration="1001000" />
       <workItem from="1590027922315" duration="2081000" />
       <workItem from="1590030047370" duration="8000" />
-      <workItem from="1590030268437" duration="1055000" />
+      <workItem from="1590030268437" duration="2696000" />
     </task>
     <servers />
   </component>
