@@ -265,6 +265,7 @@ MonoBehaviour:
   firePoint: {fileID: 123441023}
   bulletPrefab: {fileID: 3749888136068412579, guid: 3c0ec27e13daba84f989493480d250c0,
     type: 3}
+  bulletSpeed: 5
 --- !u!233 &392595223
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -280,7 +281,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 5.315017, y: 5.4161}
+  m_ConnectedAnchor: {x: 5.3150206, y: 5.4161005}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -926,6 +927,7 @@ GameObject:
   - component: {fileID: 1115374926}
   - component: {fileID: 1115374925}
   - component: {fileID: 1115374924}
+  - component: {fileID: 1115374928}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -1038,12 +1040,25 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115374923}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.67, y: -1.07, z: 0}
-  m_LocalScale: {x: 0.42447084, y: 0.42447084, z: 0.42447084}
+  m_LocalPosition: {x: 4.67, y: -2.27, z: 0}
+  m_LocalScale: {x: 0.16489418, y: 0.16489418, z: 0.16489418}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115374928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115374923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89c17a86b71c5c346a9029a0ccc6001e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 60
 --- !u!1 &1127500839
 GameObject:
   m_ObjectHideFlags: 0
@@ -1521,8 +1536,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790543440}
   m_LocalRotation: {x: -0, y: -0, z: -0.014675748, w: 0.9998923}
-  m_LocalPosition: {x: -4.5267, y: -1.4416, z: -0.058505}
-  m_LocalScale: {x: 0.15566415, y: 0.15566415, z: 0.15566415}
+  m_LocalPosition: {x: -4.56, y: -2.02, z: -0.034806}
+  m_LocalScale: {x: 0.09261083, y: 0.09261083, z: 0.09261083}
   m_Children:
   - {fileID: 1718533366}
   - {fileID: 408866360}

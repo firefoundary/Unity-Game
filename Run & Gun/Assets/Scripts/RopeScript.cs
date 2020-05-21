@@ -38,8 +38,8 @@ public class RopeScript : MonoBehaviour
 				CreateNode ();
 			
 			}
-	
-            
+
+
         } else if (done == false) {
 				done = true;
 				while(Vector2.Distance (gun.transform.position, lastNode.transform.position) > distance) {	
