@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hook: {fileID: 2232175164826843462, guid: c60c31a9513ccc24aa2a7995bb1242d4, type: 3}
+  ropeActive: 0
 --- !u!1 &408866359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,11 +1377,11 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!4 &1790543443
 Transform:

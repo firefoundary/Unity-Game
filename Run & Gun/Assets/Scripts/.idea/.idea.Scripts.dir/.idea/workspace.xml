@@ -45,11 +45,11 @@
       <list>
         <option value="$PROJECT_DIR$/Bullet.cs" />
         <option value="$PROJECT_DIR$/GrapplingGun.cs" />
-        <option value="$PROJECT_DIR$/shootHook.cs" />
         <option value="$PROJECT_DIR$/Weapon.cs" />
         <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/RopeScript.cs" />
+        <option value="$PROJECT_DIR$/shootHook.cs" />
       </list>
     </option>
   </component>
@@ -86,7 +86,7 @@
       <workItem from="1590081644303" duration="179000" />
       <workItem from="1590081849572" duration="2255000" />
       <workItem from="1590084186155" duration="415000" />
-      <workItem from="1590084851260" duration="2064000" />
+      <workItem from="1590084851260" duration="4133000" />
     </task>
     <servers />
   </component>
