@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private float move;
     private bool facingRight = true;
+    public Animator animator;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,9 @@ public class PlayerController : MonoBehaviour
         move = Input.GetAxis("Horizontal");
 
         rb.velocity = new Vector2(move * runSpeed, rb.velocity.y);
+
+        // Movement sets animation state to run
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         
         // Flip Character
         if (move < 0 && facingRight)
@@ -40,7 +44,7 @@ public class PlayerController : MonoBehaviour
             isJumping = true;
         }
     }
-    
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         // Indicate no longer jumping
@@ -55,8 +59,5 @@ public class PlayerController : MonoBehaviour
         facingRight = !facingRight; // updates facing direction
         transform.Rotate(0, 180, 0);
     }
-    
-    
-    
-    
+
 }
