@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector2(rb.velocity.x, jumpSpeed));
             isJumping = true;
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -51,6 +52,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+            animator.SetBool("isJumping", false); 
         }
     }
     
