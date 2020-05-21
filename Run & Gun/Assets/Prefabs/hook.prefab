@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 218291359626300395}
   - component: {fileID: 2611597409390392874}
   - component: {fileID: 8396240982333350552}
-  - component: {fileID: 5633559198638346499}
   - component: {fileID: -5345745687166286611}
+  - component: {fileID: -305486815545354226}
   m_Layer: 0
   m_Name: hook
   m_TagString: Untagged
@@ -163,26 +163,6 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
---- !u!114 &5633559198638346499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2232175164826843462}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3e8eb1b00779b0458a6c1a73d54ad6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destiny: {x: 0, y: 0}
-  speed: 0.5
-  distance: 0.2
-  node: {fileID: 7437037049283617306, guid: 92473acc0487ed84ea430ebca5d0a89a, type: 3}
-  lastNode: {fileID: 0}
-  gun: {fileID: 0}
-  lr: {fileID: 0}
-  Nodes: []
 --- !u!120 &-5345745687166286611
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -280,3 +260,23 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &-305486815545354226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2232175164826843462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff771977d1d5c3641adfd519d1e180d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destiny: {x: 0, y: 0}
+  speed: 0.5
+  distance: 0.2
+  node: {fileID: 7437037049283617306, guid: 92473acc0487ed84ea430ebca5d0a89a, type: 3}
+  lastNode: {fileID: 0}
+  gun: {fileID: 0}
+  lr: {fileID: 0}
+  Nodes: []

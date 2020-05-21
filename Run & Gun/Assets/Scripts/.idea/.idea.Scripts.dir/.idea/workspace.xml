@@ -35,10 +35,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Bullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/shootHook.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RopeScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Weapon.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RopeScriptScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/BulletScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -49,7 +48,11 @@
         <option value="$PROJECT_DIR$/RopeScript.cs" />
         <option value="$PROJECT_DIR$/shootHook.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/WeaponScript.cs" />
         <option value="$PROJECT_DIR$/Bullet.cs" />
+        <option value="$PROJECT_DIR$/BulletScript.cs" />
+        <option value="$PROJECT_DIR$/RopeScriptScript.cs" />
+        <option value="$PROJECT_DIR$/shootHookScript.cs" />
       </list>
     </option>
   </component>
@@ -87,7 +90,8 @@
       <workItem from="1590081849572" duration="2255000" />
       <workItem from="1590084186155" duration="415000" />
       <workItem from="1590084851260" duration="4133000" />
-      <workItem from="1590091464774" duration="1645000" />
+      <workItem from="1590091464774" duration="1950000" />
+      <workItem from="1590093690160" duration="802000" />
     </task>
     <servers />
   </component>

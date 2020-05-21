@@ -161,10 +161,10 @@ GameObject:
   m_Component:
   - component: {fileID: 392595219}
   - component: {fileID: 392595220}
-  - component: {fileID: 392595221}
-  - component: {fileID: 392595225}
   - component: {fileID: 392595224}
   - component: {fileID: 392595223}
+  - component: {fileID: 392595222}
+  - component: {fileID: 392595221}
   m_Layer: 0
   m_Name: gun
   m_TagString: Gun
@@ -245,7 +245,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 392595218}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60a3592978de1e845a14233d99280514, type: 3}
+  m_Script: {fileID: 11500000, guid: 35f647a84297a72408707f604a4ae7bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hook: {fileID: 2232175164826843462, guid: c60c31a9513ccc24aa2a7995bb1242d4, type: 3}
+  ropeActive: 0
+--- !u!114 &392595222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392595218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 229ac2b3f3708ff4999520238a903dee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firePoint: {fileID: 123441023}
@@ -296,20 +310,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &392595225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 392595218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a19d8b82a090954c82f5629f7b0b263, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hook: {fileID: 2232175164826843462, guid: c60c31a9513ccc24aa2a7995bb1242d4, type: 3}
-  ropeActive: 0
 --- !u!1 &408866359
 GameObject:
   m_ObjectHideFlags: 0
