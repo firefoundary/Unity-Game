@@ -1,5 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +43,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Weapon.cs" />
-        <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Bullet.cs" />
         <option value="$PROJECT_DIR$/GrapplingGun.cs" />
         <option value="$PROJECT_DIR$/shootHook.cs" />
+        <option value="$PROJECT_DIR$/Weapon.cs" />
+        <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
+        <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/RopeScript.cs" />
       </list>
     </option>
@@ -38,7 +63,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,7 +82,11 @@
       <workItem from="1590027922315" duration="2081000" />
       <workItem from="1590030047370" duration="8000" />
       <workItem from="1590030268437" duration="3250000" />
-      <workItem from="1590035455790" duration="8857000" />
+      <workItem from="1590035455790" duration="8914000" />
+      <workItem from="1590081644303" duration="179000" />
+      <workItem from="1590081849572" duration="2255000" />
+      <workItem from="1590084186155" duration="415000" />
+      <workItem from="1590084851260" duration="2064000" />
     </task>
     <servers />
   </component>
@@ -66,7 +95,40 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="729" y="295" key="#Notifications" timestamp="1590085039816">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="729" y="295" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1590085039816" />
+    <state x="593" y="71" key="SettingsEditor" timestamp="1590085013488">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="593" y="71" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590085013488" />
   </component>
 </project>

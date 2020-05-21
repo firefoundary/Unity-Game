@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 049d856698fe1214281d132ab3314395, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -176,10 +176,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destiny: {x: 0, y: 0}
-  speed: 0.7
+  speed: 0.5
+  distance: 0.2
   node: {fileID: 7437037049283617306, guid: 92473acc0487ed84ea430ebca5d0a89a, type: 3}
+  lastNode: {fileID: 0}
   gun: {fileID: 0}
-  go: {fileID: 0}
+  lr: {fileID: 0}
+  Nodes: []
 --- !u!120 &-5345745687166286611
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -198,7 +201,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 615226f4aaf6b9845a27750fff44811c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -224,13 +227,13 @@ LineRenderer:
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.9006236
     widthCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0
-        value: 1
+        time: 0.08571625
+        value: 0.08174133
         inSlope: 0
         outSlope: 0
         tangentMode: 0

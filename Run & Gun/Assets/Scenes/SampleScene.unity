@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 392595223}
   m_Layer: 0
   m_Name: gun
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 5.315019, y: 5.4161005}
+  m_ConnectedAnchor: {x: 5.3150196, y: 5.4161}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -290,7 +290,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -551,7 +551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 648270636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.462, y: -2.019, z: 0}
+  m_LocalPosition: {x: 0.29, y: -3.61, z: 0}
   m_LocalScale: {x: 2.1988168, y: 1.4269147, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 5
-  jumpSpeed: 450
+  jumpSpeed: 700
   animator: {fileID: 1790543445}
 --- !u!50 &1790543442
 Rigidbody2D:
@@ -1390,8 +1390,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790543440}
   m_LocalRotation: {x: -0, y: -0, z: -0.014675748, w: 0.9998923}
-  m_LocalPosition: {x: -4.67, y: 0.15, z: -0.054471}
-  m_LocalScale: {x: 0.14492808, y: 0.14492808, z: 0.14492808}
+  m_LocalPosition: {x: -4.5533, y: -1.4292, z: -0.026368}
+  m_LocalScale: {x: 0.07015402, y: 0.07015402, z: 0.07015402}
   m_Children:
   - {fileID: 1718533366}
   - {fileID: 408866360}
