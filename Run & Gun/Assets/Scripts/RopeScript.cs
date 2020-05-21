@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RopeScript : MonoBehaviour
 {
-
-    public Vector2 destiny;
+	public Vector2 destiny;
     public float speed;
 	public float distance = 1;
     public GameObject node;
