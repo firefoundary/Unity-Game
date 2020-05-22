@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     public Animator animator;
     public GameObject gameOverText, restartButton;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,10 +34,11 @@ public class PlayerController : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
         
         // Flip Character
-        if (move < 0 && facingRight)
+        if ((Input.mousePosition.x < Screen.width/2) && facingRight)
             flip();
-        else if (move > 0 && !facingRight)
+        else if ((Input.mousePosition.x > Screen.width/2) && !facingRight)
             flip();
+        
     
         // Jump Character
         if (Input.GetButtonDown("Jump") && !isJumping)

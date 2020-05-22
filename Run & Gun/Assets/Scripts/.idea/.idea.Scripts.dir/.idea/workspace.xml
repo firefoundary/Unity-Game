@@ -35,13 +35,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerBullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/RestartButton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WeaponScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/WeaponScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RestartButton.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -56,11 +56,11 @@
         <option value="$PROJECT_DIR$/RopeScript.cs" />
         <option value="$PROJECT_DIR$/WeaponScript.cs" />
         <option value="$PROJECT_DIR$/BulletScript.cs" />
-        <option value="$PROJECT_DIR$/PlayerBullet.cs" />
-        <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/EnemyBullet.cs" />
         <option value="$PROJECT_DIR$/RestartButton.cs" />
         <option value="$PROJECT_DIR$/Enemy.cs" />
+        <option value="$PROJECT_DIR$/PlayerController.cs" />
+        <option value="$PROJECT_DIR$/PlayerBullet.cs" />
       </list>
     </option>
   </component>
@@ -102,6 +102,7 @@
       <workItem from="1590093690160" duration="802000" />
       <workItem from="1590094810562" duration="11615000" />
       <workItem from="1590108045678" duration="118000" />
+      <workItem from="1590108641340" duration="5427000" />
     </task>
     <servers />
   </component>

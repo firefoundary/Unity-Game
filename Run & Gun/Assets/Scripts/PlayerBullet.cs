@@ -10,7 +10,12 @@ public class PlayerBullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    }
 
+    void Update()
+    {
+        Destroy(gameObject, 3); //destroys bullets after 3 seconds
     }
 
     void OnTriggerEnter2D(Collider2D col)
@@ -19,9 +24,11 @@ public class PlayerBullet : MonoBehaviour
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
+            Destroy(gameObject);
         }
+
         // can add bullet impact effect here
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
    
 }
