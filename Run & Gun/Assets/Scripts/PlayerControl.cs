@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerControl : MonoBehaviour
 {
     public float runSpeed;
     public float jumpSpeed;
@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     private bool facingRight = true;
     public Animator animator;
     public GameObject gameOverText, restartButton;
+    public bool isCrouching;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,16 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
         
+        // Crouch Character
+        if (Input.GetButtonDown("Crouch") && !isCrouching)
+        {
+            isCrouching = true;
+            animator.SetBool("isCrouching", true);
+        } else if (Input.GetButtonDown("Crouch") && isCrouching)
+        {
+            isCrouching = false;
+            animator.SetBool("isCrouching", false);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
