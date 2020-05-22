@@ -1303,6 +1303,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 60
+  speed: 2
+  stoppingDistance: 5
+  startTimeBtwShots: 2
+  projectile: {fileID: 8215328736782455293, guid: 7aa8e0cba51bc30408780f5d1be6680d,
+    type: 3}
 --- !u!1 &1127500839
 GameObject:
   m_ObjectHideFlags: 0

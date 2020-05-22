@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    
     private void flip()
     {
         facingRight = !facingRight; // updates facing direction
