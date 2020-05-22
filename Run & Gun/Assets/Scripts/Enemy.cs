@@ -23,7 +23,8 @@ public class Enemy : MonoBehaviour
 
 
     void Update()
-    {
+    {	
+		// waits 2 seconds between each shot
         if (timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);
@@ -36,7 +37,8 @@ public class Enemy : MonoBehaviour
     }
     
     public void TakeDamage(int damage)
-    {
+    {	
+		//enemy loses hp
         health -= damage;
         
         if (health <= 0)

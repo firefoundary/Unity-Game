@@ -55,12 +55,12 @@
         <option value="$PROJECT_DIR$/shootHookScript.cs" />
         <option value="$PROJECT_DIR$/RopeScript.cs" />
         <option value="$PROJECT_DIR$/WeaponScript.cs" />
-        <option value="$PROJECT_DIR$/RestartButton.cs" />
-        <option value="$PROJECT_DIR$/Enemy.cs" />
         <option value="$PROJECT_DIR$/BulletScript.cs" />
         <option value="$PROJECT_DIR$/PlayerBullet.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/EnemyBullet.cs" />
+        <option value="$PROJECT_DIR$/RestartButton.cs" />
+        <option value="$PROJECT_DIR$/Enemy.cs" />
       </list>
     </option>
   </component>
@@ -100,7 +100,8 @@
       <workItem from="1590084851260" duration="4133000" />
       <workItem from="1590091464774" duration="1950000" />
       <workItem from="1590093690160" duration="802000" />
-      <workItem from="1590094810562" duration="11014000" />
+      <workItem from="1590094810562" duration="11615000" />
+      <workItem from="1590108045678" duration="118000" />
     </task>
     <servers />
   </component>
