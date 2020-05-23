@@ -1106,7 +1106,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.000000014901161}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1117,7 +1117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.7}
+  m_Size: {x: 0.7, y: 0.70000005}
   m_EdgeRadius: 0
 --- !u!212 &657428781
 SpriteRenderer:
@@ -2977,7 +2977,7 @@ MonoBehaviour:
   animator: {fileID: 1790543445}
   gameOverText: {fileID: 1630190941}
   restartButton: {fileID: 64851090}
-  jumpForce: 12
+  jumpForce: 15
   extraJumpsValue: 1
   groundCheck: {fileID: 107878829}
   checkRadius: 0.3
@@ -2997,9 +2997,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_LinearDrag: 0.16
+  m_AngularDrag: 0.1
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: 6860f9c7a00bbf84988a40b6436a08d2, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
