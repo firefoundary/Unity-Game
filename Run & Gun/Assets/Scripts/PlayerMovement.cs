@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
     private int extraJumps;
     public int extraJumpsValue;
+    
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -34,29 +36,35 @@ public class PlayerMovement : MonoBehaviour
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+        //plays run animation
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
         if (facingRight == false && moveInput > 0)
             Flip();
         else if (facingRight == true && moveInput < 0)
             Flip();
         
-        // Jump Character
+        
     }
 
     void Update()
     {
+        //jumps character
         if (isGrounded == true)
         {
             extraJumps = extraJumpsValue;
+            animator.SetBool("isJumping", false);
         }
         
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             rb.velocity = Vector2.up * jumpForce;
+            animator.SetBool("isJumping", true);
             extraJumps--;
         } else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true)
         {
             rb.velocity = Vector2.up * jumpForce;
+            animator.SetBool("isJumping", true);
         }
     }
     
