@@ -233,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: -3.4520001, z: -10}
+  m_LocalPosition: {x: 2.98, y: -4.932, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -726,7 +726,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162067078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: -3.4520001, z: -10}
+  m_LocalPosition: {x: 2.98, y: -4.932, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952803080}
@@ -774,6 +774,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   extraJumpsValue: 1
+  animator: {fileID: 1253331880}
 --- !u!61 &1253331876
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -860,7 +861,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 153b35891fa6fca40a81654e11638d53, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d7ad8881f7dace947bba75dce27a9b34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -879,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1253331874}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.98, y: -6.14, z: 0}
+  m_LocalPosition: {x: 2.98, y: -6.26, z: 0}
   m_LocalScale: {x: 0.43274, y: 0.43274, z: 0.43274}
   m_Children:
   - {fileID: 729563985}
@@ -1007,7 +1008,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1439779392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9494866, y: 2.38, z: 0}
+  m_LocalPosition: {x: -1.943, y: 2.685, z: 0}
   m_LocalScale: {x: 0.15934783, y: 0.9389264, z: 1}
   m_Children: []
   m_Father: {fileID: 648270638}
@@ -1061,10 +1062,10 @@ MonoBehaviour:
   m_LookaheadSmoothing: 10
   m_LookaheadIgnoreY: 0
   m_XDamping: 1
-  m_YDamping: 1
+  m_YDamping: 0.45
   m_ZDamping: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.668
+  m_ScreenY: 0.583
   m_CameraDistance: 10
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0

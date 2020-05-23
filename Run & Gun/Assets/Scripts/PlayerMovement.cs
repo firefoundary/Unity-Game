@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private bool facingRight = false;
 
-    private bool isGrounded;
+    private bool isGrounded = false;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        
+        // isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = Vector2.up * jumpForce;
             animator.SetBool("isJumping", true);
         }
+        
     }
     
     
@@ -80,6 +81,18 @@ public class PlayerMovement : MonoBehaviour
         
         // THIS ONE rotates along y axis (dunno which is better rn)
         // transform.Rotate(0, 180, 0);
+    }
+    
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.collider.tag == "Ground")
+            isGrounded = true;
+    }
+    
+    private void OnCollisionExit2D(Collision2D col)
+    {
+        if (col.collider.tag == "Ground")
+            isGrounded = false;
     }
 
 }
