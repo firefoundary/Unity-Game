@@ -25,6 +25,9 @@ public class PlayerController : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    //dust particles
+    public ParticleSystem dust;
+
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,7 @@ public class PlayerController : MonoBehaviour
         // Jump Character
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
+            if(isGrounded == true) createDust();
             rb.velocity = Vector2.up * jumpForce;
             extraJumps--; //prevention of infinite jump
         }
@@ -86,13 +90,19 @@ public class PlayerController : MonoBehaviour
             restartButton.SetActive(true);
             gameObject.SetActive(false);
         }
-    }
+    }   
     
     
     private void flip()
     {
+        if(isGrounded == true) createDust();
         facingRight = !facingRight; // updates facing direction
         transform.Rotate(0, 180, 0);
+    }
+
+    void createDust()
+    {
+        dust.Play();
     }
 
 }
