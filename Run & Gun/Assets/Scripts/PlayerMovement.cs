@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        // isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
@@ -53,23 +53,21 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //jumps character
-        if (isGrounded == true)
-        {
-            extraJumps = extraJumpsValue;
-            animator.SetBool("isJumping", false);
-        }
-        
+        // first jump
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             if(isGrounded == true) createDust();
             rb.velocity = Vector2.up * jumpForce;
             animator.SetBool("isJumping", true);
+            animator.SetBool("isLanding", false);
             extraJumps--;
-        } else if (Input.GetButtonDown("Jump") && extraJumps == 0 && isGrounded == true)
+        } else if (Input.GetButtonDown("Jump") && extraJumps == 0)  // second jump
         {
             rb.velocity = Vector2.up * jumpForce;
-            animator.SetBool("isJumping", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isJumping2", true);
+            animator.SetBool("isLanding", false);
+            extraJumps--;
         }
         
     }
@@ -92,22 +90,20 @@ public class PlayerMovement : MonoBehaviour
         // transform.Rotate(0, 180, 0);
     }
     
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.collider.tag == "Ground")
-            isGrounded = true;
-    }
-    
-    private void OnCollisionExit2D(Collision2D col)
-    {
-        if (col.collider.tag == "Ground")
-            isGrounded = false;
-    }
-    
     void createDust()
     {
         dust.Play();
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.CompareTag("Ground"))
+        {
+            extraJumps = extraJumpsValue;
+            animator.SetBool("isLanding", true);
+            animator.SetBool("isJumping", false);
+            animator.SetBool("isJumping2", false);
+        }
+    }
 
 }
