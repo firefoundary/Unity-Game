@@ -43,10 +43,10 @@ public class PlayerMovement : MonoBehaviour
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
-        if (facingRight == false && moveInput > 0)
-            Flip();
-        else if (facingRight == true && moveInput < 0)
-            Flip();
+        if ((Input.mousePosition.x < Screen.width/2) && facingRight)
+            flip();
+        else if ((Input.mousePosition.x > Screen.width/2) && !facingRight)
+            flip();
         
         
     }
@@ -73,7 +73,7 @@ public class PlayerMovement : MonoBehaviour
     }
     
     
-    private void Flip()
+    private void flip()
     {
         facingRight = !facingRight; // updates facing direction
         
