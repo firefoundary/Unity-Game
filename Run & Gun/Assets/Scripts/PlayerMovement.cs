@@ -20,6 +20,10 @@ public class PlayerMovement : MonoBehaviour
     public int extraJumpsValue;
     
     public Animator animator;
+    
+    //dust particles
+    public ParticleSystem dust;
+
 
 
     // Start is called before the first frame update
@@ -58,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
+            if(isGrounded == true) createDust();
             rb.velocity = Vector2.up * jumpForce;
             animator.SetBool("isJumping", true);
             extraJumps--;
@@ -74,10 +79,14 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight; // updates facing direction
         
+        if(isGrounded == true) createDust();
+        
         //this inverts the x axis
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
+        
+        
         
         // THIS ONE rotates along y axis (dunno which is better rn)
         // transform.Rotate(0, 180, 0);
@@ -94,5 +103,11 @@ public class PlayerMovement : MonoBehaviour
         if (col.collider.tag == "Ground")
             isGrounded = false;
     }
+    
+    void createDust()
+    {
+        dust.Play();
+    }
+
 
 }
