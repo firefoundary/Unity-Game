@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private float moveInput;
     
     private Rigidbody2D rb;
-    private bool facingRight = false;
+    private bool facingRight = true;
 
     private bool isGrounded = false;
     public Transform groundCheck;
