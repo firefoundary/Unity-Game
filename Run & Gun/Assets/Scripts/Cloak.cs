@@ -26,7 +26,7 @@ public class Cloak : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             pickUpText.gameObject.SetActive(true);
             pickUpAllowed = true;
@@ -35,7 +35,7 @@ public class Cloak : MonoBehaviour {
     
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Equals("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             pickUpText.gameObject.SetActive(false);
             pickUpAllowed = false;
