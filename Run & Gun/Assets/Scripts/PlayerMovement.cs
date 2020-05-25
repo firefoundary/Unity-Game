@@ -83,9 +83,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-        
-        
-        
+
+
         // THIS ONE rotates along y axis (dunno which is better rn)
         // transform.Rotate(0, 180, 0);
     }
