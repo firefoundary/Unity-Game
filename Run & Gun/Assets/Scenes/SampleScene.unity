@@ -2025,6 +2025,7 @@ GameObject:
   - component: {fileID: 707232761}
   - component: {fileID: 707232763}
   - component: {fileID: 707232762}
+  - component: {fileID: 707232764}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -2091,6 +2092,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 707232760}
   m_CullTransparentMesh: 0
+--- !u!95 &707232764
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707232760}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 56a95cf9d49857b4dacfe505e77f421a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &714755085
 GameObject:
   m_ObjectHideFlags: 0
@@ -9823,9 +9843,9 @@ MonoBehaviour:
   dialogue:
     name: Sanic
     sentences:
-    - hi my name is SaNic
-    - my favourite colour is blue
-    - waffles are blue :)
+    - hello yung  blood my name is SaNic
+    - you better run F Ast, like you're in a panic!
+    - 'u can also call me Mable from Animal crossing : )'
 --- !u!1 &1370415667
 GameObject:
   m_ObjectHideFlags: 0
@@ -9869,8 +9889,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38361ddff62481240978d74ecbdad4a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
+  nameText: {fileID: 617952537}
+  dialogueText: {fileID: 1150439816}
+  animator: {fileID: 707232764}
 --- !u!1 &1391545189
 GameObject:
   m_ObjectHideFlags: 0
