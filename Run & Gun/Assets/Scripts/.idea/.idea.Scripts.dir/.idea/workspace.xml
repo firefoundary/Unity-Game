@@ -26,11 +26,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../206682.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../206682.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Prefabs/bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../Prefabs/bullet.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterJump.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BetterJump.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Enemy.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,26 +42,28 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Cloak.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerBullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PlayerControl.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/RopeScript.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WeaponScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/BetterJump.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestartButton.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parallax.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SwitchCharacterScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GrapplingGun.cs" />
         <option value="$PROJECT_DIR$/Weapon.cs" />
-        <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
         <option value="$PROJECT_DIR$/shootHook.cs" />
         <option value="$PROJECT_DIR$/Bullet.cs" />
         <option value="$PROJECT_DIR$/RopeScriptScript.cs" />
@@ -70,17 +73,20 @@
         <option value="$PROJECT_DIR$/BulletScript.cs" />
         <option value="$PROJECT_DIR$/EnemyBullet.cs" />
         <option value="$PROJECT_DIR$/RestartButton.cs" />
-        <option value="$PROJECT_DIR$/Enemy.cs" />
         <option value="$PROJECT_DIR$/PlayerBullet.cs" />
         <option value="$PROJECT_DIR$/PlayerController.cs" />
         <option value="$PROJECT_DIR$/PlayerControl.cs" />
         <option value="$PROJECT_DIR$/Grounded.cs" />
         <option value="$PROJECT_DIR$/Parallax.cs" />
-        <option value="$PROJECT_DIR$/Dialogue.cs" />
         <option value="$PROJECT_DIR$/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/DialogueSanic.cs" />
         <option value="$PROJECT_DIR$/DialogueTrigger.cs" />
         <option value="$PROJECT_DIR$/DialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Dialogue.cs" />
+        <option value="$PROJECT_DIR$/Enemy.cs" />
+        <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
+        <option value="$PROJECT_DIR$/SwitchCharacterScript.cs" />
+        <option value="$PROJECT_DIR$/Cloak.cs" />
       </list>
     </option>
   </component>
@@ -126,6 +132,7 @@
       <workItem from="1590130134775" duration="2381000" />
       <workItem from="1590186324524" duration="4031000" />
       <workItem from="1590284752762" duration="185000" />
+      <workItem from="1590437910341" duration="5040000" />
     </task>
     <servers />
   </component>
@@ -166,6 +173,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="729" y="295" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1590097149553" />
+    <state x="594" y="248" width="917" height="577" key="DiffContextDialog" timestamp="1590433679333">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="594" y="248" width="917" height="577" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1590433679333" />
     <state x="887" y="144" key="SettingsEditor" timestamp="1590104699183">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

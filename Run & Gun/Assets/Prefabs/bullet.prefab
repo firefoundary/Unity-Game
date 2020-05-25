@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6f0f4964c177019448768dcc6b312393, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -136,7 +136,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  rb: {fileID: 4478169324715661234}
 --- !u!96 &-5111925366444109732
 TrailRenderer:
   serializedVersion: 2
@@ -255,8 +254,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 855508f9c0646d54a9fb04e9638d5c11, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.821
-  m_Pitch: 1
+  m_Volume: 0.719
+  m_Pitch: 0.72
   Loop: 0
   Mute: 0
   Spatialize: 0

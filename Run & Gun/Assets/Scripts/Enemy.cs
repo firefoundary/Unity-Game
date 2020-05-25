@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
 
         timeBtwShots = startTimeBtwShots;
     }
-
+ 
 
     void Update()
     {	
