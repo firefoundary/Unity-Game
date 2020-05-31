@@ -75,13 +75,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             if(isGrounded == true) createDust();
-            rb.velocity = Vector2.up * jumpForce;
+            // rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", true);
             animator.SetBool("isLanding", false);
             extraJumps--;
         } else if (Input.GetButtonDown("Jump") && extraJumps == 0)  // second jump
         {
-            rb.velocity = Vector2.up * jumpForce;
+            // rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", false);
             animator.SetBool("isJumping2", true);
             animator.SetBool("isLanding", false);
