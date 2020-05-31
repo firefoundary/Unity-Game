@@ -26,10 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Grapple.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Grapple.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     <setting file="file://$PROJECT_DIR$/Cloak.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerBullet.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Grapple.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Grapple.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RopeScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WeaponScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,9 +82,9 @@
         <option value="$PROJECT_DIR$/Enemy.cs" />
         <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
         <option value="$PROJECT_DIR$/SwitchCharacterScript.cs" />
-        <option value="$PROJECT_DIR$/Cloak.cs" />
         <option value="$PROJECT_DIR$/GrappleHook.cs" />
         <option value="$PROJECT_DIR$/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Cloak.cs" />
       </list>
     </option>
   </component>

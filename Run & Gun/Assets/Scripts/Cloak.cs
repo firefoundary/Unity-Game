@@ -13,6 +13,7 @@ public class Cloak : MonoBehaviour {
 	public GameObject otherPrefab;
     public ParticleSystem burst;
     private bool pickUpAllowed;
+	private GameObject grapple;
 
 	private Cinemachine.CinemachineVirtualCamera virtualCam;	
 
@@ -21,6 +22,7 @@ public class Cloak : MonoBehaviour {
     {
         burst.Stop();
 		virtualCam = GameObject.FindWithTag("VirtCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
+		grapple = GameObject.FindWithTag("Grapple");
         pickUpText.gameObject.SetActive(false);
     }
 	
@@ -65,6 +67,8 @@ public class Cloak : MonoBehaviour {
 		transform.position = otherPrefab.transform.position;
  		otherPrefab.transform.position = temp;
 		player.SetActive(false);	
+
+		grapple.GetComponent<Grapple>().origin = otherPrefab.GetComponent<Rigidbody2D>();
 	}
 
 	void changeCameraFocus()
