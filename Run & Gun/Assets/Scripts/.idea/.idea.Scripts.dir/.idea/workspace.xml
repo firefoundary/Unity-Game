@@ -26,6 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,6 +129,7 @@
       <workItem from="1590186324524" duration="4031000" />
       <workItem from="1590284752762" duration="185000" />
       <workItem from="1590437910341" duration="5297000" />
+      <workItem from="1590937079750" duration="3246000" />
     </task>
     <servers />
   </component>
@@ -176,5 +178,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="887" y="144" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1590104699183" />
+    <state x="1318" y="258" key="run.anything.popup" timestamp="1590940250551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1318" y="258" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1590940250551" />
   </component>
 </project>

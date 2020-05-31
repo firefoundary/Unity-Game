@@ -8,20 +8,28 @@ using TMPro;
 public class Cloak : MonoBehaviour {
 
     [SerializeField]
-    private TextMeshProUGUI pickUpText;
-    public GameObject Player;
+  	public TextMeshProUGUI pickUpText;
+    public GameObject player;
+	public GameObject otherPrefab;
     private bool pickUpAllowed;
+
+	private Cinemachine.CinemachineVirtualCamera virtualCam;	
 
     // Use this for initialization
     private void Start ()
     {
+		virtualCam = GameObject.FindWithTag("VirtCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
         pickUpText.gameObject.SetActive(false);
     }
 	
     // Update is called once per frame
     private void Update () {
-        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E))
+        if (pickUpAllowed && Input.GetKeyDown(KeyCode.E)) 
+		{
+			changeSprite();
+			changeCameraFocus();
             PickUp();
+		}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -47,4 +55,18 @@ public class Cloak : MonoBehaviour {
         Destroy(gameObject);
     }
 
+	void changeSprite() 
+	{
+		var temp = player.transform.position;
+		otherPrefab.SetActive(true);
+		transform.position = otherPrefab.transform.position;
+ 		otherPrefab.transform.position = temp;
+		player.SetActive(false);	
+	}
+
+	void changeCameraFocus()
+	{
+		virtualCam.m_LookAt = otherPrefab.transform;
+		virtualCam.m_Follow = otherPrefab.transform;
+	}
 }
