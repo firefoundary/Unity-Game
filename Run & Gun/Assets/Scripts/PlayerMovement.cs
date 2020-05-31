@@ -6,12 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float runSpeed;
     public float jumpForce;
+	public float hookAirSpeed = 10;
     private float moveInput;
     
     private Rigidbody2D rb;
     private bool facingRight = true;
 
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -41,8 +42,21 @@ public class PlayerMovement : MonoBehaviour
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
 			
-		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().collided)
-        	rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().grappling) 
+		{
+			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().released)
+			{
+				if((rb.velocity.x > 0 && moveInput == 1) || rb.velocity.x < 0 && moveInput == -1)	
+					rb.AddForce(new Vector2(moveInput * runSpeed, 0));
+
+				if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
+					rb.AddForce(new Vector2(hookAirSpeed * moveInput * runSpeed, 0));
+
+			}else 
+			{
+        		rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+			}
+		}	
 
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));

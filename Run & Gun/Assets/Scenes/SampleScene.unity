@@ -2670,8 +2670,9 @@ MonoBehaviour:
   origin: {fileID: 1253331877}
   line_width: 0.05
   speed: 15
-  pull_force: 3
-  collided: 0
+  pull_force: 2.5
+  grappling: 0
+  released: 0
 --- !u!50 &840313466
 Rigidbody2D:
   serializedVersion: 4
@@ -9902,6 +9903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   jumpForce: 13
+  hookAirSpeed: 10
+  isGrounded: 0
   groundCheck: {fileID: 729563985}
   checkRadius: 0.5
   whatIsGround:
