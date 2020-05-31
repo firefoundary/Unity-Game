@@ -18,8 +18,8 @@ TagManager:
   - 
   - NoCollision
   - Ground
-  - 
-  - 
+  - Grapple
+  - Player
   - 
   - 
   - 

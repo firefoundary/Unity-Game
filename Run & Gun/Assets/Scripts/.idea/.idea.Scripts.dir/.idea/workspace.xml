@@ -26,7 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Cloak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Animation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/../Animation.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/InputManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../../ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +56,7 @@
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestartButton.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parallax.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Grapple.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/EnemyBullet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/SwitchCharacterScript.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,7 +80,6 @@
         <option value="$PROJECT_DIR$/PlayerControl.cs" />
         <option value="$PROJECT_DIR$/Grounded.cs" />
         <option value="$PROJECT_DIR$/Parallax.cs" />
-        <option value="$PROJECT_DIR$/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/DialogueSanic.cs" />
         <option value="$PROJECT_DIR$/DialogueTrigger.cs" />
         <option value="$PROJECT_DIR$/DialogueManager.cs" />
@@ -82,6 +88,8 @@
         <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
         <option value="$PROJECT_DIR$/SwitchCharacterScript.cs" />
         <option value="$PROJECT_DIR$/Cloak.cs" />
+        <option value="$PROJECT_DIR$/PlayerMovement.cs" />
+        <option value="$PROJECT_DIR$/Grapple.cs" />
       </list>
     </option>
   </component>
@@ -128,6 +136,9 @@
       <workItem from="1590186324524" duration="4031000" />
       <workItem from="1590284752762" duration="185000" />
       <workItem from="1590437910341" duration="5297000" />
+      <workItem from="1590780107938" duration="635000" />
+      <workItem from="1590889657648" duration="5387000" />
+      <workItem from="1590923552525" duration="3726000" />
     </task>
     <servers />
   </component>

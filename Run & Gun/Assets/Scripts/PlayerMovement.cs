@@ -26,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +40,13 @@ public class PlayerMovement : MonoBehaviour
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+		
+		GameObject grapple = GameObject.FindWithTag("Grapple");
+		bool collided = grapple.GetComponent<Grapple>().collided;
+		
+		if (!collided)
+        	rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
