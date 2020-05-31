@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 		{
 			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().released)
 			{
-				if((rb.velocity.x > 0 && moveInput == 1) || rb.velocity.x < 0 && moveInput == -1)	
+				if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
 					rb.AddForce(new Vector2(moveInput * runSpeed, 0));
 
 				if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
