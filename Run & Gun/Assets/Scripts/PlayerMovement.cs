@@ -6,12 +6,13 @@ public class PlayerMovement : MonoBehaviour
 {
     public float runSpeed;
     public float jumpForce;
+	public float hookAirSpeed = 10;
     private float moveInput;
     
     private Rigidbody2D rb;
     private bool facingRight = true;
 
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -23,7 +24,8 @@ public class PlayerMovement : MonoBehaviour
     
     //dust particles
     public ParticleSystem dust;
-    public ParticleSystem burst;
+
+
 
 
     // Start is called before the first frame update
@@ -39,7 +41,23 @@ public class PlayerMovement : MonoBehaviour
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+			
+		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().grappling) 
+		{
+			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().released)
+			{
+				if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
+					rb.AddForce(new Vector2(moveInput * runSpeed, 0));
+
+				if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
+					rb.AddForce(new Vector2(hookAirSpeed * moveInput * runSpeed, 0));
+
+			}else 
+			{
+        		rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+			}
+		}	
+
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
@@ -57,13 +75,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             if(isGrounded == true) createDust();
-            rb.velocity = Vector2.up * jumpForce;
+            // rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", true);
             animator.SetBool("isLanding", false);
             extraJumps--;
         } else if (Input.GetButtonDown("Jump") && extraJumps == 0)  // second jump
         {
-            rb.velocity = Vector2.up * jumpForce;
+            // rb.velocity = Vector2.up * jumpForce;
+            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", false);
             animator.SetBool("isJumping2", true);
             animator.SetBool("isLanding", false);

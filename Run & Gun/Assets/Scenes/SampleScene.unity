@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &2501441 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2677062165693036562, guid: fe52dd0fd2b5e3e45ba023117cacf532,
-    type: 3}
-  m_PrefabInstance: {fileID: 4524197587757607832}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &62299257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,9 +8734,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUpText: {fileID: 2017574766}
-  player: {fileID: 1253331874}
-  otherPrefab: {fileID: 2501441}
-  burst: {fileID: 208540155}
+  player: {fileID: 0}
+  otherPrefab: {fileID: 0}
+  burst: {fileID: 0}
 --- !u!1 &1149010650
 GameObject:
   m_ObjectHideFlags: 0
@@ -9585,12 +9579,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241533622}
   m_CullTransparentMesh: 0
---- !u!1 &1253331874 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3777041960545575336, guid: 27e4cd910b1b53044bc979c020f4a397,
-    type: 3}
-  m_PrefabInstance: {fileID: 3777041959380857354}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1253331879 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3777041960545575341, guid: 27e4cd910b1b53044bc979c020f4a397,
