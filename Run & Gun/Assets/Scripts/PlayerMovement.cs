@@ -40,11 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
-		
-		GameObject grapple = GameObject.FindWithTag("Grapple");
-		bool collided = grapple.GetComponent<Grapple>().collided;
-		
-		if (!collided)
+			
+		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().collided)
         	rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
 
         //plays run animation
