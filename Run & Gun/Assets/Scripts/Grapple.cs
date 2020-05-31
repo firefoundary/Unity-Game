@@ -15,7 +15,7 @@ public class Grapple : MonoBehaviour
 
     private Vector3 velocity;
 
-    public bool collided = false;
+    private bool collided = false;
     private bool keepShooting = false;
     
     void Start()
