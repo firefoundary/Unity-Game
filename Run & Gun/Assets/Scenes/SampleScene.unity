@@ -2649,7 +2649,7 @@ GameObject:
   - component: {fileID: 840313465}
   m_Layer: 10
   m_Name: Rope
-  m_TagString: Untagged
+  m_TagString: Grapple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2671,6 +2671,7 @@ MonoBehaviour:
   line_width: 0.05
   speed: 15
   pull_force: 3
+  collided: 0
 --- !u!50 &840313466
 Rigidbody2D:
   serializedVersion: 4
