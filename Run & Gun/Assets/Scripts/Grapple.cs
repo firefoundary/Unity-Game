@@ -15,7 +15,7 @@ public class Grapple : MonoBehaviour
 
     private Vector3 velocity;
 
-    public bool collided = false;
+    public bool grappling = false;
     private bool keepShooting = false;
     
     void Start()
@@ -44,7 +44,7 @@ public class Grapple : MonoBehaviour
         if (!keepShooting)
             return; 
         
-        if (collided)
+        if (grappling)
         {
             Vector2 dir = (Vector2) transform.position - origin.position;
             origin.AddForce(dir * pull_force);
@@ -52,7 +52,7 @@ public class Grapple : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
                 breakGrapple();
-                collided = false;
+                grappling = false;
                 return;
             }
         }
@@ -77,14 +77,14 @@ public class Grapple : MonoBehaviour
         dir = dir.normalized;
         velocity = dir * speed;
         transform.position = origin.position + dir;
-        collided = false;
+        grappling = false;
         keepShooting = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         velocity = Vector2.zero;
-        collided = true;
+        grappling = true;
     }
 
     void breakGrapple()
