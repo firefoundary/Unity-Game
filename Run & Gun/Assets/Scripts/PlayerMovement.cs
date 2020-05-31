@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     
     //dust particles
     public ParticleSystem dust;
-
+    public ParticleSystem burst;
 
 
     // Start is called before the first frame update
