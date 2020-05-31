@@ -11,6 +11,7 @@ public class Grapple : MonoBehaviour
     public float line_width = 0.1f;
     public float speed = 30;
     public float pull_force = 50;
+    public float grappleDistance = 8;
     private Vector2 grappleDir;
 
     private Vector3 velocity;
@@ -67,7 +68,7 @@ public class Grapple : MonoBehaviour
         {
             transform.position += velocity * Time.deltaTime;
             float distance = Vector2.Distance(transform.position, origin.position);
-            if (distance > 10)
+            if (distance > grappleDistance)
             {
                 breakGrapple();
                 return;
