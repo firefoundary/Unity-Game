@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak.cs" afterDir="false" />
-    </list>
+    <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
