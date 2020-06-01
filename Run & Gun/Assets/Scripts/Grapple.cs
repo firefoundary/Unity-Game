@@ -98,6 +98,7 @@ public class Grapple : MonoBehaviour
     void breakGrapple()
     {
         keepShooting = false;
+        velocity = Vector2.zero;
         line.SetPosition(0, Vector2.zero);
         line.SetPosition(1, Vector2.zero);
     }
