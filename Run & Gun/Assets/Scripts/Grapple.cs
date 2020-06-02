@@ -18,6 +18,7 @@ public class Grapple : MonoBehaviour
 
     public bool grappling = false;
     public bool released = false;
+	private bool existHook = false;
     private bool keepShooting = false;
     
     void Start()
@@ -41,12 +42,13 @@ public class Grapple : MonoBehaviour
         transform.position += velocity * Time.deltaTime;
 
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().isGrounded)
-        {
             released = false;
-        }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && !existHook) 
+		{
             setStart(grappleDir);
+			existHook = true;
+		}
 
         if (!keepShooting)
             return; 
@@ -56,9 +58,10 @@ public class Grapple : MonoBehaviour
             Vector2 dir = (Vector2) transform.position - origin.position;
             origin.AddForce(dir * pull_force);
 
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+            if (Input.GetKeyDown(KeyCode.Mouse1) && existHook)
             {
                 breakGrapple();
+				existHook = false;
                 grappling = false;
                 released = true;
                 return;
@@ -71,6 +74,7 @@ public class Grapple : MonoBehaviour
             if (distance > grappleDistance)
             {
                 breakGrapple();
+				existHook = false;
                 return;
             }
         }

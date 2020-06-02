@@ -26,15 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb2ffd83-4d89-4001-9467-6398b8d594bd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/Cloak Run.anim" beforeDir="false" afterPath="$PROJECT_DIR$/../Animation/CloakCroissant/Cloak Run.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/Cloak.controller" beforeDir="false" afterPath="$PROJECT_DIR$/../Animation/CloakCroissant/Cloak.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/CloakRun3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Animation/CloakCroissant/Cloak.controller" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dialogue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dialogue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DialogueTrigger.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DialogueTrigger.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grapple.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Grapple.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,16 +44,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Cloak.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Cloak.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ShowDialogue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dialogues/FirstDialogue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/shootHookScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerBullet.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Grapple.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RopeScript.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WeaponScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DialogueManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DialogueTrigger.cs.meta" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Dialogue.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Dialogue.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PlayerControl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Enemy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/RestartButton.cs" root0="SKIP_HIGHLIGHTING" />
@@ -84,15 +83,18 @@
         <option value="$PROJECT_DIR$/Parallax.cs" />
         <option value="$PROJECT_DIR$/DialogueSanic.cs" />
         <option value="$PROJECT_DIR$/DialogueTrigger.cs" />
-        <option value="$PROJECT_DIR$/DialogueManager.cs" />
-        <option value="$PROJECT_DIR$/Dialogue.cs" />
         <option value="$PROJECT_DIR$/Enemy.cs" />
         <option value="$PROJECT_DIR$/NewBehaviourScript.cs" />
         <option value="$PROJECT_DIR$/SwitchCharacterScript.cs" />
         <option value="$PROJECT_DIR$/GrappleHook.cs" />
         <option value="$PROJECT_DIR$/PlayerMovement.cs" />
-        <option value="$PROJECT_DIR$/Cloak.cs" />
         <option value="$PROJECT_DIR$/Grapple.cs" />
+        <option value="$PROJECT_DIR$/Dialogues/1stDialogue.cs" />
+        <option value="$PROJECT_DIR$/Dialogue.cs" />
+        <option value="$PROJECT_DIR$/ShowDialogue.cs" />
+        <option value="$PROJECT_DIR$/FreezeGameTime.cs" />
+        <option value="$PROJECT_DIR$/DialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Cloak.cs" />
       </list>
     </option>
   </component>
@@ -142,6 +144,7 @@
       <workItem from="1590937079750" duration="3246000" />
       <workItem from="1590981068872" duration="1339000" />
       <workItem from="1591041489871" duration="1972000" />
+      <workItem from="1591121371633" duration="6955000" />
     </task>
     <servers />
   </component>

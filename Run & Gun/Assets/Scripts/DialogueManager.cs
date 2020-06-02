@@ -9,8 +9,11 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogueText;
     public Animator animator;
+    public GameObject continueButton;
+    public GameObject player;
     private Queue<string> sentences;
-    // Start is called before the first frame update
+    
+    
     void Start()
     {
         sentences = new Queue<string>();
@@ -35,8 +38,11 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        continueButton.SetActive(false);
+
         if (sentences.Count == 0)
         {
+            player.GetComponent<PlayerMovement>().enabled = true;
             EndDialogue();
             return;
         }
@@ -45,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
     }
-
+    
     IEnumerator TypeSentence(string sentence)
     {
         dialogueText.text = "";
@@ -56,8 +62,11 @@ public class DialogueManager : MonoBehaviour
             yield return null; 
             yield return null;
             yield return null;
-
+            yield return null; 
+            yield return null;
+            yield return null;
         }
+        continueButton.SetActive(true);
     }
     
     void EndDialogue()

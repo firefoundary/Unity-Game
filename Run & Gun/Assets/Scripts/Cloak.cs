@@ -12,6 +12,7 @@ public class Cloak : MonoBehaviour {
     public GameObject player;
 	public GameObject otherPrefab;
     public ParticleSystem burst;
+    public FirstDialogue Dialogue;
     private bool pickUpAllowed;
 	private GameObject grapple;
 
@@ -33,6 +34,7 @@ public class Cloak : MonoBehaviour {
 			changeSprite();
 			changeCameraFocus();
             createBurst();
+            Dialogue.TriggerDialogue();
             PickUp();
 		}
     }
