@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cloak Run
+  m_Name: Cloak Land
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 6a63d0beba0db85429f81ade2ef09a53, type: 3}
-    - time: 0.06666667
-      value: {fileID: 21300000, guid: 2231c3e6529e73a48bab45f1165de60d, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: 1faaeb1d00333a64b9ff54c479359d11, type: 3}
-    - time: 0.23333333
-      value: {fileID: 21300000, guid: 2231c3e6529e73a48bab45f1165de60d, type: 3}
-    - time: 0.28333333
-      value: {fileID: 21300000, guid: 6a63d0beba0db85429f81ade2ef09a53, type: 3}
+      value: {fileID: 21300000, guid: fbaa6a1b816e18b43b85f892077ceec2, type: 3}
+    - time: 0.033333335
+      value: {fileID: 21300000, guid: c9580471a838ebb448bc0b706083b9f8, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,17 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 6a63d0beba0db85429f81ade2ef09a53, type: 3}
-    - {fileID: 21300000, guid: 2231c3e6529e73a48bab45f1165de60d, type: 3}
-    - {fileID: 21300000, guid: 1faaeb1d00333a64b9ff54c479359d11, type: 3}
-    - {fileID: 21300000, guid: 2231c3e6529e73a48bab45f1165de60d, type: 3}
-    - {fileID: 21300000, guid: 6a63d0beba0db85429f81ade2ef09a53, type: 3}
+    - {fileID: 21300000, guid: fbaa6a1b816e18b43b85f892077ceec2, type: 3}
+    - {fileID: 21300000, guid: c9580471a838ebb448bc0b706083b9f8, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.3
+    m_StopTime: 0.050000004
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
