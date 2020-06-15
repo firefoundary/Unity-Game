@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //speed and inputs
     public float runSpeed;
     public float jumpForce;
 	public float hookAirSpeed = 10;
     private float moveInput;
-    
-    private Rigidbody2D rb;
-    private bool facingRight = true;
 
+    //groundchecks
     public bool isGrounded = false;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
 
+    //jumps
     private int extraJumps;
     public int extraJumpsValue;
-    
-    public Animator animator;
     
     //dust particles
     public ParticleSystem dust;
 
-
-
+    //sprite characteristics
+    public Animator animator;
+    private Rigidbody2D rb;
+    private bool facingRight = true;
 
     // Start is called before the first frame update
     void Start()
@@ -42,9 +42,9 @@ public class PlayerMovement : MonoBehaviour
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
 			
-		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().grappling) 
+		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
 		{
-			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().released)
+			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
 			{
 				if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
 					rb.AddForce(new Vector2(moveInput * runSpeed, 0));

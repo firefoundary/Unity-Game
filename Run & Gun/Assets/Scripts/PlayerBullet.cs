@@ -4,18 +4,27 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
+    // private Vector2 bulletDirection;
+    public Vector3 bulletDirection;
+    public float bulletSpeed = 10;
     public int damage = 20;
+    public float destroyTime = 5;
     // public Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        // normalizes shooting speed and direction
+        bulletDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        bulletDirection.z = 0;
+        bulletDirection.Normalize();
     }
 
     void Update()
     {
-        Destroy(gameObject, 3); //destroys bullets after 3 seconds
+        transform.position += bulletDirection * bulletSpeed *  Time.deltaTime;
+
+        Destroy(gameObject, destroyTime); //destroys bullets after destroyTime seconds
     }
 
     void OnTriggerEnter2D(Collider2D col)

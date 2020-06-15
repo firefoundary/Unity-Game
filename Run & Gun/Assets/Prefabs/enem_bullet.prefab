@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8215328736782455293}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 3.103, y: -2.067, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -134,7 +134,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b23382d003ac354ea0dcd9babb7d8ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  rb: {fileID: 0}
+  bulletSpeed: 7
+  destroyTime: 5
 --- !u!96 &9101529071909559095
 TrailRenderer:
   serializedVersion: 2
@@ -175,7 +177,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1.5
+  m_Time: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.096950576

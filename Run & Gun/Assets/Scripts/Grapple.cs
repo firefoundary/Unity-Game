@@ -3,23 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Grapple : MonoBehaviour
-{
-    // Start is called before the first frame update
-    private LineRenderer line;
+{ 
     public Material mat;
     public Rigidbody2D origin;
+    public LayerMask Grappleable;
+
+    //stats
     public float line_width = 0.1f;
     public float speed = 30;
     public float pull_force = 50;
     public float grappleDistance = 8;
+
+    // line direction and velocity
     private Vector2 grappleDir;
-
     private Vector3 velocity;
+    private LineRenderer line;
 
-    public bool grappling = false;
-    public bool released = false;
+    //bools
+    public bool isGrappling = false;
+    public bool releasing = false;
 	private bool existHook = false;
-    private bool keepShooting = false;
+    private bool isShooting = false;
     
     void Start()
     {
@@ -42,7 +46,7 @@ public class Grapple : MonoBehaviour
         transform.position += velocity * Time.deltaTime;
 
         if (GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().isGrounded)
-            released = false;
+            releasing = false;
 
         if (Input.GetKeyDown(KeyCode.Mouse1) && !existHook) 
 		{
@@ -50,10 +54,10 @@ public class Grapple : MonoBehaviour
 			existHook = true;
 		}
 
-        if (!keepShooting)
+        if (!isShooting)
             return;     
         
-        if (grappling)
+        if (isGrappling)
         {
             Vector2 dir = (Vector2) transform.position - origin.position;
             origin.AddForce(dir * pull_force);
@@ -61,9 +65,7 @@ public class Grapple : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse1) && existHook)
             {
                 breakGrapple();
-				existHook = false;
-                grappling = false;
-                released = true;
+                releasing = true;
                 return;
             }
         }
@@ -71,10 +73,10 @@ public class Grapple : MonoBehaviour
         {
             transform.position += velocity * Time.deltaTime;
             float distance = Vector2.Distance(transform.position, origin.position);
+            
             if (distance > grappleDistance)
             {
                 breakGrapple();
-				existHook = false;
                 return;
             }
         }
@@ -89,23 +91,28 @@ public class Grapple : MonoBehaviour
         dir = dir.normalized;
         velocity = dir * speed;
         transform.position = origin.position + dir;
-        grappling = false;
-        keepShooting = true;
+        isGrappling = false;
+        isShooting = true;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        velocity = Vector2.zero;
-        grappling = true;
+        if (col.gameObject.layer == 10) {
+            velocity = Vector2.zero;
+            isGrappling = true;
+        }
     }
 
     void breakGrapple()
     {
-        keepShooting = false;
+        isShooting = false;
+        existHook = false;
+        isGrappling = false;
         velocity = Vector2.zero;
         line.SetPosition(0, Vector2.zero);
         line.SetPosition(1, Vector2.zero);
     }
 
+    
 }
 

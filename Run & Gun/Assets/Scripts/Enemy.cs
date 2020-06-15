@@ -5,36 +5,33 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health = 60;
-    public float speed;
-    // public float stoppingDistance;
+    public float startTimeBtwShots;
+    public GameObject projectile;
+
+
     private Transform player;
+    private float timeBtwShots;
 
-    // private float timeBtwShots;
-    // public float startTimeBtwShots;
-
-    // public GameObject projectile;
-
-    // void Start()
-    // {
-    //     player = GameObject.FindGameObjectWithTag("Player").transform;
-
-    //     timeBtwShots = startTimeBtwShots;
-    // }
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        timeBtwShots = startTimeBtwShots;
+    }
  
 
-    // void Update()
-    // {	
-	// 	// waits 2 seconds between each shot
-    //     if (timeBtwShots <= 0)
-    //     {
-    //         Instantiate(projectile, transform.position, Quaternion.identity);
-    //         timeBtwShots = startTimeBtwShots;
-    //     }
-    //     else
-    //     {
-    //         timeBtwShots -= Time.deltaTime;
-    //     }
-    // }
+    void Update()
+    {	
+    	// waits 2 seconds between each shot
+        if (timeBtwShots <= 0)
+        {
+            Instantiate(projectile, transform.position, Quaternion.identity);
+            timeBtwShots = startTimeBtwShots;
+        }
+        else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
+    }
     
     public void TakeDamage(int damage)
     {	

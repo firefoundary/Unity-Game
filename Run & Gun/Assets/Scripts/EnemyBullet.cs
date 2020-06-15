@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    // public Rigidbody2D rb;
-    public float speed;
+    public Rigidbody2D rb;
+    public float bulletSpeed = 7;
+    public float destroyTime = 5;
+
     private Transform player;
-    private Vector2 target;
+    private Vector3 bulletDirection;
     
     
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        target = new Vector2(player.position.x, player.position.y);
+        // normalizes shooting speed and direction
+        bulletDirection = player.position - transform.position;
+        bulletDirection.z = 0;
+        bulletDirection.Normalize();
     }
 
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
-
-        if (transform.position.x == target.x && transform.position.y == target.y)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += bulletDirection * bulletSpeed *  Time.deltaTime;
+        Destroy(gameObject, destroyTime); //destroys bullets after destroyTime seconds
     }
 
     void OnCollisionEnter2D(Collision2D col)
