@@ -6,35 +6,35 @@ public class Enemy : MonoBehaviour
 {
     public int health = 60;
     public float speed;
-    public float stoppingDistance;
+    // public float stoppingDistance;
     private Transform player;
 
-    private float timeBtwShots;
-    public float startTimeBtwShots;
+    // private float timeBtwShots;
+    // public float startTimeBtwShots;
 
-    public GameObject projectile;
+    // public GameObject projectile;
 
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+    // void Start()
+    // {
+    //     player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        timeBtwShots = startTimeBtwShots;
-    }
+    //     timeBtwShots = startTimeBtwShots;
+    // }
  
 
-    void Update()
-    {	
-		// waits 2 seconds between each shot
-        if (timeBtwShots <= 0)
-        {
-            Instantiate(projectile, transform.position, Quaternion.identity);
-            timeBtwShots = startTimeBtwShots;
-        }
-        else
-        {
-            timeBtwShots -= Time.deltaTime;
-        }
-    }
+    // void Update()
+    // {	
+	// 	// waits 2 seconds between each shot
+    //     if (timeBtwShots <= 0)
+    //     {
+    //         Instantiate(projectile, transform.position, Quaternion.identity);
+    //         timeBtwShots = startTimeBtwShots;
+    //     }
+    //     else
+    //     {
+    //         timeBtwShots -= Time.deltaTime;
+    //     }
+    // }
     
     public void TakeDamage(int damage)
     {	

@@ -51,7 +51,7 @@ public class Grapple : MonoBehaviour
 		}
 
         if (!keepShooting)
-            return; 
+            return;     
         
         if (grappling)
         {
@@ -106,5 +106,6 @@ public class Grapple : MonoBehaviour
         line.SetPosition(0, Vector2.zero);
         line.SetPosition(1, Vector2.zero);
     }
+
 }
 

@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class LevelLoader : MonoBehaviour
 {
 	public Animator transition;
+	public TextMeshProUGUI levelText;
 	public float transitionTime = 1f;
 	private bool portalReady = false;
 
@@ -19,13 +23,19 @@ public class LevelLoader : MonoBehaviour
 	void OnTriggerEnter2D (Collider2D collision)
 	{
 		if (collision.gameObject.CompareTag("Player"))
+		{
 			portalReady = true;
+			levelText.gameObject.SetActive(true);
+		}
 	}
 
 	void OnTriggerExit2D (Collider2D collision)
 	{
 		if (collision.gameObject.CompareTag("Player"))
+		{
 			portalReady = false;
+			levelText.gameObject.SetActive(false);
+		}
 	}
 
 	public void LoadNextLevel()
