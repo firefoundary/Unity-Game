@@ -33,6 +33,13 @@ public class PlayerBullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
             Destroy(gameObject);
+        } 
+        
+        // destroy bullet if collides with terrain
+        if (col.CompareTag("Player")) {
+        } else {
+            Destroy(gameObject);
+            Debug.Log("destroyed");
         }
 
         // can add bullet impact effect here

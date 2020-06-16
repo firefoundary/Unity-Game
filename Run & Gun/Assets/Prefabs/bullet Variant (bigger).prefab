@@ -57,6 +57,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: bullet Variant (bigger)
       objectReference: {fileID: 0}
+    - target: {fileID: 7105005798351484328, guid: 3c0ec27e13daba84f989493480d250c0,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7990042364360994229, guid: 3c0ec27e13daba84f989493480d250c0,
         type: 3}
       propertyPath: m_LocalPosition.x
