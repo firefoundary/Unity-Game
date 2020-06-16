@@ -29,17 +29,22 @@ public class EnemyBullet : MonoBehaviour
         Destroy(gameObject, destroyTime); //destroys bullets after destroyTime seconds
     }
 
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        // if bullet hits player, kill player, and destroy bullet
-        if (col.gameObject.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
-    }
+    // void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     // if bullet hits player destroy bullet
+    //     if (col.gameObject.CompareTag("Player"))
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
    
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.CompareTag("Ground")) {
+            Destroy(gameObject);
+            return;
+        }
+        
         Player player = col.GetComponent<Player>();
         if (player != null)
         {

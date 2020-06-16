@@ -137,7 +137,7 @@ MonoBehaviour:
   rb: {fileID: 3894699233234476925}
   bulletSpeed: 7
   destroyTime: 5
-  bulletDamage: 20
+  damage: 20
 --- !u!96 &9101529071909559095
 TrailRenderer:
   serializedVersion: 2
@@ -178,7 +178,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 1
+  m_Time: 0.4
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 0.096950576

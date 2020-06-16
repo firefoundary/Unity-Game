@@ -28,6 +28,11 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+         if (col.CompareTag("Ground")) {
+            Destroy(gameObject);
+            return;
+        }
+
         Enemy enemy = col.GetComponent<Enemy>();
         if (enemy != null)
         {
@@ -36,14 +41,10 @@ public class PlayerBullet : MonoBehaviour
         } 
         
         // destroy bullet if collides with terrain
-        if (col.CompareTag("Player")) {
-        } else {
-            Destroy(gameObject);
-            Debug.Log("destroyed");
-        }
 
         // can add bullet impact effect here
         //Destroy(gameObject);
     }
+    
    
 }
