@@ -122,7 +122,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 60
-  bulletSpeed: 5
   startTimeBtwShots: 2
   projectile: {fileID: 8215328736782455293, guid: 7aa8e0cba51bc30408780f5d1be6680d,
+    type: 3}
+  effect: {fileID: 8468900679097125696, guid: a0acfcbdbc022b442bef7a97e93809f5, type: 3}
+  bloodSplash: {fileID: 4790732847673131731, guid: 5e1f664759127fe4da059731e97ab40c,
     type: 3}

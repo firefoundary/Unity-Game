@@ -7,6 +7,8 @@ public class Enemy : MonoBehaviour
     public int health = 60;
     public float startTimeBtwShots;
     public GameObject projectile;
+    public GameObject effect;
+    public GameObject bloodSplash;
 
 
     private Transform player;
@@ -37,7 +39,6 @@ public class Enemy : MonoBehaviour
     {	
 		//enemy loses hp
         health -= damage;
-        
         if (health <= 0)
             Die();
     }
@@ -45,6 +46,9 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         // can add death animation here
+        Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
+        Instantiate(effect, position, Quaternion.identity);
+        Instantiate(bloodSplash, position, Quaternion.identity);
         Destroy(gameObject);
     }
     
