@@ -7,6 +7,7 @@ public class EnemyBullet : MonoBehaviour
     public Rigidbody2D rb;
     public float bulletSpeed = 7;
     public float destroyTime = 5;
+    public int damage = 20;
 
     private Transform player;
     private Vector3 bulletDirection;
@@ -37,4 +38,16 @@ public class EnemyBullet : MonoBehaviour
         }
     }
    
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Player player = col.GetComponent<Player>();
+        if (player != null)
+        {
+            player.TakeDamage(damage);
+            Destroy(gameObject);
+        }
+
+        // can add bullet impact effect here
+        //Destroy(gameObject);
+    }
 }

@@ -65,8 +65,6 @@ public class PlayerMovement : MonoBehaviour
             flip();
         else if (facingRight == true && moveInput < 0)
             flip();
-        
-        
     }
 
     void Update()
@@ -99,14 +97,10 @@ public class PlayerMovement : MonoBehaviour
         
         if(isGrounded == true) createDust();
         
-        //this inverts the x axis
+        //inverts x axis
         Vector3 Scaler = transform.localScale;
         Scaler.x *= -1;
         transform.localScale = Scaler;
-
-
-        // THIS ONE rotates along y axis (dunno which is better rn)
-        // transform.Rotate(0, 180, 0);
     }
     
     void createDust()

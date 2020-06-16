@@ -6,6 +6,7 @@ public class WeaponScript : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public GameObject shotEffect;
     private Vector2 bulletDirection;
 
     // Update is called once per frame
@@ -14,6 +15,8 @@ public class WeaponScript : MonoBehaviour
         // shoots bullet
         if (Input.GetButtonDown("Fire1"))
         {
+            // bullet muzzle effect
+            // Instantiate(shotEffect, firePoint.position, shotEffect.transform.rotation);
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         }
     }

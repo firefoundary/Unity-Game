@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    // private Vector2 bulletDirection;
-    public Vector3 bulletDirection;
+    private Vector3 bulletDirection;
     public float bulletSpeed = 10;
     public int damage = 20;
-    public float destroyTime = 5;
+    public float destroyTime = 3;
     // public Rigidbody2D rb;
 
     // Start is called before the first frame update

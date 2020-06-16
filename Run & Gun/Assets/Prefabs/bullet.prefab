@@ -135,10 +135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c31f0b1253ec90a408161ef73c9ffcc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDirection: {x: 0, y: 0, z: 0}
   bulletSpeed: 15
   damage: 20
-  destroyTime: 5
+  destroyTime: 3
 --- !u!96 &-5111925366444109732
 TrailRenderer:
   serializedVersion: 2

@@ -123,8 +123,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 60
   startTimeBtwShots: 2
+  attackRange: 10
   projectile: {fileID: 8215328736782455293, guid: 7aa8e0cba51bc30408780f5d1be6680d,
     type: 3}
-  effect: {fileID: 8468900679097125696, guid: a0acfcbdbc022b442bef7a97e93809f5, type: 3}
+  effect: {fileID: 8468900679097125696, guid: 89ca91201de132d49b56b47201849643, type: 3}
   bloodSplash: {fileID: 4790732847673131731, guid: 5e1f664759127fe4da059731e97ab40c,
     type: 3}
+  body: {fileID: 5563062839666318096}
+  hurtColor: {r: 0.9622642, g: 0.46751517, b: 0.46751517, a: 1}

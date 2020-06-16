@@ -47,6 +47,11 @@ PrefabInstance:
       propertyPath: m_Parameters.colorGradient.atime2
       value: 65535
       objectReference: {fileID: 0}
+    - target: {fileID: -4417905859514133420, guid: 3c0ec27e13daba84f989493480d250c0,
+        type: 3}
+      propertyPath: destroyTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3749888136068412579, guid: 3c0ec27e13daba84f989493480d250c0,
         type: 3}
       propertyPath: m_Name
