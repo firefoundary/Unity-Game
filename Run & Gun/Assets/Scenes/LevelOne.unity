@@ -1251,23 +1251,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 221242430}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &240351120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 240351112}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 229ac2b3f3708ff4999520238a903dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 2138823357}
-  bulletPrefab: {fileID: 3758970355695321899, guid: 3c0ec27e13daba84f989493480d250c0,
-    type: 3}
-  shotEffect: {fileID: 4630724870996693690, guid: 777ed3130782ecd49b3fcc370d25999a,
-    type: 3}
 --- !u!1 &248044777
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,7 +1757,7 @@ PrefabInstance:
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: -0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616c052b6278e974b878b22d0402c90d, type: 3}
@@ -3877,6 +3860,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 2861391275895229998, guid: 616c052b6278e974b878b22d0402c90d,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318096, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_Color.r
@@ -3981,7 +3969,7 @@ PrefabInstance:
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: -0.3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 616c052b6278e974b878b22d0402c90d, type: 3}
@@ -8828,12 +8816,6 @@ SpriteMask:
   m_BackSortingOrder: 0
   m_IsCustomRangeActive: 0
   m_SpriteSortPoint: 0
---- !u!4 &2138823357 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8708805066165033198, guid: 86533b62b8a973e4483db5012b2e5d01,
-    type: 3}
-  m_PrefabInstance: {fileID: 221242430}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5563062839096246249
 PrefabInstance:
   m_ObjectHideFlags: 0

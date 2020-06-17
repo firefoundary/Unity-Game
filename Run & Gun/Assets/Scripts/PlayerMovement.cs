@@ -69,10 +69,12 @@ public class PlayerMovement : MonoBehaviour
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
-        if (facingRight == false && moveInput > 0)
-            flip();
-        else if (facingRight == true && moveInput < 0)
-            flip();
+        if (facingRight == false && moveInput > 0){
+            flip(-180);
+        }
+        else if (facingRight == true && moveInput < 0){
+            flip(0);
+        }
     }
 
     void Update()
@@ -114,16 +116,16 @@ public class PlayerMovement : MonoBehaviour
     }
     
     
-    private void flip()
+    private void flip(int y)
     {
         facingRight = !facingRight; // updates facing direction
-        
+        transform.eulerAngles = new Vector3(0, y, 0);
         if(isGrounded == true) createDust();
         
         //inverts x axis
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        // Vector3 Scaler = transform.localScale;
+        // Scaler.x *= -1;
+        // transform.localScale = Scaler;
     }
     
     public void createDust()
