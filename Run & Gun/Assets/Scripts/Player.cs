@@ -5,13 +5,29 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public int health = 100;
-
     public SpriteRenderer body;
     public Color hurtColor;
+
+    public bool hurt = false;
+    public GameObject hurtEffect;
+
+    //audio
+    public AudioClip hurtSound;
+    private AudioSource source;
+
+    void Start() {
+        source = GetComponent<AudioSource>();
+    }
 
 
     public void TakeDamage(int damage)
     {	
+        hurt = true;
+        Instantiate(hurtEffect, transform.position, Quaternion.identity);
+
+        source.clip = hurtSound;
+        source.Play();        
+
         StartCoroutine(Flash());
         health -= damage;
 
@@ -33,5 +49,6 @@ public class Player : MonoBehaviour
         body.color = hurtColor;
         yield return new WaitForSeconds(0.075f);
         body.color = Color.white;
+        hurt = false;
     }
 }

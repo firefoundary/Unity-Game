@@ -22,15 +22,22 @@ public class PlayerMovement : MonoBehaviour
     
     //dust particles
     public ParticleSystem dust;
+    public bool spawnDust;
 
     //sprite characteristics
     public Animator animator;
     private Rigidbody2D rb;
     private bool facingRight = true;
 
+    //audio
+    public AudioClip landingSound;
+    public AudioClip jumpSound;
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
     }
@@ -41,7 +48,8 @@ public class PlayerMovement : MonoBehaviour
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
-			
+		
+        //grappling animation code
 		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
 		{
 			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
@@ -69,10 +77,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(isGrounded == true) {
+            if (spawnDust == true) {
+                createDust();
+                source.clip = landingSound;
+                source.Play();
+                spawnDust = false;
+            }
+        } else {
+            spawnDust = true;
+        }
+
         // first jump
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
             if(isGrounded == true) createDust();
+            source.clip = jumpSound;
+            source.Play();
             // rb.velocity = Vector2.up * jumpForce;
             rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", true);
@@ -81,6 +102,8 @@ public class PlayerMovement : MonoBehaviour
         } else if (Input.GetButtonDown("Jump") && extraJumps == 0)  // second jump
         {
             // rb.velocity = Vector2.up * jumpForce;
+            source.clip = jumpSound;
+            source.Play();
             rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
             animator.SetBool("isJumping", false);
             animator.SetBool("isJumping2", true);
@@ -103,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         transform.localScale = Scaler;
     }
     
-    void createDust()
+    public void createDust()
     {
         dust.Play();
     }

@@ -8,9 +8,13 @@ public class Enemy : MonoBehaviour
     public float startTimeBtwShots;
     public float attackRange = 5;
 
+    //bullet
     public GameObject projectile;
+
+    //death particles
     public GameObject effect;
     public GameObject bloodSplash;
+    public GameObject hurtEffect;
 
     public SpriteRenderer body;
     public Color hurtColor;
@@ -48,6 +52,7 @@ public class Enemy : MonoBehaviour
     {	
         StartCoroutine(Flash());
         health -= damage;
+        Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
         if (health <= 0)
             Die();
@@ -56,7 +61,7 @@ public class Enemy : MonoBehaviour
     void Die()
     {
         Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
-        
+
         // death particles
         Instantiate(effect, position, Quaternion.identity);
         Instantiate(bloodSplash, position, Quaternion.identity);

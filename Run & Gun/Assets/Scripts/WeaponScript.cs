@@ -12,7 +12,6 @@ public class WeaponScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // shoots bullet
         if (Input.GetButtonDown("Fire1"))
         {
             // bullet muzzle effect
