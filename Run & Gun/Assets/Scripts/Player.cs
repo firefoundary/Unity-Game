@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    public int health = 100;
     public SpriteRenderer body;
     public Color hurtColor;
 
@@ -15,10 +15,23 @@ public class Player : MonoBehaviour
     public AudioClip hurtSound;
     private AudioSource source;
 
+    //health
+    public int health = 10;
+    public int numOfHearts; 
+
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
     void Start() {
         source = GetComponent<AudioSource>();
     }
 
+    void Update() {
+
+        HealthBar();
+
+    }
 
     public void TakeDamage(int damage)
     {	
@@ -46,9 +59,33 @@ public class Player : MonoBehaviour
     }
 
     IEnumerator Flash() {
+
         body.color = hurtColor;
         yield return new WaitForSeconds(0.075f);
         body.color = Color.white;
         hurt = false;
+
+    }
+
+    void HealthBar() {
+        
+        if (health > numOfHearts)
+            health = numOfHearts;
+
+        //health bar update
+        for (int i = 0; i < hearts.Length; i++) {
+
+            if (i < health)
+                hearts[i].sprite = fullHeart;
+            else 
+                hearts[i].sprite = emptyHeart;
+
+            
+            if (i < numOfHearts)
+                hearts[i].enabled = true;
+            else
+                hearts[i].enabled = false;
+                
+        }
     }
 }

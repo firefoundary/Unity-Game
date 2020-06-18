@@ -8,7 +8,6 @@ public class WeaponScript : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject shotEffect;
 
-    private Vector2 bulletDirection;
     private float timeBtwShots;
     public float startTimeBtwShots;
 

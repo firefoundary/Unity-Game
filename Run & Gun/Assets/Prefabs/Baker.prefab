@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89c17a86b71c5c346a9029a0ccc6001e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 60
+  health: 3
   startTimeBtwShots: 1.5
   attackRange: 10
   projectile: {fileID: 8215328736782455293, guid: 7aa8e0cba51bc30408780f5d1be6680d,

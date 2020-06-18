@@ -40,7 +40,7 @@ public class EnemyBullet : MonoBehaviour
    
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.CompareTag("Ground")) {
+        if (col.CompareTag("Ground") || col.CompareTag("PlayerBullet")) {
             Destroy(gameObject);
             return;
         }
