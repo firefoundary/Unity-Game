@@ -98,9 +98,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   delay: 2
   radius: 2
-  force: 9
+  force: 30
   grenadeSpeed: 7
-  damage: 20
+  damage: 2
+  stunDuration: 2
   explosionEffect: {fileID: 8086528507028459413, guid: 5e63dc0180a822142bab02508d0013e9,
     type: 3}
 --- !u!61 &1372979764602273614

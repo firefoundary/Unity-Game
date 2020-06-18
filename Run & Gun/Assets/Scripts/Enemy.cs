@@ -63,8 +63,6 @@ public class Enemy : MonoBehaviour
     {	
         StartCoroutine(Flash());
 
-        Debug.Log("hit with" + damage + "damage");
-
         health -= damage;
         SetBarSize();
 

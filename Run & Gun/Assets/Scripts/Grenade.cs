@@ -10,6 +10,7 @@ public class Grenade : MonoBehaviour
     public float force = 200;
     public float grenadeSpeed = 5;
     public int damage = 20;
+    public float stunDuration = 2;
 
     private Vector3 forceDirection;
     public GameObject explosionEffect;
@@ -65,14 +66,13 @@ public class Grenade : MonoBehaviour
 
             //damage enemy
             Enemy enemy = nearbyObject.GetComponent<Enemy>();
-            if (enemy != null) {
-
+            if (enemy != null)
                 enemy.TakeDamage(damage);
 
-            }
         }
 
         // remove grenade
         Destroy(gameObject);
     }
+
 }

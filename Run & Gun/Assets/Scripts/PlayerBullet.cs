@@ -46,7 +46,6 @@ public class PlayerBullet : MonoBehaviour
         Enemy enemy = col.GetComponent<Enemy>();
         if (enemy != null)
         {
-            Debug.Log("shoot with" + damage + "damage");
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         } 
