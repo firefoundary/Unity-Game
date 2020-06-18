@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  radius: 1
+  radius: 2
   force: 9
   grenadeSpeed: 7
   damage: 20

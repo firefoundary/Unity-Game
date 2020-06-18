@@ -18,7 +18,6 @@ public class Grenade : MonoBehaviour
 
     float countdown;
     bool hasExploded = false;
-    bool thrown = false;
 
     // Start is called before the first frame update
     void Start()

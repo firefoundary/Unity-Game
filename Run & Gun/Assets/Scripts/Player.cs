@@ -16,12 +16,13 @@ public class Player : MonoBehaviour
     private AudioSource source;
 
     //health
-    public int health = 10;
+    public float health = 10;
     public int numOfHearts; 
-
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
+
+
 
     void Start() {
         source = GetComponent<AudioSource>();
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {	
         hurt = true;
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
@@ -50,11 +51,8 @@ public class Player : MonoBehaviour
 
  void Die()
     {
-        // Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
-        
-        // death particles
-        // Instantiate(effect, position, Quaternion.identity);
-        // Instantiate(bloodSplash, position, Quaternion.identity);
+
+        //can add death particles here
         Destroy(gameObject);
     }
 

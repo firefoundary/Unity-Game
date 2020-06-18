@@ -5818,7 +5818,7 @@ Transform:
   m_Children:
   - {fileID: 1952803080}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1162067081
 MonoBehaviour:
@@ -8595,7 +8595,7 @@ PrefabInstance:
     - target: {fileID: 4158878848408968705, guid: 6a106dca519a975488890d839a77b81f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4158878848408968705, guid: 6a106dca519a975488890d839a77b81f,
         type: 3}
@@ -9774,6 +9774,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 3109029692112049240, guid: 616c052b6278e974b878b22d0402c90d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318096, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_Color.r
@@ -9787,6 +9792,11 @@ PrefabInstance:
     - target: {fileID: 5563062839666318096, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5563062839666318097, guid: 616c052b6278e974b878b22d0402c90d,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318108, guid: 616c052b6278e974b878b22d0402c90d,

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int health = 60;
+    public float health = 3;
     public float startTimeBtwShots;
     public float attackRange = 5;
 
@@ -23,15 +23,26 @@ public class Enemy : MonoBehaviour
     private float dist;
     private float timeBtwShots;
 
+    //healthbar
+    public GameObject healthBar;
+    private Transform barTransform;
+    private float lower;
+
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBtwShots = startTimeBtwShots;
+
+        barTransform = healthBar.transform;
+        lower = 1 / (float) health;
+
     }
  
 
     void Update()
     {	
+
         dist = Vector3.Distance(player.position, transform.position);
 
         if (dist <= attackRange) {
@@ -48,10 +59,15 @@ public class Enemy : MonoBehaviour
         }
     }
     
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {	
         StartCoroutine(Flash());
+
+        Debug.Log("hit with" + damage + "damage");
+
         health -= damage;
+        SetBarSize();
+
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
         if (health <= 0)
@@ -72,5 +88,13 @@ public class Enemy : MonoBehaviour
         body.color = hurtColor;
         yield return new WaitForSeconds(0.075f);
         body.color = Color.white;
+    }
+
+    public void SetBarSize() {
+
+        Vector3 temp = barTransform.localScale;
+        temp.x -= lower;
+        barTransform.localScale = temp;
+
     }
 }

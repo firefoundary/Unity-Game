@@ -8,9 +8,10 @@ public class PlayerBullet : MonoBehaviour
     private float angle;
 
     public float bulletSpeed = 10;
-    public int damage = 20;
+    public float damage;
     public float destroyTime = 3;
-    // public Rigidbody2D rb;
+    
+    public GameObject collisionEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +34,11 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-         if (col.CompareTag("Ground") || col.CompareTag("EnemyBullet")) {
+        if (col.CompareTag("Ground") || col.CompareTag("EnemyBullet")) {
+
+            if (col.CompareTag("EnemyBullet"))
+                Instantiate(collisionEffect, transform.position, Quaternion.identity);
+
             Destroy(gameObject);
             return;
         }
@@ -41,11 +46,12 @@ public class PlayerBullet : MonoBehaviour
         Enemy enemy = col.GetComponent<Enemy>();
         if (enemy != null)
         {
+            Debug.Log("shoot with" + damage + "damage");
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         } 
         
-        // destroy bullet if collides with terrain
+        // destroy bullet if collides with terrain b
 
         // can add bullet impact effect here
         //Destroy(gameObject);
