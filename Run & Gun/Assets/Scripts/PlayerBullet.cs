@@ -12,6 +12,7 @@ public class PlayerBullet : MonoBehaviour
     public float destroyTime = 3;
     
     public GameObject collisionEffect;
+    public GameObject bossEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class PlayerBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        //destroy on hit ground or enemy bullet
         if (col.CompareTag("Ground") || col.CompareTag("EnemyBullet")) {
 
             if (col.CompareTag("EnemyBullet"))
@@ -43,6 +45,7 @@ public class PlayerBullet : MonoBehaviour
             return;
         }
 
+        //damage enemy
         Enemy enemy = col.GetComponent<Enemy>();
         if (enemy != null)
         {
@@ -50,10 +53,15 @@ public class PlayerBullet : MonoBehaviour
             Destroy(gameObject);
         } 
         
-        // destroy bullet if collides with terrain b
+        BossHealth boss = col.GetComponent<BossHealth>();
+        if (boss != null) 
+        {
+            boss.TakeDamage(damage);
+            Instantiate(bossEffect, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
+     
 
-        // can add bullet impact effect here
-        //Destroy(gameObject);
     }
     
    

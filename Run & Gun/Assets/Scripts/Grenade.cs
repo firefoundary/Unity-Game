@@ -9,7 +9,7 @@ public class Grenade : MonoBehaviour
     public float radius = 5;
     public float force = 200;
     public float grenadeSpeed = 5;
-    public int damage = 20;
+    public int damage = 2;
     public float stunDuration = 2;
 
     private Vector3 forceDirection;
@@ -68,6 +68,12 @@ public class Grenade : MonoBehaviour
             Enemy enemy = nearbyObject.GetComponent<Enemy>();
             if (enemy != null)
                 enemy.TakeDamage(damage);
+
+            //damage boss
+            BossHealth boss = nearbyObject.GetComponent<BossHealth>();
+                if (boss != null) 
+                    boss.TakeDamage(damage);
+    
 
         }
 

@@ -56,3 +56,6 @@ TagManager:
   - name: healthbar
     uniqueID: 4142418369
     locked: 0
+  - name: Boss
+    uniqueID: 821221471
+    locked: 0

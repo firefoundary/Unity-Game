@@ -11,11 +11,10 @@ public class Enemy : MonoBehaviour
     //bullet
     public GameObject projectile;
 
-    //death particles
+    //death particles and damage effects
     public GameObject effect;
     public GameObject bloodSplash;
     public GameObject hurtEffect;
-
     public SpriteRenderer body;
     public Color hurtColor;
 
