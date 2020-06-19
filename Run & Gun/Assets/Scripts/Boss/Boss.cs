@@ -36,7 +36,7 @@ public class Boss : MonoBehaviour
         else if (transform.position.x < player.position.x && !isFlipped) 
         {
             transform.localScale = flipped;
-            transform.Rotate(0, 0, 0);
+            transform.Rotate(0, 180, 0);
             isFlipped = true;
         }
 
