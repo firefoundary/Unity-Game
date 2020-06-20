@@ -1218,6 +1218,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 8708805066297005965, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: startDashTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708805066297005965, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: dashSpeed
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 8708805066297005965, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: dashParticles
+      value: 
+      objectReference: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
+        type: 3}
     - target: {fileID: 8708805067912333182, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_Layer
@@ -1345,6 +1361,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 221242430}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &240351113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 240351112}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ec9b200680fbd40b5647ec92c0fbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 23
+  startDashTime: 0.1
+  dashParticles: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
+    type: 3}
 --- !u!50 &240351117 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 8708805066297005963, guid: 86533b62b8a973e4483db5012b2e5d01,
@@ -5011,7 +5043,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &841643909
 Transform:
   m_ObjectHideFlags: 0

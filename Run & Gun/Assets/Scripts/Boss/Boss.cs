@@ -44,15 +44,5 @@ public class Boss : MonoBehaviour
 
 
 
-    // void Die()
-    // {
-    //     Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
-
-    //     // death particles
-    //     Instantiate(effect, position, Quaternion.identity);
-    //     Instantiate(bloodSplash, position, Quaternion.identity);
-    //     Destroy(gameObject);
-    // }
-
 
 }

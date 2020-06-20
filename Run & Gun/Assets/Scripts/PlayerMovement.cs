@@ -8,7 +8,16 @@ public class PlayerMovement : MonoBehaviour
     public float runSpeed;
     public float jumpForce;
 	public float hookAirSpeed = 10;
-    private float moveInput;
+    public float moveInput;
+
+    //dash
+    public float dashSpeed;
+    public float startDashTime;
+    private float dashTime;
+    private int direction = 0;
+    public GameObject dashParticles;
+    private bool madeParticles;
+
 
     //groundchecks
     public bool isGrounded = false;
@@ -19,14 +28,14 @@ public class PlayerMovement : MonoBehaviour
     //jumps
     private int extraJumps;
     public int extraJumpsValue;
-    
+
     //dust particles
     public ParticleSystem dust;
     public bool spawnDust;
 
     //sprite characteristics
     public Animator animator;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private bool facingRight = true;
 
     //audio
@@ -40,16 +49,94 @@ public class PlayerMovement : MonoBehaviour
         source = GetComponent<AudioSource>();
         extraJumps = extraJumpsValue;
         rb = GetComponent<Rigidbody2D>();
+
+        dashTime = startDashTime;
     }
 
     void FixedUpdate()
+    {
+        // isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+
+        // // Move Character
+        // moveInput = Input.GetAxisRaw("Horizontal");
+		
+        // //grappling animation code
+		// if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
+		// {
+		// 	if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
+		// 	{
+		// 		if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
+		// 			rb.AddForce(new Vector2(moveInput * runSpeed, 0));
+
+		// 		if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
+		// 			rb.AddForce(new Vector2(hookAirSpeed * moveInput * runSpeed, 0));
+
+		// 	}else 
+		// 	{
+        // 		rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+		// 	}
+		// }	
+
+        // //plays run animation
+        // animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+
+        // if (facingRight == false && moveInput > 0){
+        //     flip(-180);
+        // }
+        // else if (facingRight == true && moveInput < 0){
+        //     flip(0);
+        // }
+
+        // //dash logic
+        // if (direction == 0) 
+        // {
+        //     if(Input.GetKeyDown(KeyCode.LeftShift)) 
+        //     {
+        //         if(moveInput < 0)
+        //             direction = 1;
+        //         else if (moveInput > 0)
+        //             direction = 2;
+        //     }  
+        // } 
+        // else 
+        // {
+        //     if (dashTime <= 0) 
+        //     {
+        //         direction = 0;
+        //         dashTime = startDashTime;
+        //         rb.velocity = Vector2.zero;
+        //         madeParticles = false;
+        //     }
+        //     else {
+        //         dashTime -= Time.deltaTime;
+
+        //         if(direction == 1) {
+        //             if(!madeParticles) {
+        //                 Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
+        //                 madeParticles = true;
+        //             }
+        //             rb.velocity = Vector2.left * dashSpeed;
+        //         }
+        //         else if (direction == 2) {
+        //             if(!madeParticles) {
+        //                 Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
+        //                 madeParticles = true;
+        //             }
+        //             rb.velocity = Vector2.right * dashSpeed;
+        //         }
+        //     }
+        // }
+
+    }
+
+    void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
 
         // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
 		
-        //grappling animation code
+        //movement logic
 		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
 		{
 			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
@@ -75,10 +162,49 @@ public class PlayerMovement : MonoBehaviour
         else if (facingRight == true && moveInput < 0){
             flip(0);
         }
-    }
 
-    void Update()
-    {
+        //dash logic
+        if (direction == 0) 
+        {
+            if(Input.GetKeyDown(KeyCode.LeftShift)) 
+            {
+                if(moveInput < 0)
+                    direction = 1;
+                else if (moveInput > 0)
+                    direction = 2;
+            }  
+        } 
+        else 
+        {
+            if (dashTime <= 0) 
+            {
+                direction = 0;
+                dashTime = startDashTime;
+
+                rb.velocity = Vector2.zero;
+                madeParticles = false;
+
+            }
+            else {
+                dashTime -= Time.deltaTime;
+
+                if(direction == 1) {
+                    if(!madeParticles) {
+                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
+                        madeParticles = true;
+                    }
+                    rb.velocity = Vector2.left * dashSpeed;
+                }
+                else if (direction == 2) {
+                    if(!madeParticles) {
+                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
+                        madeParticles = true;
+                    }
+                    rb.velocity = Vector2.right * dashSpeed;
+                }
+            }
+        }
+
         if(isGrounded == true) {
             if (spawnDust == true) {
                 createDust();
@@ -112,7 +238,8 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isLanding", false);
             extraJumps--;
         }
-        
+
+         
     }
     
     
@@ -120,7 +247,9 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight = !facingRight; // updates facing direction
         transform.eulerAngles = new Vector3(0, y, 0);
-        if(isGrounded == true) createDust();
+
+        if(isGrounded == true) 
+            createDust();
         
         //inverts x axis
         // Vector3 Scaler = transform.localScale;
