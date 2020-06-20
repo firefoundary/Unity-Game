@@ -10,15 +10,6 @@ public class PlayerMovement : MonoBehaviour
 	public float hookAirSpeed = 10;
     public float moveInput;
 
-    //dash
-    public float dashSpeed;
-    public float startDashTime;
-    private float dashTime;
-    private int direction = 0;
-    public GameObject dashParticles;
-    private bool madeParticles;
-
-
     //groundchecks
     public bool isGrounded = false;
     public Transform groundCheck;
@@ -43,223 +34,64 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpSound;
     private AudioSource source;
 
+    //reference to playerdash script
+    private PlayerDash playerDash;
+
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        playerDash = GetComponent<PlayerDash>();
         source = GetComponent<AudioSource>();
         extraJumps = extraJumpsValue;
-        rb = GetComponent<Rigidbody2D>();
-
-        dashTime = startDashTime;
     }
 
     void FixedUpdate()
     {
-        // isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-        // // Move Character
-        // moveInput = Input.GetAxisRaw("Horizontal");
-		
-        // //grappling animation code
-		// if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
-		// {
-		// 	if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
-		// 	{
-		// 		if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
-		// 			rb.AddForce(new Vector2(moveInput * runSpeed, 0));
-
-		// 		if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
-		// 			rb.AddForce(new Vector2(hookAirSpeed * moveInput * runSpeed, 0));
-
-		// 	}else 
-		// 	{
-        // 		rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
-		// 	}
-		// }	
-
-        // //plays run animation
-        // animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-
-        // if (facingRight == false && moveInput > 0){
-        //     flip(-180);
-        // }
-        // else if (facingRight == true && moveInput < 0){
-        //     flip(0);
-        // }
-
-        // //dash logic
-        // if (direction == 0) 
-        // {
-        //     if(Input.GetKeyDown(KeyCode.LeftShift)) 
-        //     {
-        //         if(moveInput < 0)
-        //             direction = 1;
-        //         else if (moveInput > 0)
-        //             direction = 2;
-        //     }  
-        // } 
-        // else 
-        // {
-        //     if (dashTime <= 0) 
-        //     {
-        //         direction = 0;
-        //         dashTime = startDashTime;
-        //         rb.velocity = Vector2.zero;
-        //         madeParticles = false;
-        //     }
-        //     else {
-        //         dashTime -= Time.deltaTime;
-
-        //         if(direction == 1) {
-        //             if(!madeParticles) {
-        //                 Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
-        //                 madeParticles = true;
-        //             }
-        //             rb.velocity = Vector2.left * dashSpeed;
-        //         }
-        //         else if (direction == 2) {
-        //             if(!madeParticles) {
-        //                 Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
-        //                 madeParticles = true;
-        //             }
-        //             rb.velocity = Vector2.right * dashSpeed;
-        //         }
-        //     }
-        // }
+        // everything except jump logic and spawn dust
 
     }
 
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-
-        // Move Character
         moveInput = Input.GetAxisRaw("Horizontal");
 		
         //movement logic
-		if (!GameObject.FindWithTag("Grapple").GetComponent<Grapple>().isGrappling) 
-		{
-			if (GameObject.FindWithTag("Grapple").GetComponent<Grapple>().releasing)
-			{
-				if((rb.velocity.x >= 0 && moveInput == 1) || rb.velocity.x <= 0 && moveInput == -1)	
-					rb.AddForce(new Vector2(moveInput * runSpeed, 0));
-
-				if((rb.velocity.x > 0 && moveInput == -1) || rb.velocity.x < 0 && moveInput == 1)	
-					rb.AddForce(new Vector2(hookAirSpeed * moveInput * runSpeed, 0));
-
-			}else 
-			{
-        		rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
-			}
-		}	
+        rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
 
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
-        if (facingRight == false && moveInput > 0){
+        //flip logic
+        if (!facingRight && moveInput > 0) {
             flip(-180);
         }
-        else if (facingRight == true && moveInput < 0){
+        else if (facingRight && moveInput < 0){
             flip(0);
         }
 
         //dash logic
-        if (direction == 0) 
-        {
-            if(Input.GetKeyDown(KeyCode.LeftShift)) 
-            {
-                if(moveInput < 0)
-                    direction = 1;
-                else if (moveInput > 0)
-                    direction = 2;
-            }  
-        } 
-        else 
-        {
-            if (dashTime <= 0) 
-            {
-                direction = 0;
-                dashTime = startDashTime;
+        playerDash.Dash();
 
-                rb.velocity = Vector2.zero;
-                madeParticles = false;
-
-            }
-            else {
-                dashTime -= Time.deltaTime;
-
-                if(direction == 1) {
-                    if(!madeParticles) {
-                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
-                        madeParticles = true;
-                    }
-                    rb.velocity = Vector2.left * dashSpeed;
-                }
-                else if (direction == 2) {
-                    if(!madeParticles) {
-                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
-                        madeParticles = true;
-                    }
-                    rb.velocity = Vector2.right * dashSpeed;
-                }
-            }
-        }
-
-        if(isGrounded == true) {
-            if (spawnDust == true) {
-                createDust();
-                source.clip = landingSound;
-                source.Play();
-                spawnDust = false;
-            }
-        } else {
-            spawnDust = true;
-        }
-
-        // first jump
+        //jump logic
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
         {
-            if(isGrounded == true) createDust();
-            source.clip = jumpSound;
-            source.Play();
-            // rb.velocity = Vector2.up * jumpForce;
-            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
+            if(isGrounded == true) 
+                dust.Play();
+
+            Jump();
             animator.SetBool("isJumping", true);
             animator.SetBool("isLanding", false);
-            extraJumps--;
         } else if (Input.GetButtonDown("Jump") && extraJumps == 0)  // second jump
         {
-            // rb.velocity = Vector2.up * jumpForce;
-            source.clip = jumpSound;
-            source.Play();
-            rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce); // maintains horz velocity on jump
+            Jump();
             animator.SetBool("isJumping", false);
             animator.SetBool("isJumping2", true);
             animator.SetBool("isLanding", false);
-            extraJumps--;
         }
 
-         
-    }
-    
-    
-    private void flip(int y)
-    {
-        facingRight = !facingRight; // updates facing direction
-        transform.eulerAngles = new Vector3(0, y, 0);
-
-        if(isGrounded == true) 
-            createDust();
-        
-        //inverts x axis
-        // Vector3 Scaler = transform.localScale;
-        // Scaler.x *= -1;
-        // transform.localScale = Scaler;
-    }
-    
-    public void createDust()
-    {
-        dust.Play();
+        spawnDustOnLand();         
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -273,4 +105,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+
+    //
+    //HELPER FUNCTIONS
+    //
+
+
+    void Jump() {
+        source.clip = jumpSound;
+        source.Play();
+        rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce);  // maintains horz velocity on jump
+        extraJumps--;
+
+    }
+    
+    private void flip(int y)
+    {
+        facingRight = !facingRight; // updates facing direction
+        transform.eulerAngles = new Vector3(0, y, 0);
+
+        if(isGrounded) 
+            dust.Play();
+    }
+
+    void spawnDustOnLand() {
+        if(isGrounded == true) {
+            if (spawnDust == true) {
+                dust.Play();
+                source.clip = landingSound;
+                source.Play();
+                spawnDust = false;
+            }
+        } else {
+            spawnDust = true;
+        }
+    }
+
+    
 }

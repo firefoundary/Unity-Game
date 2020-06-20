@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDash : MonoBehaviour
-{
+{   
+    //dash stats
     public float dashSpeed;
     public float startDashTime;
     private float dashTime;
-
-    private int direction = 0;
     public GameObject dashParticles;
 
+    //private variables
+    private int direction = 0;
     private Rigidbody2D rb;
     private float moveInput;
-
-    private bool madeParticles;
+    private bool madeParticles = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,12 +23,11 @@ public class PlayerDash : MonoBehaviour
         dashTime = startDashTime;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         moveInput = GetComponent<PlayerMovement>().moveInput;
+    }
 
-        //dash logic
+    public void Dash() {
         if (direction == 0) 
         {
             if(Input.GetKeyDown(KeyCode.LeftShift)) 
@@ -68,6 +67,6 @@ public class PlayerDash : MonoBehaviour
                     rb.velocity = Vector2.right * dashSpeed;
                 }
             }
-        }
+        }      
     }
 }

@@ -47,6 +47,8 @@ GameObject:
   - component: {fileID: 8708805066297005965}
   - component: {fileID: 1576363375946047805}
   - component: {fileID: 3579927183195958627}
+  - component: {fileID: 2349249784208775942}
+  - component: {fileID: 7450473016587122618}
   m_Layer: 0
   m_Name: Cloak Croissant
   m_TagString: Player
@@ -298,10 +300,7 @@ MonoBehaviour:
   runSpeed: 4
   jumpForce: 13
   hookAirSpeed: 10
-  dashSpeed: 23
-  startDashTime: 0.1
-  dashParticles: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
-    type: 3}
+  moveInput: 0
   isGrounded: 0
   groundCheck: {fileID: 8708805067912333183}
   checkRadius: 0.5
@@ -312,6 +311,7 @@ MonoBehaviour:
   dust: {fileID: 8708805068161836648}
   spawnDust: 0
   animator: {fileID: 8708805066297005958}
+  rb: {fileID: 0}
   landingSound: {fileID: 8300000, guid: 57893d83dbc62f2488ccc7f00847ce32, type: 3}
   jumpSound: {fileID: 8300000, guid: 4ce8e573d6eea35418e4a19ea81aaf4f, type: 3}
 --- !u!114 &1576363375946047805
@@ -365,6 +365,37 @@ MonoBehaviour:
   shotEffect: {fileID: 4630724870996693690, guid: 777ed3130782ecd49b3fcc370d25999a,
     type: 3}
   startTimeBtwShots: 0.25
+--- !u!114 &2349249784208775942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708805066297005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ec9b200680fbd40b5647ec92c0fbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 23
+  startDashTime: 0.1
+  dashParticles: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
+    type: 3}
+--- !u!114 &7450473016587122618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708805066297005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7880a142bdff22f42a8c45c20f127d06, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 14
+  grenadePrefab: {fileID: 1372979764602273648, guid: ffc59a32e6f135947aa1abd6eccc6cf4,
+    type: 3}
 --- !u!1 &8708805067912333182
 GameObject:
   m_ObjectHideFlags: 0
