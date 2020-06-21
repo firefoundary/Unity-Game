@@ -6,6 +6,7 @@ public class PlayerDash : MonoBehaviour
 {   
     //dash stats
     public float dashSpeed;
+    public float cooldown;
     public float startDashTime;
     private float dashTime;
     public GameObject dashParticles;
@@ -15,6 +16,7 @@ public class PlayerDash : MonoBehaviour
     private Rigidbody2D rb;
     private float moveInput;
     private bool madeParticles = false;
+    private bool canDash = true;
 
     // Start is called before the first frame update
     void Start()
@@ -50,23 +52,32 @@ public class PlayerDash : MonoBehaviour
 
             }
             else {
-                dashTime -= Time.deltaTime;
-
-                if(direction == 1) {
+                if(direction == 1 && canDash) {
                     if(!madeParticles) {
                         Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
                         madeParticles = true;
                     }
                     rb.velocity = Vector2.left * dashSpeed;
+                    StartCoroutine(coolDown());
                 }
-                else if (direction == 2) {
+                else if (direction == 2 && canDash) {
                     if(!madeParticles) {
                         Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
                         madeParticles = true;
                     }
                     rb.velocity = Vector2.right * dashSpeed;
+                    StartCoroutine(coolDown());
                 }
+
+                dashTime -= Time.deltaTime;
             }
         }      
+    }
+
+    IEnumerator coolDown() {
+        yield return new WaitForSeconds(dashTime);
+        canDash = false;
+        yield return new WaitForSeconds(cooldown);
+        canDash = true;
     }
 }

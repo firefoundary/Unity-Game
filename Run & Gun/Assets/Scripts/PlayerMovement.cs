@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
+    //wall slide
+    bool isTouchingFront;
+    public Transform frontCheck;
+    bool wallSliding;
+    public float wallSlidingSpeed;
+
     //dust particles
     public ParticleSystem dust;
     public bool spawnDust;
@@ -91,6 +97,19 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isLanding", false);
         }
 
+        //wall jump logic
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+
+        if (isTouchingFront && !isGrounded && moveInput != 0)
+            wallSliding = true;
+        else 
+            wallSliding = false;
+
+        if (wallSliding)
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        
+
+
         spawnDustOnLand();         
     }
 
@@ -110,11 +129,10 @@ public class PlayerMovement : MonoBehaviour
     //HELPER FUNCTIONS
     //
 
-
     void Jump() {
         source.clip = jumpSound;
         source.Play();
-        rb.velocity = new Vector2(rb.velocity.x, 1 * jumpForce);  // maintains horz velocity on jump
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);  // maintains horz velocity on jump
         extraJumps--;
 
     }
