@@ -11,7 +11,7 @@ public class Cloak : MonoBehaviour {
   	public TextMeshProUGUI pickUpText;
     public GameObject player;
 	public GameObject otherPrefab;
-    public ParticleSystem burst;
+    public ParticleSystem particles;
     public FirstDialogue Dialogue;
     private bool pickUpAllowed;
 	private GameObject grapple;
@@ -21,7 +21,7 @@ public class Cloak : MonoBehaviour {
     // Use this for initialization
     private void Start ()
     {
-        burst.Stop();
+        particles.Stop();
 		virtualCam = GameObject.FindWithTag("VirtCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
 		grapple = GameObject.FindWithTag("Grapple");
         pickUpText.gameObject.SetActive(false);
@@ -33,7 +33,7 @@ public class Cloak : MonoBehaviour {
 		{
 			changeSprite();
 			changeCameraFocus();
-            createBurst();
+            Instantiate(particles, player.transform.position, particles.transform.rotation);
             Dialogue.TriggerDialogue();
             PickUp();
 		}
@@ -76,9 +76,4 @@ public class Cloak : MonoBehaviour {
 		virtualCam.m_LookAt = otherPrefab.transform;
 		virtualCam.m_Follow = otherPrefab.transform;
 	}
-
-    void createBurst()
-    {
-        burst.Play();
-    }
 }

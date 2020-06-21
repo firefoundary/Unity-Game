@@ -11,11 +11,17 @@ public class WeaponScript : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
+    private PlayerMovement player;
+
+    void Start() {
+        player = GetComponent<PlayerMovement>();
+    }
+
     // Update is called once per frame
     void Update()
     {
         
-        if (timeBtwShots <= 0) {
+        if (timeBtwShots <= 0 && !player.dialogueFreeze) {
             if (Input.GetMouseButtonDown(0)) {
                 // bullet muzzle effect
                 // Instantiate(shotEffect, firePoint.position, shotEffect.transform.rotation);

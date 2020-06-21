@@ -26,6 +26,7 @@ public class Enemy : MonoBehaviour
     public GameObject healthBar;
     private Transform barTransform;
     private float lower;
+    private float maxHealth;
 
 
     void Start()
@@ -34,7 +35,8 @@ public class Enemy : MonoBehaviour
         timeBtwShots = startTimeBtwShots;
 
         barTransform = healthBar.transform;
-        lower = 1 / (float) health;
+        // lower = 1 / (float) health;
+        maxHealth = health;
 
     }
  
@@ -62,7 +64,9 @@ public class Enemy : MonoBehaviour
     {	
         StartCoroutine(Flash());
 
+
         health -= damage;
+        lower = damage / (float) maxHealth;
         SetBarSize();
 
         Instantiate(hurtEffect, transform.position, Quaternion.identity);

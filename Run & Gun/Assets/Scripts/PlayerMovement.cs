@@ -76,10 +76,10 @@ public class PlayerMovement : MonoBehaviour
 
         //flip logic
         if (!facingRight && moveInput > 0) {
-            flip(-180);
+            flip();
         }
         else if (facingRight && moveInput < 0){
-            flip(0);
+            flip();
         }
 
         //dash logic
@@ -143,10 +143,16 @@ public class PlayerMovement : MonoBehaviour
 
     }
     
-    private void flip(int y)
+    private void flip()
     {
         facingRight = !facingRight; // updates facing direction
-        transform.eulerAngles = new Vector3(0, y, 0);
+
+        Vector3 flipped = transform.localScale;
+        flipped.z *= -1f;
+        transform.localScale = flipped;
+
+        // transform.eulerAngles = new Vector3(0, y, 0);
+        transform.Rotate(0, 180, 0);
 
         if(isGrounded) 
             dust.Play();

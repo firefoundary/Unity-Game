@@ -480,7 +480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  groundDistance: 1
+  groundDistance: 2
   wallDistance: 0.01
   groundDetection: {fileID: 4247924907858351912}
   wallDetection: {fileID: 9086305264186905353}

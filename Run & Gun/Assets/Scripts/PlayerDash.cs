@@ -52,7 +52,7 @@ public class PlayerDash : MonoBehaviour
             else {
                 if(direction == 1 && canDash) {
                     if(!madeParticles) {
-                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
+                        GameObject.Instantiate(dashParticles, transform.position, dashParticles.transform.rotation * Quaternion.Euler(0f, 180f, 0f));
                         madeParticles = true;
                     }
                     rb.velocity = Vector2.left * dashSpeed;
