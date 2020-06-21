@@ -5,10 +5,11 @@ using UnityEngine;
 public class FirstDialogue : MonoBehaviour
 {
     public Dialogue dialogue;
+    public bool freezePlayer;
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, freezePlayer);
     }
 
 }

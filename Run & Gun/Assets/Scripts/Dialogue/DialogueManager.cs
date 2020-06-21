@@ -19,8 +19,11 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue, bool freezePlayer)
     {
+        if (freezePlayer)
+            player.GetComponent<PlayerMovement>().dialogueFreeze = true;
+
         animator.SetBool("IsOpen", true);
         
         nameText.text = dialogue.name;
@@ -58,13 +61,7 @@ public class DialogueManager : MonoBehaviour
         foreach (char letter in sentence.ToCharArray())
         {
             dialogueText.text += letter;
-            yield return null;  // slows down text animation speed
-            yield return null; 
-            yield return null;
-            yield return null;
-            yield return null; 
-            yield return null;
-            yield return null;
+            yield return new WaitForSeconds(0.01f);
         }
         continueButton.SetActive(true);
     }
@@ -72,6 +69,9 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
+        player.GetComponent<PlayerMovement>().dialogueFreeze = false;
     }
+
+   
  
 }

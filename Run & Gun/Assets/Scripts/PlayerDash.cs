@@ -46,8 +46,6 @@ public class PlayerDash : MonoBehaviour
             {
                 direction = 0;
                 dashTime = startDashTime;
-
-                rb.velocity = Vector2.zero;
                 madeParticles = false;
 
             }

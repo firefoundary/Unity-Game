@@ -363,7 +363,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 4
   jumpForce: 13
-  hookAirSpeed: 10
   moveInput: 0
   isGrounded: 0
   groundCheck: {fileID: 8708805067912333183}
@@ -373,7 +372,7 @@ MonoBehaviour:
     m_Bits: 512
   extraJumpsValue: 1
   frontCheck: {fileID: 2339214420573205243}
-  wallSlidingSpeed: 2
+  wallSlidingSpeed: 1
   dust: {fileID: 8708805068161836648}
   spawnDust: 0
   animator: {fileID: 8708805066297005958}

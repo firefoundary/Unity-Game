@@ -69,8 +69,6 @@ public class Cloak : MonoBehaviour {
 		transform.position = otherPrefab.transform.position;
  		otherPrefab.transform.position = temp;
 		player.SetActive(false);	
-
-		grapple.GetComponent<Grapple>().origin = otherPrefab.GetComponent<Rigidbody2D>();
 	}
 
 	void changeCameraFocus()

@@ -5074,7 +5074,7 @@ GameObject:
   - component: {fileID: 3777041960545575342}
   - component: {fileID: 3777041960545575330}
   - component: {fileID: 3777041960545575328}
-  - component: {fileID: 3777041960545575337}
+  - component: {fileID: 4234668126501452012}
   m_Layer: 0
   m_Name: NakedCroissant
   m_TagString: Player
@@ -5097,6 +5097,7 @@ Transform:
   - {fileID: 3777041960330154062}
   - {fileID: 3777041960413605578}
   - {fileID: 6054619222455909744}
+  - {fileID: 734008183438893570}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -5312,7 +5313,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3777041960545575337
+--- !u!114 &4234668126501452012
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5321,15 +5322,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3777041960545575336}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe651ff5478693a45b7b94ef7e7f784e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8410a45567987ba4aab8b8849a8cb7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 4
-  jumpForce: 13
-  hookAirSpeed: 10
+  runSpeed: 2
+  jumpForce: 9
+  moveInput: 0
   isGrounded: 0
   groundCheck: {fileID: 3777041960038592859}
-  checkRadius: 0.5
+  checkRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 512
@@ -5337,8 +5338,39 @@ MonoBehaviour:
   dust: {fileID: 3777041960330154060}
   spawnDust: 0
   animator: {fileID: 3777041960545575330}
+  rb: {fileID: 0}
   landingSound: {fileID: 0}
   jumpSound: {fileID: 0}
+--- !u!1 &4411972402823093301
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 734008183438893570}
+  m_Layer: 0
+  m_Name: Front Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &734008183438893570
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411972402823093301}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.012772, y: -11.384861, z: -199.16124}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3777041960545575341}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4828018412440956821
 GameObject:
   m_ObjectHideFlags: 0

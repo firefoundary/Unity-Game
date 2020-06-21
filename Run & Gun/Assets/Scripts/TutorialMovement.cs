@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class TutorialMovement : MonoBehaviour
 {
     //speed and inputs
     public float runSpeed;
@@ -19,12 +19,6 @@ public class PlayerMovement : MonoBehaviour
     private int extraJumps;
     public int extraJumpsValue;
 
-    //wall slide
-    bool isTouchingFront;
-    public Transform frontCheck;
-    bool wallSliding;
-    public float wallSlidingSpeed;
-
     //dust particles
     public ParticleSystem dust;
     public bool spawnDust;
@@ -39,17 +33,10 @@ public class PlayerMovement : MonoBehaviour
     public AudioClip jumpSound;
     private AudioSource source;
 
-    //dialogueFreeze
-    public bool dialogueFreeze;
-
-    //reference to playerdash script
-    private PlayerDash playerDash;
-
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        playerDash = GetComponent<PlayerDash>();
         source = GetComponent<AudioSource>();
         extraJumps = extraJumpsValue;
     }
@@ -63,13 +50,10 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        
         moveInput = Input.GetAxisRaw("Horizontal");
 		
         //movement logic
-        if (!dialogueFreeze)
-            rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
-        else rb.velocity = new Vector2(0, rb.velocity.y);
+        rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
 
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
@@ -81,10 +65,6 @@ public class PlayerMovement : MonoBehaviour
         else if (facingRight && moveInput < 0){
             flip(0);
         }
-
-        //dash logic
-        if (!dialogueFreeze)
-            playerDash.Dash();
 
         //jump logic
         if (Input.GetButtonDown("Jump") && extraJumps > 0)
@@ -102,19 +82,6 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping2", true);
             animator.SetBool("isLanding", false);
         }
-
-        //wall jump logic
-        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
-
-        if (isTouchingFront && !isGrounded && moveInput != 0)
-            wallSliding = true;
-        else 
-            wallSliding = false;
-
-        if (wallSliding)
-            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
-        
-
 
         spawnDustOnLand();         
     }
