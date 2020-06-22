@@ -229,7 +229,8 @@ AudioSource:
   m_GameObject: {fileID: 8708805066297005964}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 500dcd62b8f9d254eab93be8001f6c70,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.567
@@ -379,6 +380,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   landingSound: {fileID: 8300000, guid: 57893d83dbc62f2488ccc7f00847ce32, type: 3}
   jumpSound: {fileID: 8300000, guid: 4ce8e573d6eea35418e4a19ea81aaf4f, type: 3}
+  dialogueFreeze: 0
 --- !u!114 &2349249784208775942
 MonoBehaviour:
   m_ObjectHideFlags: 0
