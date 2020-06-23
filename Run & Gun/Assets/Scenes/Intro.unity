@@ -2641,7 +2641,8 @@ MonoBehaviour:
   dialogue:
     name: ???
     sentences:
-    - Woah you really do be sad eh? Try double pressing W to jump over that ledge
+    - Woah you really do be sad eh? Try double pressing W or SPACE to jump over that
+      ledge
   freezePlayer: 0
 --- !u!61 &521519185
 BoxCollider2D:
@@ -3196,8 +3197,8 @@ MonoBehaviour:
     - You know, you deserve much more than those bakers could ever give you
     - "Now you might be wondering: \u2018Where can I find my purpose? What do I do
       now?\u2019"
-    - Kiddo, I will give you your purpose AND your mission
-    - "I\u2019m vibing at the end of this path, waiting for you to get here :)"
+    - "Kiddo, I will give you your purpose AND your mission. I\u2019m vibing at the
+      end of this path, waiting for you to get here :)"
     - All you have to do is let me wrap my arms around you, and you will feel like
       a whole new croissant
   freezePlayer: 0
@@ -4516,7 +4517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898343029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.26, y: -0.66, z: 16.225046}
+  m_LocalPosition: {x: 33.2, y: -0.66, z: 16.225046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078553540}
@@ -4551,7 +4552,7 @@ MonoBehaviour:
   dialogue:
     name: ???
     sentences:
-    - Yes,, keep coming to me,, I can feel your burntness get closer and closer,,
+    - Yes,, keep coming to me,, I can smell your burntness get closer and closer,,
   freezePlayer: 0
 --- !u!61 &898343033
 BoxCollider2D:
@@ -10604,11 +10605,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4158878848408968705, guid: 6a106dca519a975488890d839a77b81f,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4158878848408968705, guid: 6a106dca519a975488890d839a77b81f,
-        type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
@@ -10701,6 +10697,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_margin.w
       value: 27.726562
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069062292318104994, guid: 6a106dca519a975488890d839a77b81f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069062292318104994, guid: 6a106dca519a975488890d839a77b81f,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8069062292318104994, guid: 6a106dca519a975488890d839a77b81f,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a106dca519a975488890d839a77b81f, type: 3}

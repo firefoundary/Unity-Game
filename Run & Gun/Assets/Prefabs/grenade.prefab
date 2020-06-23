@@ -100,7 +100,7 @@ MonoBehaviour:
   radius: 3
   force: 6
   speed: 10
-  reflectSpeed: 4
+  reflectSpeed: 5
   damage: 2
   splashEffect: {fileID: 7794453720674123751, guid: 359194d6c182a2b4598df2c3870ac1c0,
     type: 3}
