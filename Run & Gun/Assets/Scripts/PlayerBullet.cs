@@ -28,6 +28,7 @@ public class PlayerBullet : MonoBehaviour
         //bullet angle and position 
         angle = Mathf.Atan2(bulletDirection.y, bulletDirection.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+        
         transform.position += bulletDirection * bulletSpeed *  Time.deltaTime;
 
         Destroy(gameObject, destroyTime); //destroys bullets after destroyTime seconds

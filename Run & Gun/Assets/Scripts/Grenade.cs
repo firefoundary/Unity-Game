@@ -8,17 +8,22 @@ public class Grenade : MonoBehaviour
     public float delay = 2;
     public float radius = 5;
     public float force = 200;
-    public float grenadeSpeed = 5;
+    public float speed = 5;
+    public float reflectSpeed = 3;
     public int damage = 2;
-    public float stunDuration = 2;
+
 
     private Vector3 forceDirection;
-    public GameObject explosionEffect;
+    public GameObject splashEffect;
+    public GameObject explosionParticles;
 
     private Vector3 grenadeDirection;
+    private Vector3 lastDirection;
 
     float countdown;
     bool hasExploded = false;
+
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
     void Start()
@@ -30,13 +35,15 @@ public class Grenade : MonoBehaviour
         grenadeDirection.z = 0;
         grenadeDirection.Normalize();
 
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(grenadeDirection * grenadeSpeed, ForceMode2D.Impulse);
+        rb = GetComponent<Rigidbody2D>();
+        rb.velocity = grenadeDirection * speed;
     }
 
     // Update is called once per frame
     void Update()
     {
+        lastDirection = rb.velocity;
+
         countdown -= Time.deltaTime;
         if (countdown <= 0 && !hasExploded) {
             Explode();
@@ -47,7 +54,9 @@ public class Grenade : MonoBehaviour
     void Explode () {
 
         // show effect
-        Instantiate(explosionEffect, transform.position, transform.rotation);
+        GameObject splash = Instantiate(splashEffect, transform.position, transform.rotation);
+        Instantiate(explosionParticles, transform.position, transform.rotation);
+        
 
         //Get nearby enemies
         Collider2D [] colliders = Physics2D.OverlapCircleAll(transform.position, radius);
@@ -79,6 +88,21 @@ public class Grenade : MonoBehaviour
 
         // remove grenade
         Destroy(gameObject);
+    }
+    
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.CompareTag("Enemy")) {
+            Explode();
+            hasExploded = true;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.CompareTag("Ground")) {
+            var direction = Vector3.Reflect(lastDirection.normalized, col.contacts[0].normal);
+
+            rb.velocity = direction * reflectSpeed;
+        }
     }
 
 }

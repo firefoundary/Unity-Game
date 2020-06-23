@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1372979764602273648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.44, y: -17.82, z: 0}
-  m_LocalScale: {x: 0.12941135, y: 0.12941135, z: 0.12941135}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,16 +93,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1372979764602273648}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31da3e3f385552a4283e11b8b14817e0, type: 3}
+  m_Script: {fileID: 11500000, guid: 207549ddc59e51441a9238fb1b3e9e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  radius: 2
-  force: 30
-  grenadeSpeed: 7
+  radius: 3
+  force: 6
+  speed: 10
+  reflectSpeed: 4
   damage: 2
-  stunDuration: 2
-  explosionEffect: {fileID: 8086528507028459413, guid: 5e63dc0180a822142bab02508d0013e9,
+  splashEffect: {fileID: 7794453720674123751, guid: 359194d6c182a2b4598df2c3870ac1c0,
+    type: 3}
+  explosionParticles: {fileID: 8468900679097125696, guid: d9fd82861242bb64391388fc88defe98,
     type: 3}
 --- !u!61 &1372979764602273614
 BoxCollider2D:
@@ -149,5 +151,5 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
