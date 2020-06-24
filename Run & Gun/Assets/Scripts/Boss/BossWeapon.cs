@@ -5,28 +5,24 @@ using UnityEngine;
 public class BossWeapon : MonoBehaviour
 {
     public float attackDamage = 1;
-    
-
-    public Vector3 attackOffset;
+    public Transform attackPos;
     public float attackRange = 1;
     public LayerMask attackMask;
 
 
     void Attack()
     {
-        Vector3 pos = transform.position;
-        pos += transform.right * attackOffset.x;
-        pos += transform.up * attackOffset.y;
 
-        Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
+        Collider2D colInfo = Physics2D.OverlapCircle(attackPos.position, attackRange, attackMask);
         if (colInfo != null)
             colInfo.GetComponent<Player>().TakeDamage(attackDamage);
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
+    void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
+
 }

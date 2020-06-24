@@ -13,6 +13,7 @@ TagManager:
   - PlayerBullet
   - Bullet
   - bar
+  - GameOverMenu
   layers:
   - Default
   - TransparentFX

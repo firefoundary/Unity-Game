@@ -40,6 +40,13 @@ public class Player : MonoBehaviour
         if (isInvulnernable)
             return;
 
+        health -= damage;
+        if (health <= 0) {
+            Die();
+            return;
+        }
+            
+
         hurt = true;
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
@@ -47,17 +54,17 @@ public class Player : MonoBehaviour
         source.Play();        
 
         StartCoroutine(Flash());
-        health -= damage;
+        
 
-        if (health <= 0)
-            Die();
     }
 
  void Die()
     {
-
         //can add death particles here
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+
+        FindObjectOfType<GameManager>().EndGame();
+
     }
 
     IEnumerator Flash() {
