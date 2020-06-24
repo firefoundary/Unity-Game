@@ -5,8 +5,6 @@ using UnityEngine;
 public class ShootBehaviour : StateMachineBehaviour
 {
     public GameObject bulletPrefab;
-    public float bulletSpeed = 7;
-    public float destroyTime = 5;
 
     private Transform player;
     private Vector3 bulletDirection;
@@ -40,8 +38,6 @@ public class ShootBehaviour : StateMachineBehaviour
     {
         if (timeBtwShots <= 0) {
             GameObject bullet = Instantiate(bulletPrefab, pos, Quaternion.identity);
-            bullet.transform.position += bulletDirection * bulletSpeed *  Time.deltaTime;
-            Destroy(bullet, destroyTime);
 
             timeBtwShots = startTimeBtwShots;
             timer -= Time.deltaTime;

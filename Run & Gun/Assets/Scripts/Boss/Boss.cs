@@ -8,7 +8,6 @@ public class Boss : MonoBehaviour
     //following Player
     public Transform player;
     public bool isFlipped = false;
-    public float colDamage = 1;
 
 
     // Start is called before the first frame update
@@ -41,11 +40,6 @@ public class Boss : MonoBehaviour
             isFlipped = true;
         }
 
-    }
-
-    void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.CompareTag("Player"))
-            col.gameObject.GetComponent<Player>().TakeDamage(colDamage);
     }
 
 

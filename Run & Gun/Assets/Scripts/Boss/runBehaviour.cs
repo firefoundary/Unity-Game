@@ -7,9 +7,15 @@ public class runBehaviour : StateMachineBehaviour
     public float speed;
     public float attackRange;
 
-    private float timer;
+    //charge
+    private float timerCharge;
     public float minChargeTime;
     public float maxChargeTime;
+
+    //shoot
+    private float timerShoot;
+    public float minShootTime;
+    public float maxShootTime;
     
     Transform player;
     Rigidbody2D rb;
@@ -25,7 +31,8 @@ public class runBehaviour : StateMachineBehaviour
        rb = animator.GetComponent<Rigidbody2D>();
        boss = animator.GetComponent<Boss>();
 
-       timer = Random.Range(minChargeTime, maxChargeTime);
+       timerCharge = Random.Range(minChargeTime, maxChargeTime);
+       timerShoot = Random.Range(minShootTime, maxShootTime);
 
     }
 
@@ -43,12 +50,17 @@ public class runBehaviour : StateMachineBehaviour
             animator.SetTrigger("Attack");
         } 
 
-        if (timer <= 0) {
+        //charge
+        if (timerCharge <= 0)
            animator.SetTrigger("Charge");
-        }
-        else {
-           timer -= Time.deltaTime;
-        }
+        else
+           timerCharge -= Time.deltaTime;
+
+        //shoot
+        if (timerShoot <= 0)
+           animator.SetTrigger("Shoot");
+        else
+           timerShoot -= Time.deltaTime;
     }
 
     //exit
