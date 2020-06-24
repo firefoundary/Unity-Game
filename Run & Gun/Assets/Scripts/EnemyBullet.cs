@@ -7,7 +7,9 @@ public class EnemyBullet : MonoBehaviour
     public Rigidbody2D rb;
     public float bulletSpeed = 7;
     public float destroyTime = 5;
-    public int damage = 20;
+    public int damage = 1;
+    
+    public float degreesPerSec = 360f;
 
     private Transform player;
     private Vector3 bulletDirection;
@@ -21,22 +23,21 @@ public class EnemyBullet : MonoBehaviour
         bulletDirection = player.position - transform.position;
         bulletDirection.z = 0;
         bulletDirection.Normalize();
+
+        Destroy(gameObject, destroyTime); 
     }
 
     void Update()
     {
         transform.position += bulletDirection * bulletSpeed *  Time.deltaTime;
-        Destroy(gameObject, destroyTime); //destroys bullets after destroyTime seconds
+
+        //spins bullet 
+        float rotateAmount = degreesPerSec * Time.deltaTime; 
+        float curRotate = transform.localRotation.eulerAngles.z; 
+        transform.localRotation = Quaternion.Euler(new Vector3(0, 0, curRotate + rotateAmount));
+        
     }
 
-    // void OnCollisionEnter2D(Collision2D col)
-    // {
-    //     // if bullet hits player destroy bullet
-    //     if (col.gameObject.CompareTag("Player"))
-    //     {
-    //         Destroy(gameObject);
-    //     }
-    // }
    
     void OnTriggerEnter2D(Collider2D col)
     {
@@ -51,8 +52,5 @@ public class EnemyBullet : MonoBehaviour
             player.TakeDamage(damage);
             Destroy(gameObject);
         }
-
-        // can add bullet impact effect here
-        //Destroy(gameObject);
     }
 }

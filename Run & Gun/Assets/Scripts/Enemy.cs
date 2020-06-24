@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
 
     //bullet
     public GameObject projectile;
+    public float colDamage = 1;
 
     //death particles and damage effects
     public GameObject effect;
@@ -97,6 +98,12 @@ public class Enemy : MonoBehaviour
         temp.x -= lower;
         barTransform.localScale = temp;
 
+    }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.CompareTag("Player")) {
+            col.gameObject.GetComponent<Player>().TakeDamage(colDamage);
+        }
     }
 
 }

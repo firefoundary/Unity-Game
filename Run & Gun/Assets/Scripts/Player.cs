@@ -23,7 +23,6 @@ public class Player : MonoBehaviour
     public Sprite emptyHeart;
 
     //enemy collision
-    public float colDamage = 1;
     public float timeBtwDamage = 1;
     private bool isInvulnernable = false;
 
@@ -104,11 +103,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.CompareTag("Enemy")) {
-            TakeDamage(colDamage);
-        }
-    }
+    
 
 
 
