@@ -22,7 +22,10 @@ public class Player : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
-
+    //enemy collision
+    public float colDamage = 1;
+    public float timeBtwDamage = 1;
+    private bool isInvulnernable = false;
 
     void Start() {
         source = GetComponent<AudioSource>();
@@ -31,11 +34,13 @@ public class Player : MonoBehaviour
     void Update() {
 
         HealthBar();
-
     }
 
     public void TakeDamage(float damage)
     {	
+        if (isInvulnernable)
+            return;
+
         hurt = true;
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
@@ -58,10 +63,22 @@ public class Player : MonoBehaviour
 
     IEnumerator Flash() {
 
-        body.color = hurtColor;
-        yield return new WaitForSeconds(0.075f);
-        body.color = Color.white;
+        isInvulnernable = true;
+
+        //body.color = hurtColor;
+        body.color = new Color(1, 1, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        body.color = new Color(1, 1, 1, 1);
+        yield return new WaitForSeconds(0.1f);
+        body.color = new Color(1, 1, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        body.color = new Color(1, 1, 1, 1);
+
+        //body.color = Color.white;
         hurt = false;
+
+        yield return new WaitForSeconds(timeBtwDamage);
+        isInvulnernable = false;
 
     }
 
@@ -86,4 +103,26 @@ public class Player : MonoBehaviour
                 
         }
     }
+
+    void OnCollisionEnter2D(Collision2D col) {
+        if (col.gameObject.CompareTag("Enemy")) {
+            TakeDamage(colDamage);
+        }
+    }
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

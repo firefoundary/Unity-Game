@@ -71,6 +71,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
         else rb.velocity = new Vector2(0, rb.velocity.y);
 
+
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
 
@@ -128,12 +129,14 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isJumping", false);
             animator.SetBool("isJumping2", false);
         }
+        
     }
 
 
     //
     //HELPER FUNCTIONS
     //
+
 
     void Jump() {
         source.clip = jumpSound;
