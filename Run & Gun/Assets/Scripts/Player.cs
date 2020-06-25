@@ -11,10 +11,6 @@ public class Player : MonoBehaviour
     public GameObject hurtEffect;
     public CameraShake2 cameraShake;
 
-    //audio
-    public AudioClip hurtSound;
-    private AudioSource source;
-
     //health
     public float health = 10;
     public int numOfHearts; 
@@ -26,8 +22,10 @@ public class Player : MonoBehaviour
     public float timeBtwDamage = 1;
     private bool isInvulnernable = false;
 
+    //audio
+    public AudioSource damageSound;
+
     void Start() {
-        source = GetComponent<AudioSource>();
     }
 
     void Update() {
@@ -52,8 +50,8 @@ public class Player : MonoBehaviour
         hurt = true;
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
-        source.clip = hurtSound;
-        source.Play();        
+        
+        damageSound.Play();        
 
         StartCoroutine(Flash());
         

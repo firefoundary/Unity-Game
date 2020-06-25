@@ -11,6 +11,9 @@ public class WeaponScript : MonoBehaviour
     private float timeBtwShots;
     public float startTimeBtwShots;
 
+    //audio
+    public AudioSource shootSound;
+
     private PlayerMovement player;
 
     void Start() {
@@ -23,10 +26,11 @@ public class WeaponScript : MonoBehaviour
         
         if (timeBtwShots <= 0 && !player.dialogueFreeze) {
             if (Input.GetMouseButtonDown(0)) {
-                // bullet muzzle effect
-                // Instantiate(shotEffect, firePoint.position, shotEffect.transform.rotation);
+
+                shootSound.Play();
                 Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 timeBtwShots = startTimeBtwShots;
+
             }
          }
          else {

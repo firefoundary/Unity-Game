@@ -23,6 +23,10 @@ public class PlayerDash : MonoBehaviour
     private bool madeParticles = false;
     private bool canDash = true;
 
+    //audio
+    public AudioSource dashSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -57,16 +61,22 @@ public class PlayerDash : MonoBehaviour
             else {
                 if(direction == 1 && canDash) {
                     if(!madeParticles) {
-                        GameObject.Instantiate(dashParticles, transform.position, dashParticles.transform.rotation * Quaternion.Euler(0f, 180f, 0f));
+
+                        Instantiate(dashParticles, transform.position, dashParticles.transform.rotation * Quaternion.Euler(0f, 180f, 0f));
                         madeParticles = true;
+                        dashSound.Play();
+
                     }
                     rb.velocity = Vector2.left * dashSpeed;
                     StartCoroutine(coolDown());
                 }
                 else if (direction == 2 && canDash) {
                     if(!madeParticles) {
+
                         Instantiate(dashParticles, transform.position, dashParticles.transform.rotation);
                         madeParticles = true;
+                        dashSound.Play();
+                        
                     }
                     rb.velocity = Vector2.right * dashSpeed;
                     StartCoroutine(coolDown());
@@ -76,6 +86,8 @@ public class PlayerDash : MonoBehaviour
             }
         }      
     }
+
+
 
     IEnumerator coolDown() {
         yield return new WaitForSeconds(dashTime);

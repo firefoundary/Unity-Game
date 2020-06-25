@@ -9,7 +9,7 @@ public class CameraShake2 : MonoBehaviour
     public float waitSeconds = 0.05f;
     public float amount = 0.02f;
     
-    public CinemachineVirtualCamera camera;
+    public new CinemachineVirtualCamera camera;
     public GameObject player;
 
     void Update() {

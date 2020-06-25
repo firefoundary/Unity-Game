@@ -29,6 +29,9 @@ public class Enemy : MonoBehaviour
     private float lower;
     private float maxHealth;
 
+    //audio
+    public AudioSource hurtSound;
+
 
     void Start()
     {
@@ -65,15 +68,18 @@ public class Enemy : MonoBehaviour
     {	
         StartCoroutine(Flash());
 
+        hurtSound.Play();
 
         health -= damage;
         lower = damage / (float) maxHealth;
         SetBarSize();
 
-        Instantiate(hurtEffect, transform.position, Quaternion.identity);
-
         if (health <= 0)
             Die();
+
+        Instantiate(hurtEffect, transform.position, Quaternion.identity);
+
+        
     }
 
     void Die()

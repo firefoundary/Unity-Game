@@ -5,25 +5,25 @@ using UnityEngine;
 public class idleBehaviour : StateMachineBehaviour
 {
 
-    private float timer;
-    public float minTime;
-    public float maxTime;
-
+    private GameObject p;
+    private PlayerMovement player;
+    
     //start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       timer = Random.Range(minTime, maxTime);
+       p = GameObject.FindGameObjectWithTag("Player");
+       
     }
 
     //update
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       if (timer <= 0) {
-           animator.SetTrigger("Run");
-       }
-       else {
-           timer -= Time.deltaTime;
-       }
+        player = p.GetComponent<PlayerMovement>();
+
+        if (!player.dialogueFreeze) {
+            animator.SetTrigger("Start");
+        }
+            
     }
 
     //exit

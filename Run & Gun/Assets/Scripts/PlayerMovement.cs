@@ -35,9 +35,10 @@ public class PlayerMovement : MonoBehaviour
     private bool facingRight = true;
 
     //audio
-    public AudioClip landingSound;
-    public AudioClip jumpSound;
-    private AudioSource source;
+    // public AudioClip jumpSound;
+    
+    // private AudioSource source;
+    public AudioSource jumpSound;
 
     //dialogueFreeze
     public bool dialogueFreeze;
@@ -50,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         playerDash = GetComponent<PlayerDash>();
-        source = GetComponent<AudioSource>();
+        // source = GetComponent<AudioSource>();
         extraJumps = extraJumpsValue;
     }
 
@@ -139,8 +140,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     void Jump() {
-        source.clip = jumpSound;
-        source.Play();
+        jumpSound.Play();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);  // maintains horz velocity on jump
         extraJumps--;
 
@@ -165,8 +165,6 @@ public class PlayerMovement : MonoBehaviour
         if(isGrounded == true) {
             if (spawnDust == true) {
                 dust.Play();
-                source.clip = landingSound;
-                source.Play();
                 spawnDust = false;
             }
         } else {

@@ -14,6 +14,17 @@ public class BossHealth : MonoBehaviour
     public GameObject deathParticles;
 
     private float halfHealth;
+    private bool isAnger = false;
+
+    //lights change
+    public GameObject normalLights;
+    public GameObject angerLights;
+    public GameObject flash;
+
+    //music change
+    public GameObject BGM;
+    public GameObject newBGM;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,23 +45,47 @@ public class BossHealth : MonoBehaviour
 
         health -= damage;
 
-        if (health <= halfHealth)
-            GetComponent<Animator>().SetBool("isAnger", true);
+        // half HP events
+        if (!isAnger) {
+            if (health <= halfHealth) {
 
+                GetComponent<Animator>().SetBool("isAnger", true);
+                StartCoroutine(Transition());
+                isAnger = true;
+
+            }
+        }
         
         if (health <= 0) {
-            Die();
+            Defeated();
         }
     }
 
-    void Die() {
+    void Defeated() {
 
         Vector3 position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
-
+        GetComponent<Animator>().SetTrigger("isDefeat");
         Instantiate(deathParticles, position, Quaternion.identity);
-        Destroy(gameObject);
+
+        changeMusic();
 
     }
 
+    IEnumerator Transition() {
+        yield return new WaitForSeconds(1f);
+        flash.SetActive(true);
+
+        yield return new WaitForSeconds(0.15f);
+        normalLights.SetActive(true);
+        angerLights.SetActive(true);
+        
+        yield return new WaitForSeconds(3f);
+        flash.SetActive(false);
+    }
+
+    void changeMusic() {
+        BGM.SetActive(false);
+        newBGM.SetActive(true);
+    }
 
 }
