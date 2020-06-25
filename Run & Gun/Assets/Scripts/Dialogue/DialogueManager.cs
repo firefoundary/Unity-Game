@@ -21,8 +21,13 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue, bool freezePlayer)
     {
-        if (freezePlayer)
-            player.GetComponent<PlayerMovement>().dialogueFreeze = true;
+        if (freezePlayer) {
+            if (player.GetComponent<PlayerMovement>())
+                player.GetComponent<PlayerMovement>().dialogueFreeze = true;
+            else
+                player.GetComponent<TutorialMovement>().dialogueFreeze = true;
+        }
+            
 
         animator.SetBool("IsOpen", true);
         
@@ -45,7 +50,11 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == 0)
         {
-            player.GetComponent<PlayerMovement>().enabled = true;
+            if (player.GetComponent<PlayerMovement>())
+                player.GetComponent<PlayerMovement>().enabled = true;
+            else
+                player.GetComponent<TutorialMovement>().enabled = true;
+
             EndDialogue();
             return;
         }
@@ -69,7 +78,12 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("IsOpen", false);
-        player.GetComponent<PlayerMovement>().dialogueFreeze = false;
+        // player.GetComponent<PlayerMovement>().dialogueFreeze = false;
+        
+        if (player.GetComponent<PlayerMovement>())
+            player.GetComponent<PlayerMovement>().dialogueFreeze = false;
+        else
+            player.GetComponent<TutorialMovement>().dialogueFreeze = false;
     }
 
    

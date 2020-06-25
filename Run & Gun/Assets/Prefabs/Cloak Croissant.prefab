@@ -334,9 +334,10 @@ MonoBehaviour:
   hurt: 0
   hurtEffect: {fileID: 8086528507028459413, guid: cb44ecfb66736ff40a5fba60b6ac28cf,
     type: 3}
+  cameraShake: {fileID: 0}
   hurtSound: {fileID: 8300000, guid: b383b4e5ed26612408734136f4706d78, type: 3}
-  health: 5
-  numOfHearts: 5
+  health: 6
+  numOfHearts: 6
   hearts:
   - {fileID: 0}
   - {fileID: 0}
@@ -352,6 +353,7 @@ MonoBehaviour:
     type: 3}
   emptyHeart: {fileID: -2462698100037057672, guid: 27885471c3142c14199fe2934da4e1a6,
     type: 3}
+  timeBtwDamage: 1
 --- !u!114 &8708805066297005965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,6 +402,7 @@ MonoBehaviour:
   startDashTime: 0.12
   dashParticles: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
     type: 3}
+  dashIndicator: {fileID: 0}
 --- !u!114 &3579927183195958627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +436,8 @@ MonoBehaviour:
   throwForce: 14
   grenadePrefab: {fileID: 1372979764602273648, guid: ffc59a32e6f135947aa1abd6eccc6cf4,
     type: 3}
+  nadeIndicator: {fileID: 0}
+  startTimeBtwShots: 2
 --- !u!1 &8708805067912333182
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,9 +7,9 @@ public class Player : MonoBehaviour
 {
     public SpriteRenderer body;
     public Color hurtColor;
-
     public bool hurt = false;
     public GameObject hurtEffect;
+    public CameraShake2 cameraShake;
 
     //audio
     public AudioClip hurtSound;
@@ -40,6 +40,8 @@ public class Player : MonoBehaviour
         if (isInvulnernable)
             return;
 
+        StartCoroutine(cameraShake.Shake());
+
         health -= damage;
         if (health <= 0) {
             Die();
@@ -62,9 +64,7 @@ public class Player : MonoBehaviour
     {
         //can add death particles here
         gameObject.SetActive(false);
-
         FindObjectOfType<GameManager>().EndGame();
-
     }
 
     IEnumerator Flash() {

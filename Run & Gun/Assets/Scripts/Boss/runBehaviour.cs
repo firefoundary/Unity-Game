@@ -8,9 +8,7 @@ public class runBehaviour : StateMachineBehaviour
     public float attackRange;
 
     //charge
-    private float timerCharge;
-    public float minChargeTime;
-    public float maxChargeTime;
+    public float chargeRange;
 
     //shoot
     private float timerShoot;
@@ -22,8 +20,6 @@ public class runBehaviour : StateMachineBehaviour
     Boss boss;
 
 
-    
-
     //start
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -31,7 +27,6 @@ public class runBehaviour : StateMachineBehaviour
        rb = animator.GetComponent<Rigidbody2D>();
        boss = animator.GetComponent<Boss>();
 
-       timerCharge = Random.Range(minChargeTime, maxChargeTime);
        timerShoot = Random.Range(minShootTime, maxShootTime);
 
     }
@@ -51,10 +46,8 @@ public class runBehaviour : StateMachineBehaviour
         } 
 
         //charge
-        if (timerCharge <= 0)
+        if (Vector2.Distance(player.position, rb.position) > chargeRange)
            animator.SetTrigger("Charge");
-        else
-           timerCharge -= Time.deltaTime;
 
         //shoot
         if (timerShoot <= 0)

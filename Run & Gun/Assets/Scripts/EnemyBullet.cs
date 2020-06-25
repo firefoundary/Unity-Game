@@ -45,7 +45,7 @@ public class EnemyBullet : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        
+
         Player player = col.GetComponent<Player>();
         if (player != null)
         {

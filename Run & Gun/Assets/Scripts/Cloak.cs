@@ -18,6 +18,8 @@ public class Cloak : MonoBehaviour {
 
 	private Cinemachine.CinemachineVirtualCamera virtualCam;	
 
+    public GameObject portal;
+
     // Use this for initialization
     private void Start ()
     {
@@ -59,6 +61,7 @@ public class Cloak : MonoBehaviour {
 
     private void PickUp()
     {
+        portal.SetActive(true);
         Destroy(gameObject);
     }
 

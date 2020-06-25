@@ -33,6 +33,9 @@ public class TutorialMovement : MonoBehaviour
     public AudioClip jumpSound;
     private AudioSource source;
 
+    //dialogueFreeze
+    public bool dialogueFreeze;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +56,9 @@ public class TutorialMovement : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal");
 		
         //movement logic
-        rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+        if (!dialogueFreeze)
+            rb.velocity = new Vector2(moveInput * runSpeed, rb.velocity.y);
+        else rb.velocity = new Vector2(0, rb.velocity.y);
 
         //plays run animation
         animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));

@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerDash : MonoBehaviour
 {   
@@ -9,7 +11,10 @@ public class PlayerDash : MonoBehaviour
     public float cooldown;
     public float startDashTime;
     private float dashTime;
+
+    //visuals
     public GameObject dashParticles;
+    public GameObject dashIndicator;
 
     //private variables
     private int direction = 0;
@@ -75,7 +80,11 @@ public class PlayerDash : MonoBehaviour
     IEnumerator coolDown() {
         yield return new WaitForSeconds(dashTime);
         canDash = false;
+        dashIndicator.GetComponent<Image>().color = new Color (1,1,1, 0.2f);
+
         yield return new WaitForSeconds(cooldown);
         canDash = true;
+        dashIndicator.GetComponent<Image>().color = new Color (1,1,1, 0.8f);
+
     }
 }
