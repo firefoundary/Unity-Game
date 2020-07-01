@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI dialogueText;
     public Animator animator;
     public GameObject continueButton;
+    public GameObject bossButton;
     public GameObject player;
     private Queue<string> sentences;
     
@@ -19,15 +20,15 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue, bool freezePlayer)
+    public void StartDialogue(Dialogue dialogue, bool freezePlayer, bool boss)
     {
+
         if (freezePlayer) {
             if (player.GetComponent<PlayerMovement>())
                 player.GetComponent<PlayerMovement>().dialogueFreeze = true;
             else
                 player.GetComponent<TutorialMovement>().dialogueFreeze = true;
         }
-            
 
         animator.SetBool("IsOpen", true);
         
@@ -41,11 +42,15 @@ public class DialogueManager : MonoBehaviour
             
         }
 
-        DisplayNextSentence();
+        if (boss)
+            BOSSDisplayNextSentence();
+        else
+            DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
+
         continueButton.SetActive(false);
 
         if (sentences.Count == 0)
@@ -84,8 +89,57 @@ public class DialogueManager : MonoBehaviour
             player.GetComponent<PlayerMovement>().dialogueFreeze = false;
         else
             player.GetComponent<TutorialMovement>().dialogueFreeze = false;
+
     }
 
+
+    //
+    //BOSS DIALOGUE METHODS
+    //
+
+    public void BOSSDisplayNextSentence()
+    {
+        bossButton.SetActive(false);
+
+        if (sentences.Count == 0)
+        {
+            if (player.GetComponent<PlayerMovement>())
+                player.GetComponent<PlayerMovement>().enabled = true;
+            else
+                player.GetComponent<TutorialMovement>().enabled = true;
+
+            BOSSEndDialogue();
+            return;
+        }
+
+        string sentence = sentences.Dequeue();
+        StopAllCoroutines();
+        StartCoroutine(BOSSTypeSentence(sentence));
+    }
+    
+    IEnumerator BOSSTypeSentence(string sentence)
+    {
+        dialogueText.text = "";
+        foreach (char letter in sentence.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(0.01f);
+        }
+        bossButton.SetActive(true);
+    }
    
+    void BOSSEndDialogue()
+    {
+        FindObjectOfType<GameManager>().BossChoice();
+
+        animator.SetBool("IsOpen", false);
+        // player.GetComponent<PlayerMovement>().dialogueFreeze = false;
+        
+        if (player.GetComponent<PlayerMovement>())
+            player.GetComponent<PlayerMovement>().dialogueFreeze = false;
+        else
+            player.GetComponent<TutorialMovement>().dialogueFreeze = false;
+
+    }
  
 }

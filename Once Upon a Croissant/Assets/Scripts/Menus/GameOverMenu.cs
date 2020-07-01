@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
-    public static bool isPaused = false;
 
     public GameObject gameOverMenu;
 

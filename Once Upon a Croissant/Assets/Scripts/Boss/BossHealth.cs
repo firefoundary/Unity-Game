@@ -65,9 +65,9 @@ public class BossHealth : MonoBehaviour
 
     void Defeated() {
 
-        Vector3 position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
         GetComponent<Animator>().SetTrigger("isDefeat");
-        Instantiate(deathParticles, position, Quaternion.identity);
+        // Vector3 position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+        // Instantiate(deathParticles, position, Quaternion.identity);
 
         changeMusic();
 
@@ -90,6 +90,11 @@ public class BossHealth : MonoBehaviour
     void changeMusic() {
         BGM.SetActive(false);
         newBGM.SetActive(true);
+    }
+
+    public void particles() {
+        Vector3 position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Instantiate(deathParticles, position, Quaternion.identity);
     }
 
 }

@@ -6,10 +6,11 @@ public class FirstDialogue : MonoBehaviour
 {
     public Dialogue dialogue;
     public bool freezePlayer;
+    public bool boss;
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, freezePlayer);
+        FindObjectOfType<DialogueManager>().StartDialogue(dialogue, freezePlayer, boss);
     }
 
 }

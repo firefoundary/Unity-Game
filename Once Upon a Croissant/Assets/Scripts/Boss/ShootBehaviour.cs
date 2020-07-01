@@ -14,7 +14,8 @@ public class ShootBehaviour : StateMachineBehaviour
     // public float startTimeBtwShots;
     // private float timeBtwShots;
 
-    public float timer;
+    private float timer;
+    public float StartTimer;
 
 
 
@@ -27,6 +28,8 @@ public class ShootBehaviour : StateMachineBehaviour
         // bulletDirection = player.position - pos;
         // bulletDirection.z = 0;
         // bulletDirection.Normalize();
+
+        timer = StartTimer;
        
     }
 

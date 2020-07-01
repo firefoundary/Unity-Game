@@ -25,7 +25,12 @@ public class Player : MonoBehaviour
     //audio
     public AudioSource damageSound;
 
+    //hp item particles
+    public ParticleSystem healthParticles;
+    public AudioSource hpSound;
+
     void Start() {
+        healthParticles.Stop();
     }
 
     void Update() {
