@@ -18,7 +18,7 @@ public class BossChoice : MonoBehaviour
         bossChoiceUI.SetActive(false);
     }
 
-    public void Spare() {
+    public void Spare() { 
         Debug.Log("spared");
         GameObject.Find("Boss Baker").GetComponent<Animator>().SetTrigger("Spared");
         bossChoiceUI.SetActive(false);

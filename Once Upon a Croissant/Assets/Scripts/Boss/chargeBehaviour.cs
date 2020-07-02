@@ -36,6 +36,7 @@ public class chargeBehaviour : StateMachineBehaviour
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+
         if (rdyUpTime <= 0) {
             newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
@@ -43,8 +44,13 @@ public class chargeBehaviour : StateMachineBehaviour
         else
             rdyUpTime -= Time.deltaTime;
 
-        if (Vector2.Distance(rb.position, target) < 0.1)
+        if (Vector2.Distance(rb.position, target) < 0.1) {
             animator.SetTrigger("Run");
+            Debug.Log("trigger set");
+        }
+            
+
+
 
 
     }

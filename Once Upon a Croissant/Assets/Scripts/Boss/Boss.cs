@@ -13,6 +13,9 @@ public class Boss : MonoBehaviour
     public GameObject EggSpawner;
     public float eggsDuration;
 
+    //killed particles
+    public GameObject killedParticles;
+
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +54,10 @@ public class Boss : MonoBehaviour
         yield return new WaitForSeconds(eggsDuration);
         EggSpawner.SetActive(false);
 
+    }
+
+    public void KilledParticles() {
+        Instantiate(killedParticles, transform.position, Quaternion.identity);
     }
 
 
