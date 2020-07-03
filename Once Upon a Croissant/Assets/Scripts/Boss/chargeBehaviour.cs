@@ -46,7 +46,6 @@ public class chargeBehaviour : StateMachineBehaviour
 
         if (Vector2.Distance(rb.position, target) < 0.1) {
             animator.SetTrigger("Run");
-            Debug.Log("trigger set");
         }
             
 

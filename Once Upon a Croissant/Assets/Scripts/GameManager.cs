@@ -17,7 +17,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void BossChoice() {
-        Debug.Log("bosschoice function called");
         bossMenu.SetActive(true);
     }
 

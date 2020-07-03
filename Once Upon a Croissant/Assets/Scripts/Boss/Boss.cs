@@ -16,6 +16,8 @@ public class Boss : MonoBehaviour
     //killed particles
     public GameObject killedParticles;
 
+    public GameObject portal;
+
 
     // Start is called before the first frame update
     void Start()
@@ -56,9 +58,22 @@ public class Boss : MonoBehaviour
 
     }
 
+    //
+    //animation event functions
+    //
+
     public void KilledParticles() {
         Instantiate(killedParticles, transform.position, Quaternion.identity);
     }
 
+    public void PlayerTransform() {
+        GameObject.Find("Cloak Croissant").GetComponent<Animator>().SetTrigger("Transform");
+        gameObject.SetActive(false);
+    }
+
+    public void openPortal() {
+        portal.SetActive(true);
+        portal.GetComponentInChildren<Animator>().SetBool("boss", true);
+    }
 
 }

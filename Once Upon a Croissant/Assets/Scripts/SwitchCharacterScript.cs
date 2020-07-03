@@ -5,48 +5,31 @@ using UnityEngine;
 public class SwitchCharacterScript : MonoBehaviour {
 
     // referenses to controlled game objects
-    public GameObject avatar1, avatar2;
+    public GameObject player, otherPrefab;
 
-    // variable contains which avatar is on and active
-    int whichAvatarIsOn = 1;
+
+	private Cinemachine.CinemachineVirtualCamera virtualCam;	
+
 
     // Use this for initialization
     void Start () {
-
-        // enable first avatar and disable another one
-        avatar1.gameObject.SetActive (true);
-        avatar2.gameObject.SetActive (false);
+        virtualCam = GameObject.FindWithTag("VirtCam").GetComponent<Cinemachine.CinemachineVirtualCamera>();
     }
 
-    // public method to switch avatars by pressing UI button
-    public void SwitchAvatar()
-    {
+    public void changeSprite() 
+	{
+		var temp = player.transform.position;
+		otherPrefab.SetActive(true);
+		transform.position = otherPrefab.transform.position;
+ 		otherPrefab.transform.position = temp;
+		player.SetActive(false);	
 
-        // processing whichAvatarIsOn variable
-        switch (whichAvatarIsOn) {
+        changeCameraFocus();
+	}
 
-            // if the first avatar is on
-            case 1:
-
-                // then the second avatar is on now
-                whichAvatarIsOn = 2;
-
-                // disable the first one and anable the second one
-                avatar1.gameObject.SetActive (false);
-                avatar2.gameObject.SetActive (true);
-                break;
-
-            // if the second avatar is on
-            case 2:
-
-                // then the first avatar is on now
-                whichAvatarIsOn = 1;
-
-                // disable the second one and anable the first one
-                avatar1.gameObject.SetActive (true);
-                avatar2.gameObject.SetActive (false);
-                break;
-        }
-			
-    }
+    public void changeCameraFocus()
+	{
+		virtualCam.m_LookAt = otherPrefab.transform;
+		virtualCam.m_Follow = otherPrefab.transform;
+	}
 }

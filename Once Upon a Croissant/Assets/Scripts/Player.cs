@@ -29,6 +29,9 @@ public class Player : MonoBehaviour
     public ParticleSystem healthParticles;
     public AudioSource hpSound;
 
+    //animation particles
+    public GameObject transformParticles;
+
     void Start() {
         healthParticles.Stop();
     }
@@ -113,7 +116,18 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+    //
+    // animation events
+    //
+
+    public void transformPlayer() {
+        Instantiate(transformParticles, transform.position, Quaternion.identity);
+       
+        GetComponent<SwitchCharacterScript>().changeSprite();
+        GetComponent<SwitchCharacterScript>().changeCameraFocus();
+
+	
+    }
 
 
 

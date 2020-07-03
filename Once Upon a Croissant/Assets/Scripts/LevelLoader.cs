@@ -13,9 +13,17 @@ public class LevelLoader : MonoBehaviour
 	public float transitionTime = 1f;
 	private bool portalReady = false;
 
+	public bool bossSpared;
+
+
 	// Update is called once per frame
     void Update()
     {
+		if (portalReady && Input.GetKeyDown(KeyCode.E) && bossSpared) {
+			LoadSparedScene();
+			return;
+		}
+
 	    if (portalReady && Input.GetKeyDown(KeyCode.E))
 		    LoadNextLevel();
     }
@@ -54,4 +62,14 @@ public class LevelLoader : MonoBehaviour
 		//Load scene
 		SceneManager.LoadScene(levelIndex);
 	}
+
+	public void LoadSparedScene() {
+		Debug.Log("loaded spared scene");
+		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
+	}
+
+	public void SetSparedTrue() {
+		bossSpared = true;
+	}
+
 }
