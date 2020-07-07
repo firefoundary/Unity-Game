@@ -2125,8 +2125,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386900480}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -141.85, y: -6.8569, z: 36.45}
-  m_LocalScale: {x: 0.2680411, y: 1, z: 1}
+  m_LocalPosition: {x: -141.85, y: 8.73, z: 36.45}
+  m_LocalScale: {x: 0.2680411, y: 1.4810653, z: 1}
   m_Children: []
   m_Father: {fileID: 1160940557}
   m_RootOrder: 2
@@ -3028,7 +3028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9000003, y: 2.5300002, z: -10}
+  m_LocalPosition: {x: 3.9000003, y: 11.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3552,6 +3552,7 @@ MonoBehaviour:
     - All you have to do is let me wrap my arms around you, and you will feel like
       a whole new croissant
   freezePlayer: 1
+  boss: 0
 --- !u!61 &612449826
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5032,7 +5033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstDialogue: {fileID: 889368019}
-  delayTime: 0
+  delayTime: 0.6
 --- !u!114 &889368019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5055,6 +5056,7 @@ MonoBehaviour:
       bakers"
     - "...They don\u2019t deserve to be running their dinky bakery anyways.."
   freezePlayer: 1
+  boss: 0
 --- !u!61 &889368020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5322,6 +5324,7 @@ MonoBehaviour:
     sentences:
     - Yes,, keep coming to me,, I can smell your burntness get closer and closer,,
   freezePlayer: 0
+  boss: 0
 --- !u!61 &898343033
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6219,8 +6222,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 991451868}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -79.6, y: -6.856867, z: 36.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -79.6, y: 8.73, z: 36.45}
+  m_LocalScale: {x: 1, y: 1.4810653, z: 1}
   m_Children: []
   m_Father: {fileID: 1160940557}
   m_RootOrder: 1
@@ -7729,6 +7732,7 @@ MonoBehaviour:
     - "Don\u2019t you feel like a whole new croissant? You run faster and jump higher
       too!!!"
   freezePlayer: 1
+  boss: 0
 --- !u!1 &1146610630
 GameObject:
   m_ObjectHideFlags: 0
@@ -7987,7 +7991,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162067078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9000003, y: 2.5300002, z: -10}
+  m_LocalPosition: {x: 3.9000003, y: 11.26, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952803080}
@@ -8709,8 +8713,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1271839110}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.4, y: -6.856867, z: 36.45}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 18.4, y: 8.73, z: 36.45}
+  m_LocalScale: {x: 1, y: 1.4810653, z: 1}
   m_Children: []
   m_Father: {fileID: 1160940557}
   m_RootOrder: 0
@@ -8812,6 +8816,7 @@ MonoBehaviour:
   dialogueText: {fileID: 634247419}
   animator: {fileID: 856630774}
   continueButton: {fileID: 734486480}
+  bossButton: {fileID: 0}
   player: {fileID: 1266419476}
 --- !u!1 &1389664983
 GameObject:
@@ -9410,7 +9415,7 @@ PrefabInstance:
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.41
+      value: 36.17
       objectReference: {fileID: 0}
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
@@ -9465,7 +9470,7 @@ PrefabInstance:
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.3424
+      value: 0.9386836
       objectReference: {fileID: 0}
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
@@ -9640,6 +9645,7 @@ MonoBehaviour:
     sentences:
     - Press 'W' to jump, and double press it to double jump!
   freezePlayer: 0
+  boss: 0
 --- !u!61 &1583069047
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10602,8 +10608,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1795893583}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 112.31, y: -6.8569, z: 36.45}
-  m_LocalScale: {x: 0.9128873, y: 1, z: 1}
+  m_LocalPosition: {x: 112.31, y: 8.73, z: 36.45}
+  m_LocalScale: {x: 0.9128873, y: 1.4810653, z: 1}
   m_Children: []
   m_Father: {fileID: 1160940557}
   m_RootOrder: 3
@@ -12382,7 +12388,7 @@ PrefabInstance:
     - target: {fileID: 3777041960545575341, guid: 27e4cd910b1b53044bc979c020f4a397,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7
+      value: 10.43
       objectReference: {fileID: 0}
     - target: {fileID: 3777041960545575341, guid: 27e4cd910b1b53044bc979c020f4a397,
         type: 3}
