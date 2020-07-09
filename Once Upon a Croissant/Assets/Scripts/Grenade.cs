@@ -54,7 +54,8 @@ public class Grenade : MonoBehaviour
     void Explode () {
 
         // show effect
-        GameObject splash = Instantiate(splashEffect, transform.position, transform.rotation);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
+        GameObject splash = Instantiate(splashEffect, pos, transform.rotation);
         Destroy(splash, 10);
         Instantiate(explosionParticles, transform.position, transform.rotation);
         

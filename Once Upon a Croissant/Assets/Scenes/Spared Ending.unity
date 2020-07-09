@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 38901728}
   - component: {fileID: 38901727}
   m_Layer: 0
-  m_Name: Untitled-Artwork (23)_0
+  m_Name: umbrella
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,12 +277,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38901726}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -45.41, y: -0.06, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.2550697, y: 2.6616154, z: 20.754543}
   m_LocalScale: {x: 0.31268474, y: 0.31268474, z: 0.31268474}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1372844962}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &52942897
 PrefabInstance:
@@ -1716,7 +1716,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808026845}
   m_LocalRotation: {x: 0, y: 0, z: 0.5682747, w: 0.82283896}
-  m_LocalPosition: {x: -44.63, y: -1.35, z: 0}
+  m_LocalPosition: {x: -44.63, y: -1.35, z: -1}
   m_LocalScale: {x: -0.24516, y: 0.24516, z: 0.24516}
   m_Children:
   - {fileID: 1977835804}
@@ -2029,7 +2029,7 @@ GameObject:
   - component: {fileID: 1109678503}
   - component: {fileID: 1109678502}
   m_Layer: 0
-  m_Name: Untitled-Artwork (23)_2
+  m_Name: beach towel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2093,12 +2093,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1109678501}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -44.7, y: -1.39, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5.5450706, y: 1.3316153, z: 20.754543}
   m_LocalScale: {x: 0.36068282, y: 0.36068282, z: 0.36068282}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1372844962}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1127403243
 GameObject:
@@ -2193,7 +2193,7 @@ GameObject:
   - component: {fileID: 1127746324}
   - component: {fileID: 1127746323}
   m_Layer: 0
-  m_Name: Untitled-Artwork (23)_1
+  m_Name: drink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2257,12 +2257,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127746322}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.25, y: -0.41, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.09507, y: 2.3116152, z: 20.754543}
   m_LocalScale: {x: -0.466896, y: 0.466896, z: 0.466896}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1372844962}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1149365702
 GameObject:
@@ -2613,6 +2613,9 @@ Transform:
   m_Children:
   - {fileID: 187489877}
   - {fileID: 1344701174}
+  - {fileID: 1109678503}
+  - {fileID: 38901728}
+  - {fileID: 1127746324}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
