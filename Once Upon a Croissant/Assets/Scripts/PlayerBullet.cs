@@ -53,6 +53,14 @@ public class PlayerBullet : MonoBehaviour
             enemy.TakeDamage(damage);
             Destroy(gameObject);
         } 
+
+        //damage charge enemy
+        EnemyHealth chargeEnemy = col.GetComponent<EnemyHealth>();
+        if (chargeEnemy != null)
+        {
+            chargeEnemy.TakeDamage(damage);
+            Destroy(gameObject);
+        }
         
         BossHealth boss = col.GetComponent<BossHealth>();
         if (boss != null) 

@@ -607,6 +607,7 @@ MonoBehaviour:
     - 'I will guide you on how to use your abilities to your fullest in order to
       free your heavy heart >: )'
   freezePlayer: 1
+  boss: 0
 --- !u!61 &192465097
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1612,6 +1613,7 @@ MonoBehaviour:
       Try it on these bakers!
     - After, jump on that button to open the next stage
   freezePlayer: 1
+  boss: 0
 --- !u!61 &335506351
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3691,7 +3693,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3715,7 +3717,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.6, y: -4.77, z: -10}
+  m_LocalPosition: {x: -33.6, y: -4.687, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3807,6 +3809,7 @@ MonoBehaviour:
     - Try it out on this bad boi on the left, it can really save you if a bullet
       is coming and you can't dodge in time xD
   freezePlayer: 1
+  boss: 0
 --- !u!61 &528674162
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4522,7 +4525,7 @@ PrefabInstance:
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9
+      value: 5.8
       objectReference: {fileID: 0}
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
@@ -4593,6 +4596,41 @@ PrefabInstance:
         type: 3}
       propertyPath: lengthInSec
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 0.8584906
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.6114721
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0.8461396
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.7609469
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.9342737
+      objectReference: {fileID: 0}
+    - target: {fileID: 5501444836713230382, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 27.24
       objectReference: {fileID: 0}
     - target: {fileID: 8468900679097125696, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
@@ -4667,6 +4705,7 @@ MonoBehaviour:
       direction you walk in
     - Make the most of your double jumps and dash to make it across this space!
   freezePlayer: 1
+  boss: 0
 --- !u!61 &684609522
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4759,6 +4798,7 @@ MonoBehaviour:
     - Now you're ready to get some revenge on the homies who didn't see your worth
     - Go through this portal and slay sum papis
   freezePlayer: 1
+  boss: 0
 --- !u!61 &687697730
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6458,11 +6498,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620439350207392, guid: 42fc513ba3b20c643942adda24484b55, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.2574635
+      value: 12.3
       objectReference: {fileID: 0}
     - target: {fileID: 4620439350207392, guid: 42fc513ba3b20c643942adda24484b55, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 22.610115
+      value: 14.1
       objectReference: {fileID: 0}
     - target: {fileID: 4620439350207392, guid: 42fc513ba3b20c643942adda24484b55, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6691,6 +6731,7 @@ MonoBehaviour:
     - REMEMBER!!! you can take your time by wall sliding. You can wall slide by moving
       towards the wall!
   freezePlayer: 1
+  boss: 0
 --- !u!61 &1098619201
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6855,6 +6896,7 @@ MonoBehaviour:
     sentences:
     - Aim with your mouse and left click to shoot this BAKER BOI
   freezePlayer: 1
+  boss: 0
 --- !u!61 &1125381275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7155,7 +7197,7 @@ MonoBehaviour:
   m_Follow: {fileID: 240351119}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 5.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -7176,7 +7218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162067078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.6, y: -4.77, z: -10}
+  m_LocalPosition: {x: -33.6, y: -4.687, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952803080}
@@ -9320,6 +9362,7 @@ MonoBehaviour:
   dialogueText: {fileID: 504448365}
   animator: {fileID: 1781368520}
   continueButton: {fileID: 650606879}
+  bossButton: {fileID: 0}
   player: {fileID: 240351112}
 --- !u!1 &1380000973
 GameObject:
@@ -9691,17 +9734,17 @@ PrefabInstance:
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.82076305
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.38203096
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9528302
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -9827,17 +9870,17 @@ PrefabInstance:
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.82076305
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.38203096
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9528302
+      value: 0.7075472
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -11242,6 +11285,7 @@ MonoBehaviour:
     - Moving into walls will allow you to wall slide. Resetting your double jump
     - Jump from wall to wall to climb any cliff that comes your way :))
   freezePlayer: 1
+  boss: 0
 --- !u!61 &1668674141
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13166,6 +13210,7 @@ MonoBehaviour:
       is, then...
     - Kill the baker by bouncing your juicy butter nade eggsdee
   freezePlayer: 1
+  boss: 0
 --- !u!61 &1958295972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -13323,17 +13368,17 @@ PrefabInstance:
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.82076305
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.38203096
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9528302
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 3110823922980575945, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -13474,17 +13519,17 @@ PrefabInstance:
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.82076305
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.38203096
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_Color.b
-      value: 0.9528302
+      value: 0.70980394
       objectReference: {fileID: 0}
     - target: {fileID: 8517392242500243446, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -13658,6 +13703,7 @@ MonoBehaviour:
     - NOTICE under your hp bar, there are cooldown indicators for your abilities
     - Now,  you can jump down to the left for the next training!
   freezePlayer: 1
+  boss: 0
 --- !u!61 &2033865661
 BoxCollider2D:
   m_ObjectHideFlags: 0

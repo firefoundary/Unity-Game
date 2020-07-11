@@ -11,7 +11,7 @@ public class Patrol : MonoBehaviour
     public Transform groundDetection;
     public Transform wallDetection;
 
-    private bool movingRight = true;
+    public bool movingRight = false;
 
     // Start is called before the first frame update
     void Start()
@@ -28,11 +28,15 @@ public class Patrol : MonoBehaviour
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, groundDistance);
         if (!groundInfo.collider) {
             if(movingRight) {
-                transform.eulerAngles = new Vector3(0, 180, 0);
+                // transform.eulerAngles = new Vector3(0, 180, 0);
+                transform.Rotate(0, 180, 0);
                 movingRight = false;
+                GetComponent<ChargeEnemy>().isFlipped = !GetComponent<ChargeEnemy>().isFlipped;
             } else {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                // transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.Rotate(0, 180, 0);
                 movingRight = true;
+                GetComponent<ChargeEnemy>().isFlipped = !GetComponent<ChargeEnemy>().isFlipped;
             }
         }
 

@@ -34,7 +34,7 @@ TagManager:
   - Grenade
   - EnemyHitBox
   - Boss
-  - 
+  - ChargeBaker
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Boss
     uniqueID: 821221471
+    locked: 0
+  - name: Baker
+    uniqueID: 548461351
     locked: 0

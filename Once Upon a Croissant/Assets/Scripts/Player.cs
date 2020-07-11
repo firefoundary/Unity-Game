@@ -77,7 +77,6 @@ public class Player : MonoBehaviour
 
         isInvulnernable = true;
 
-        //body.color = hurtColor;
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);
         body.color = new Color(1, 1, 1, 1);
@@ -85,8 +84,12 @@ public class Player : MonoBehaviour
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);
         body.color = new Color(1, 1, 1, 1);
+        yield return new WaitForSeconds(0.1f);
+        body.color = new Color(1, 1, 1, 0);
+        yield return new WaitForSeconds(0.1f);
+        body.color = new Color(1, 1, 1, 1);
+        
 
-        //body.color = Color.white;
         hurt = false;
 
         yield return new WaitForSeconds(timeBtwDamage);

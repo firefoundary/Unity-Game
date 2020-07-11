@@ -23,12 +23,6 @@ public class Enemy : MonoBehaviour
     private float dist;
     private float timeBtwShots;
 
-    //healthbar
-    public GameObject healthBar;
-    private Transform barTransform;
-    private float lower;
-    private float maxHealth;
-
     //audio
     public AudioSource hurtSound;
 
@@ -37,10 +31,6 @@ public class Enemy : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         timeBtwShots = startTimeBtwShots;
-
-        barTransform = healthBar.transform;
-        // lower = 1 / (float) health;
-        maxHealth = health;
 
     }
  
@@ -71,8 +61,7 @@ public class Enemy : MonoBehaviour
         hurtSound.Play();
 
         health -= damage;
-        lower = damage / (float) maxHealth;
-        SetBarSize();
+
 
         if (health <= 0)
             Die();
@@ -96,14 +85,6 @@ public class Enemy : MonoBehaviour
         body.color = hurtColor;
         yield return new WaitForSeconds(0.075f);
         body.color = Color.white;
-    }
-
-    public void SetBarSize() {
-
-        Vector3 temp = barTransform.localScale;
-        temp.x -= lower;
-        barTransform.localScale = temp;
-
     }
 
 
