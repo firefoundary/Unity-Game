@@ -21,7 +21,7 @@ public class BakerWalk : StateMachineBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rb = animator.GetComponent<Rigidbody2D>();
 
-        animator.GetComponent<Patrol>().enabled = true;
+        animator.GetComponent<PatrolCharge>().enabled = true;
     }
 
 
@@ -36,7 +36,7 @@ public class BakerWalk : StateMachineBehaviour
 
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<Patrol>().enabled = false;
+        animator.GetComponent<PatrolCharge>().enabled = false;
         animator.ResetTrigger("Walk");
         animator.ResetTrigger("Charge");
        

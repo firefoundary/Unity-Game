@@ -75,10 +75,15 @@ public class Grenade : MonoBehaviour
             
             }
 
-            //damage enemy
+            //damage normal enemy
             Enemy enemy = nearbyObject.GetComponent<Enemy>();
             if (enemy != null)
                 enemy.TakeDamage(damage);
+
+            //damage charge enemy
+            EnemyHealth chargeEnemy = nearbyObject.GetComponent<EnemyHealth>();
+            if (chargeEnemy != null)
+                chargeEnemy.TakeDamage(damage);
 
             //damage boss
             BossHealth boss = nearbyObject.GetComponent<BossHealth>();

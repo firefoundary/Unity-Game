@@ -5345,6 +5345,11 @@ PrefabInstance:
       propertyPath: levelText
       value: 
       objectReference: {fileID: 1920720300}
+    - target: {fileID: 4158878848408968706, guid: 6a106dca519a975488890d839a77b81f,
+        type: 3}
+      propertyPath: transitionTime
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4158878848408968717, guid: 6a106dca519a975488890d839a77b81f,
         type: 3}
       propertyPath: m_Name
@@ -6113,6 +6118,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007741153}
   - component: {fileID: 1007741154}
+  - component: {fileID: 1007741155}
   m_Layer: 0
   m_Name: Player Baker
   m_TagString: Untagged
@@ -6159,6 +6165,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1007741155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007741152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0352c38a442815046b949d33b1d13dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portal: {fileID: 896790989}
 --- !u!1001 &1013426516
 PrefabInstance:
   m_ObjectHideFlags: 0

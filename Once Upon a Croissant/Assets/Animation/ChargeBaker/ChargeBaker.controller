@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa4f9bacbe22b8429f3807a6e28ac08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 5
   chargeOffSet: 0
   readyUpTime: 0.5
 --- !u!1101 &-1340860854817267379
@@ -79,13 +79,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Charge
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec6b1f7cd150094e8c745a40934021a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chargeRange: 5
+  chargeRange: 6
 --- !u!1102 &7097755725826397127
 AnimatorState:
   serializedVersion: 5

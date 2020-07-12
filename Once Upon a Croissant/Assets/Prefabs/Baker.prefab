@@ -171,7 +171,6 @@ MonoBehaviour:
     type: 3}
   body: {fileID: 5563062839666318096}
   hurtColor: {r: 0.9622642, g: 0.46751517, b: 0.46751517, a: 1}
-  healthBar: {fileID: 0}
   hurtSound: {fileID: 6170343035905421975}
 --- !u!95 &1679470259612215199
 Animator:
@@ -205,10 +204,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  groundDistance: 2
+  groundDistance: 1
   wallDistance: 0.01
   groundDetection: {fileID: 4247924907858351912}
   wallDetection: {fileID: 9086305264186905353}
+  movingRight: 0
 --- !u!50 &5736940717406101773
 Rigidbody2D:
   serializedVersion: 4
