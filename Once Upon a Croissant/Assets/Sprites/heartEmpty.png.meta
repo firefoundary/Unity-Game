@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 89a1745b4ce3ea243bc39d6cdb9e2eb7
+guid: 5a745289820e73a48b613237a3bdec9f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1564688358316481467
-    second: hearts_0
-  - first:
-      213: 5726080727020278575
-    second: hearts_1
+      213: -1184286366367508762
+    second: heartEmpty_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -93,43 +90,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hearts_0
+      name: heartEmpty_0
       rect:
         serializedVersion: 2
-        x: 430
-        y: 996
-        width: 425
-        height: 363
+        x: 965
+        y: 991
+        width: 445
+        height: 378
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbb94a595c3e6b510800000000000000
-      internalID: 1564688358316481467
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: hearts_1
-      rect:
-        serializedVersion: 2
-        x: 973
-        y: 996
-        width: 426
-        height: 363
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2311494510277f40800000000000000
-      internalID: 5726080727020278575
+      spriteID: 6e6935c03d1909fe0800000000000000
+      internalID: -1184286366367508762
       vertices: []
       indices: 
       edges: []

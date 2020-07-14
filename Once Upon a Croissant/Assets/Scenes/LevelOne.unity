@@ -684,7 +684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157871774}
   m_LocalRotation: {x: -0, y: -0, z: -0.3742608, w: 0.9273235}
-  m_LocalPosition: {x: 1.9137253, y: 4.3620505, z: 36.406803}
+  m_LocalPosition: {x: 1.9137253, y: 4.3620505, z: 27.7}
   m_LocalScale: {x: 4.128383, y: 4.392597, z: 3.4678}
   m_Children: []
   m_Father: {fileID: 1310621882}
@@ -731,7 +731,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 6012742235431164835, guid: 6f661f3425b902344b7a3596ea7b168a,
     type: 3}
-  m_Color: {r: 0.9811321, g: 0.94925046, b: 0.83766466, a: 0.29411766}
+  m_Color: {r: 0.9811321, g: 0.94925046, b: 0.83766466, a: 0.3137255}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1139,12 +1139,12 @@ PrefabInstance:
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: 52.33
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.5
+      value: -3.6
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
@@ -3841,7 +3841,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1999997, y: -16.587, z: -11}
+  m_LocalPosition: {x: 52.33, y: -2.6869998, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9454,7 +9454,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1162067078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1999997, y: -16.587, z: -11}
+  m_LocalPosition: {x: 52.33, y: -2.6869998, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1952803080}
@@ -16133,8 +16133,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: HPitem1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8531228507282388351, guid: 76085b1b1e5d9a94bb775cfc474d731e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76085b1b1e5d9a94bb775cfc474d731e, type: 3}
 --- !u!4 &636119100226351162 stripped
 Transform:

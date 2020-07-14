@@ -116,7 +116,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -163,6 +163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d22c16ede65ac640be0b0bb0cc91f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpFullNotif: {fileID: 3656900182162027688, guid: 40a995ca16dbb2445ab88641ad8139b5,
+    type: 3}
 --- !u!1 &1669670363181777288
 GameObject:
   m_ObjectHideFlags: 0

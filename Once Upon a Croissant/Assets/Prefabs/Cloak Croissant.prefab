@@ -253,7 +253,7 @@ MonoBehaviour:
   - {fileID: 0}
   fullHeart: {fileID: 1461790830086664752, guid: 27885471c3142c14199fe2934da4e1a6,
     type: 3}
-  emptyHeart: {fileID: -2462698100037057672, guid: 27885471c3142c14199fe2934da4e1a6,
+  emptyHeart: {fileID: -1184286366367508762, guid: 5a745289820e73a48b613237a3bdec9f,
     type: 3}
   timeBtwDamage: 1
   damageSound: {fileID: 0}

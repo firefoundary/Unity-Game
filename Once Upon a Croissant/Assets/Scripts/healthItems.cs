@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class healthItems : MonoBehaviour
 {
+    public GameObject hpFullNotif;
 
-    void OnCollisionEnter2D(Collision2D col) {
+
+    void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.CompareTag("Player")) 
         {
             Player player = col.gameObject.GetComponent<Player>();
@@ -15,6 +17,10 @@ public class healthItems : MonoBehaviour
                 player.healthParticles.Play();
                 player.hpSound.Play();
                 Destroy(gameObject);
+            } 
+            else 
+            {
+                Instantiate(hpFullNotif, player.transform.position, hpFullNotif.transform.rotation);
             }
         }
     }

@@ -9,6 +9,7 @@ public class chargeBehaviour : StateMachineBehaviour
     public float readyUpTime;
     private float rdyUpTime;
 
+
     Transform player;
     Rigidbody2D rb;
     Boss boss;
@@ -31,6 +32,8 @@ public class chargeBehaviour : StateMachineBehaviour
             target = new Vector2(player.position.x - chargeOffSet, rb.position.y);
 
         rdyUpTime = readyUpTime;
+
+        animator.GetComponent<BossSounds>().chargeSound();
 
     }
 
