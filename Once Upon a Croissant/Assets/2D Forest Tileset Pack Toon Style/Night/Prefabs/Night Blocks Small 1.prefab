@@ -1156,7 +1156,7 @@ Transform:
   m_GameObject: {fileID: 1508982201974028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.859993, y: 8.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0996875, z: 1}
   m_Children: []
   m_Father: {fileID: 4320236571357882}
   m_RootOrder: 10
@@ -1270,6 +1270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4320236571357882}
   - component: {fileID: 61422936774757226}
+  - component: {fileID: 1839024941406212341}
   m_Layer: 9
   m_Name: Night Blocks Small 1
   m_TagString: Ground
@@ -1332,6 +1333,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22.15097, y: 13.492825}
   m_EdgeRadius: 0
+--- !u!95 &1839024941406212341
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652841170038268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 062ba7f5e67c546429224889d1f66d05, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1695081129947928
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1379,7 @@ Transform:
   m_GameObject: {fileID: 1695081129947928}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.84000397, y: 8.39, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.0996875, z: 1}
   m_Children: []
   m_Father: {fileID: 4320236571357882}
   m_RootOrder: 9
