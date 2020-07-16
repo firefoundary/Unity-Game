@@ -9,12 +9,19 @@ using UnityEngine.Playables;
 public class CutScene : MonoBehaviour
 {
     public PlayableAsset cutscene;
+    public bool restartGame;
 
     // Start is called before the first frame update
     void Start()
     {
         float duration = (float) cutscene.duration;
-		Invoke("LoadNextLevel", duration);
+
+        if (restartGame) {
+            Invoke("loopGame", duration);
+            return;
+        } 
+        else
+		    Invoke("LoadNextLevel", duration);
     }
 
 
@@ -22,4 +29,10 @@ public class CutScene : MonoBehaviour
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
+
+    public void loopGame()
+	{
+		SceneManager.LoadScene(0);
+	}
+
 }
