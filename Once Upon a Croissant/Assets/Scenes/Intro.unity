@@ -495,6 +495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 102460361}
   - component: {fileID: 102460362}
+  - component: {fileID: 102460363}
   m_Layer: 0
   m_Name: NIght Mountain Close_1
   m_TagString: Untagged
@@ -571,6 +572,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &102460363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102460360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.3
 --- !u!4 &108959821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4571372410976698, guid: 2876e378d7a1ce34096f1fd144d468fa,
@@ -1032,11 +1047,26 @@ PrefabInstance:
       propertyPath: dashSound
       value: 
       objectReference: {fileID: 1918245737}
+    - target: {fileID: 2349249784208775942, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3579927183195958627, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 908469919}
+    - target: {fileID: 3579927183195958627, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450473016587122618, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005956, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_Enabled
@@ -1764,7 +1794,7 @@ Transform:
   - {fileID: 908469918}
   - {fileID: 125465903}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &358578047 stripped
 Transform:
@@ -2156,7 +2186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408324454}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 88.74, y: -20.18, z: 14.643127}
+  m_LocalPosition: {x: 91.32, y: -20.18, z: 14.643127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1258815044}
@@ -2255,8 +2285,9 @@ GameObject:
   m_Component:
   - component: {fileID: 434134148}
   - component: {fileID: 434134147}
+  - component: {fileID: 434134149}
   m_Layer: 0
-  m_Name: BGM
+  m_Name: BG Music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2271,11 +2302,12 @@ AudioSource:
   m_GameObject: {fileID: 434134146}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 500dcd62b8f9d254eab93be8001f6c70,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 4f13ab42b2c0a2e4a86895eda9a2d08b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.548
-  m_Pitch: 0.4
+  m_Pitch: 0.45
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -2370,8 +2402,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434134149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434134146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5eaff095ff9fc43972e42fb2cfca50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &443968270 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4620439350207392, guid: 42fc513ba3b20c643942adda24484b55,
@@ -2990,6 +3034,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9911f7b5d7a5ab9489ad33d2ccaabf74, type: 3}
+--- !u!1 &581413675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1057089286508100, guid: 9911f7b5d7a5ab9489ad33d2ccaabf74,
+    type: 3}
+  m_PrefabInstance: {fileID: 581413674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &581413676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581413675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.26
 --- !u!1 &586165083
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,6 +3064,7 @@ GameObject:
   m_Component:
   - component: {fileID: 586165084}
   - component: {fileID: 586165085}
+  - component: {fileID: 586165086}
   m_Layer: 0
   m_Name: NIght Mountains Far (1)
   m_TagString: Untagged
@@ -3072,6 +3137,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &586165086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586165083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.3
 --- !u!1 &600796700
 GameObject:
   m_ObjectHideFlags: 0
@@ -3458,6 +3537,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2876e378d7a1ce34096f1fd144d468fa, type: 3}
+--- !u!1 &623308058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1962506149791220, guid: 2876e378d7a1ce34096f1fd144d468fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 623308057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &623308059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623308058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.27
 --- !u!1 &626999400
 GameObject:
   m_ObjectHideFlags: 0
@@ -3959,6 +4058,7 @@ GameObject:
   m_Component:
   - component: {fileID: 702263997}
   - component: {fileID: 702263998}
+  - component: {fileID: 702263999}
   m_Layer: 0
   m_Name: NIght Mountains Far (3)
   m_TagString: Untagged
@@ -4033,6 +4133,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &702263999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702263996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.3
 --- !u!1 &714755085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5755,6 +5869,7 @@ GameObject:
   m_Component:
   - component: {fileID: 985182127}
   - component: {fileID: 985182128}
+  - component: {fileID: 985182129}
   m_Layer: 0
   m_Name: NIght Hills CLose
   m_TagString: Untagged
@@ -5830,6 +5945,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &985182129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 985182126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.25
 --- !u!1 &991451868
 GameObject:
   m_ObjectHideFlags: 0
@@ -6072,6 +6201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000380376}
   - component: {fileID: 1000380377}
+  - component: {fileID: 1000380378}
   m_Layer: 0
   m_Name: NIght Ground Close
   m_TagString: Untagged
@@ -6144,6 +6274,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1000380378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000380375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.2
 --- !u!1 &1002876292
 GameObject:
   m_ObjectHideFlags: 0
@@ -7166,6 +7310,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1502b06b8d746c440b2309ab5e0b5eef, type: 3}
+--- !u!1 &1110527528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1602977051313384, guid: 1502b06b8d746c440b2309ab5e0b5eef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1110527527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1110527529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110527528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.21
 --- !u!1 &1124063739
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,7 +7354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1124063739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30.362795, y: 5.7446804, z: 5.2943945}
+  m_LocalPosition: {x: 30.362795, y: 5.74468, z: 5.2943935}
   m_LocalScale: {x: 0.32987493, y: 0.32987493, z: 0.32987493}
   m_Children:
   - {fileID: 1000380376}
@@ -8054,13 +8218,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1258815043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.313305, y: 11.066044, z: -82.88732}
+  m_LocalPosition: {x: -24.313305, y: 11.066044, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1446447788}
   - {fileID: 408324455}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1265003017 stripped
 Transform:
@@ -8466,7 +8630,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446447787}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.07, y: -19.11, z: 14.643127}
+  m_LocalPosition: {x: 24.31, y: -19.11, z: 14.643127}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1258815044}
@@ -8801,6 +8965,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1516984978}
   - component: {fileID: 1516984979}
+  - component: {fileID: 1516984980}
   m_Layer: 0
   m_Name: Ground Close (2)
   m_TagString: Untagged
@@ -8872,6 +9037,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1516984980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1516984977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.2
 --- !u!1001 &1527589497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8917,7 +9096,7 @@ PrefabInstance:
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4860748021659717600, guid: 62eaff51a5aec4948b5c8e0d9de75f1e,
         type: 3}
@@ -9643,6 +9822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1753886534}
   - component: {fileID: 1753886535}
+  - component: {fileID: 1753886536}
   m_Layer: 0
   m_Name: Mountains Far (2)
   m_TagString: Untagged
@@ -9714,6 +9894,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1753886536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753886533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.3
 --- !u!1 &1777684150
 GameObject:
   m_ObjectHideFlags: 0
@@ -10612,6 +10806,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1982165087}
   - component: {fileID: 1982165088}
+  - component: {fileID: 1982165089}
   m_Layer: 0
   m_Name: 'NIght Mountains Close '
   m_TagString: Untagged
@@ -10685,6 +10880,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1982165089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1982165086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 519420028}
+  parallaxEffect: 0.3
 --- !u!1 &1983676842
 GameObject:
   m_ObjectHideFlags: 0

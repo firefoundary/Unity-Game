@@ -76,4 +76,32 @@ public class Boss : MonoBehaviour
         portal.GetComponentInChildren<Animator>().SetBool("boss", true);
     }
 
+    public void freezePlayer() {
+        //disable palyer movements during ending
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+        player.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+        player.GetComponent<Animator>().SetFloat("Speed", 0);
+        player.GetComponent<PlayerMovement>().enabled = false;
+        player.GetComponent<PlayerDash>().enabled = false;
+        player.GetComponent<WeaponScript>().enabled = false;
+        player.GetComponent<GrenadeThrower>().enabled = false;
+
+        Debug.Log("froze player");
+
+    }
+
+    public void unfreezePlayer() {
+        //re-enable player movements
+        GameObject player = GameObject.Find("Cloak Croissant");
+
+        player.GetComponent<PlayerMovement>().enabled = true;
+        player.GetComponent<PlayerDash>().enabled = true;
+        player.GetComponent<WeaponScript>().enabled = true;
+        player.GetComponent<GrenadeThrower>().enabled = true;
+
+        Debug.Log("unfroze player");
+
+    }
+
 }

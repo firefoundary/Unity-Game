@@ -103,11 +103,6 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == 0)
         {
-            if (player.GetComponent<PlayerMovement>())
-                player.GetComponent<PlayerMovement>().enabled = true;
-            else
-                player.GetComponent<TutorialMovement>().enabled = true;
-
             BOSSEndDialogue();
             return;
         }
@@ -134,7 +129,7 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("IsOpen", false);
         // player.GetComponent<PlayerMovement>().dialogueFreeze = false;
-        
+
         if (player.GetComponent<PlayerMovement>())
             player.GetComponent<PlayerMovement>().dialogueFreeze = false;
         else

@@ -12,15 +12,12 @@ public class Parallax : MonoBehaviour
     void Start()
     {
         startPosX = transform.position.x;
-        startPosY = transform.position.y;
-        length = GetComponent<SpriteRenderer>().bounds.size.x;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         float distX = (cam.transform.position.x * parallaxEffect);
-        float distY = (cam.transform.position.y * parallaxEffect);
-        transform.position = new Vector3(startPosX + distX, startPosY + distY, transform.position.z);
+        transform.position = new Vector3(startPosX + distX, transform.position.y, transform.position.z);
     }
 }
