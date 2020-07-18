@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 2349249784208775942}
   - component: {fileID: 3579927183195958627}
   - component: {fileID: 7450473016587122618}
+  - component: {fileID: 1323250388924716926}
   m_Layer: 0
   m_Name: Cloak Croissant
   m_TagString: Player
@@ -261,6 +262,7 @@ MonoBehaviour:
   hpSound: {fileID: 0}
   transformParticles: {fileID: 8086528507028459413, guid: a64d9db14b71e7c4d93d4bb609d8fe49,
     type: 3}
+  camera: {fileID: 0}
 --- !u!114 &8708805066297005965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,6 +291,7 @@ MonoBehaviour:
   spawnDust: 0
   animator: {fileID: 8708805066297005958}
   rb: {fileID: 0}
+  facingRight: 1
   jumpSound: {fileID: 8300000, guid: 4ce8e573d6eea35418e4a19ea81aaf4f, type: 3}
   dialogueFreeze: 0
 --- !u!114 &2349249784208775942
@@ -346,6 +349,24 @@ MonoBehaviour:
     type: 3}
   nadeIndicator: {fileID: 0}
   startTimeBtwShots: 2
+--- !u!114 &1323250388924716926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8708805066297005964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbb37cc8636f7eb448edc6f2af334dae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changeTime: 0.1
+  freezeTime: 0.4
+  hitEffect: {fileID: 8086528507028459413, guid: ad365be34be54164fb1cef214b362e92,
+    type: 3}
+  hitEffect2: {fileID: 8086528507028459413, guid: 9e3f67d5177a2b946b75df44d071c58d,
+    type: 3}
 --- !u!1 &8708805067912333182
 GameObject:
   m_ObjectHideFlags: 0
