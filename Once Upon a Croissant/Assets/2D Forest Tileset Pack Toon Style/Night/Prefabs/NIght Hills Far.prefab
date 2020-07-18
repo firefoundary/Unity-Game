@@ -334,6 +334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4571372410976698}
   - component: {fileID: 212253627132683584}
+  - component: {fileID: 8909737988733982114}
   m_Layer: 0
   m_Name: NIght Hills Far
   m_TagString: Untagged
@@ -409,3 +410,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8909737988733982114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962506149791220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.39
+  yAxis: 0

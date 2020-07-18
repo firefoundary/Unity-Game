@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8215328736782455293}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 3.103, y: -2.067, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.23644847, y: 0.23644847, z: 0.23644847}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,8 +74,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6f0f4964c177019448768dcc6b312393, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: -4654852555892460981, guid: 56cab517c77ae9244b6560b7a3a2584b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -119,9 +120,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.042396888, y: -0.06360004}
   serializedVersion: 2
-  m_Radius: 0.145
+  m_Radius: 0.6052744
 --- !u!114 &2301253262119801745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +139,7 @@ MonoBehaviour:
   bulletSpeed: 7
   destroyTime: 5
   damage: 1
+  degreesPerSec: 360
 --- !u!96 &9101529071909559095
 TrailRenderer:
   serializedVersion: 2
@@ -181,7 +183,7 @@ TrailRenderer:
   m_Time: 0.4
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 0.096950576
+    widthMultiplier: 0.14
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -208,11 +210,11 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.8867924, g: 0.18823427, b: 0.18823427, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
-      key2: {r: 0, g: 0, b: 0, a: 0}
-      key3: {r: 0, g: 0, b: 0, a: 0}
-      key4: {r: 0, g: 0, b: 0, a: 0}
+      key0: {r: 0.8196079, g: 0.8078432, b: 0.6901961, a: 1}
+      key1: {r: 1, g: 1, b: 1, a: 0.9372549}
+      key2: {r: 0, g: 0, b: 0, a: 0.907675}
+      key3: {r: 0, g: 0, b: 0, a: 0.90588236}
+      key4: {r: 0, g: 0, b: 0, a: 0.6039216}
       key5: {r: 0, g: 0, b: 0, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
@@ -225,16 +227,16 @@ TrailRenderer:
       ctime6: 0
       ctime7: 0
       atime0: 0
-      atime1: 65535
-      atime2: 0
-      atime3: 0
-      atime4: 0
-      atime5: 0
+      atime1: 30647
+      atime2: 47802
+      atime3: 48380
+      atime4: 57054
+      atime5: 65535
       atime6: 0
       atime7: 0
       m_Mode: 0
       m_NumColorKeys: 2
-      m_NumAlphaKeys: 2
+      m_NumAlphaKeys: 6
     numCornerVertices: 0
     numCapVertices: 0
     alignment: 0
