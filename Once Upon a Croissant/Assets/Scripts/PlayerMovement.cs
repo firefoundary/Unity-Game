@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     //sprite characteristics
     public Animator animator;
     public Rigidbody2D rb;
-    private bool facingRight = true;
+    public bool facingRight = true;
     
     // private AudioSource source;
     public AudioSource jumpSound;

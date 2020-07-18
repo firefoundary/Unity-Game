@@ -32,6 +32,9 @@ public class Player : MonoBehaviour
     //animation particles
     public GameObject transformParticles;
 
+    //test
+    public new CameraShakeBrackeys camera;
+
     void Start() {
         healthParticles.Stop();
     }
@@ -46,17 +49,21 @@ public class Player : MonoBehaviour
         if (isInvulnernable)
             return;
 
-        StartCoroutine(cameraShake.Shake());
+        GetComponent<TimeStop>().StopTime();
+
+        // StartCoroutine(cameraShake.Shake());
+        StartCoroutine(camera.Shake());
 
         health -= damage;
         if (health <= 0) {
+            HealthBar();
             Die();
             return;
         }
             
 
         hurt = true;
-        Instantiate(hurtEffect, transform.position, Quaternion.identity);
+        // Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
         
         damageSound.Play();        
@@ -69,6 +76,7 @@ public class Player : MonoBehaviour
  void Die()
     {
         //can add death particles here
+        Time.timeScale = 1f;
         gameObject.SetActive(false);
         FindObjectOfType<GameManager>().EndGame();
     }
@@ -76,6 +84,8 @@ public class Player : MonoBehaviour
     IEnumerator Flash() {
 
         isInvulnernable = true;
+
+        yield return new WaitForSeconds(0.1f);
 
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);

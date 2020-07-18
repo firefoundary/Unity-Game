@@ -19,12 +19,13 @@ public class PlayerDash : MonoBehaviour
     //private variables
     private int direction = 0;
     private Rigidbody2D rb;
-    private float moveInput;
+    private bool facingRight;
     private bool madeParticles = false;
     private bool canDash = true;
 
     //audio
     public AudioSource dashSound;
+
 
 
     // Start is called before the first frame update
@@ -35,7 +36,7 @@ public class PlayerDash : MonoBehaviour
     }
 
     void Update() {
-        moveInput = GetComponent<PlayerMovement>().moveInput;
+        facingRight = GetComponent<PlayerMovement>().facingRight;
     }
 
     public void Dash() {
@@ -43,9 +44,9 @@ public class PlayerDash : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.LeftShift)) 
             {
-                if(moveInput < 0)
+                if(!facingRight)
                     direction = 1;
-                else if (moveInput > 0)
+                else if (facingRight)
                     direction = 2;
             }  
         } 
