@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4353565999251302}
   - component: {fileID: 212559708334822968}
+  - component: {fileID: 7023444579646625566}
   m_Layer: 0
   m_Name: NIght Ground Far
   m_TagString: Untagged
@@ -164,6 +165,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7023444579646625566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602977051313384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.21
+  yAxis: 0
 --- !u!1 &1719275423680908
 GameObject:
   m_ObjectHideFlags: 0

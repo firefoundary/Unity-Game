@@ -253,6 +253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4797417351949932}
   - component: {fileID: 212448168260378686}
+  - component: {fileID: 6813610434987060258}
   m_Layer: 0
   m_Name: NIght Ground Close
   m_TagString: Untagged
@@ -327,3 +328,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6813610434987060258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1632627014774034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 456712fca8b003348b8723529aa2c10f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  parallaxEffect: 0.2
+  yAxis: 0
