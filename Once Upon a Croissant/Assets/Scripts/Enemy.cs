@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour
 
     //death particles and damage effects
     public GameObject effect;
-    public GameObject bloodSplash;
     public GameObject hurtEffect;
     public SpriteRenderer body;
     public Color hurtColor;
@@ -77,7 +76,6 @@ public class Enemy : MonoBehaviour
 
         // death particles
         Instantiate(effect, position, Quaternion.identity);
-        Instantiate(bloodSplash, position, Quaternion.identity);
         Destroy(gameObject);
     }
     
