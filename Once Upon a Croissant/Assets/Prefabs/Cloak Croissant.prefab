@@ -240,6 +240,8 @@ MonoBehaviour:
     type: 3}
   hitEffect2: {fileID: 8086528507028459413, guid: 9e3f67d5177a2b946b75df44d071c58d,
     type: 3}
+  deathParticles: {fileID: 8086528507028459413, guid: aa93f9d203d352a43867357b324648f5,
+    type: 3}
   health: 6
   numOfHearts: 6
   hearts:

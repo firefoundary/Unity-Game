@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
+        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
 
         // death particles
         Instantiate(effect, position, Quaternion.identity);

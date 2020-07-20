@@ -72,6 +72,7 @@ public class Player : MonoBehaviour
 
     IEnumerator Die() 
     {
+        Debug.Log("called die");
         StartCoroutine(camera.Shake(1f, 0.17f));
         GetComponent<PlayerMovement>().enabled = false;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -85,6 +86,11 @@ public class Player : MonoBehaviour
         Time.timeScale = 1f;
         gameObject.SetActive(false);
         FindObjectOfType<GameManager>().EndGame();
+        
+    }
+
+    public void dieHelper() {
+        StartCoroutine(Die());
     }
 
 
@@ -97,11 +103,11 @@ public class Player : MonoBehaviour
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);
         body.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);
         body.color = new Color(1, 1, 1, 1);
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         body.color = new Color(1, 1, 1, 0);
         yield return new WaitForSeconds(0.1f);
         body.color = new Color(1, 1, 1, 1);
@@ -145,8 +151,6 @@ public class Player : MonoBehaviour
        
         GetComponent<SwitchCharacterScript>().changeSprite();
         GetComponent<SwitchCharacterScript>().changeCameraFocus();
-
-	
     }
 
 

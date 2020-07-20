@@ -4,23 +4,22 @@ using UnityEngine;
 
 public class DestroyPillar : MonoBehaviour
 {
-    public GameObject pillar;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+   
+    public bool grenadeBreakable;
+    public bool onEnemyDeath;
+    public GameObject enemy;
+
+    void Update() {
+        if (onEnemyDeath) {
+            if (!enemy)
+                Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnCollisionEnter2D(Collision2D col)
     {
-
-    }
-
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.gameObject.tag == "Player") {
-            Destroy(pillar);
+        if (col.gameObject.tag == "grenade" && grenadeBreakable) {
+            col.gameObject.GetComponent<Grenade>().Explode();
             Destroy(gameObject);
         }
     }

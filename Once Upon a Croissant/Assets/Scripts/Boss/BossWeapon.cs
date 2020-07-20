@@ -19,6 +19,10 @@ public class BossWeapon : MonoBehaviour
 
     }
 
+    public void increaseAttackRange() {
+        attackRange = 1.9f;
+    }
+
     
     void OnDrawGizmosSelected() {
         Gizmos.color = Color.red;

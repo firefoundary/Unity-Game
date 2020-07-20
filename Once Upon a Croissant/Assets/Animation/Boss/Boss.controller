@@ -296,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630cf14c2ae79f340be019092f0b9593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 14
   chargeOffSet: 3
   readyUpTime: 0.5
 --- !u!114 &-5160033482410556620
@@ -580,10 +580,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  attackRange: 2.5
-  chargeRange: 7
-  minShootTime: 2
-  maxShootTime: 4
+  attackRange: 3
+  chargeRange: 5
+  minShootTime: 1
+  maxShootTime: 2.25
 --- !u!1101 &-428333748408624076
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1103,8 +1103,8 @@ MonoBehaviour:
   speed: 4
   attackRange: 2
   chargeRange: 7
-  minShootTime: 3
-  maxShootTime: 4
+  minShootTime: 2
+  maxShootTime: 3
 --- !u!1102 &6578431846961002172
 AnimatorState:
   serializedVersion: 5

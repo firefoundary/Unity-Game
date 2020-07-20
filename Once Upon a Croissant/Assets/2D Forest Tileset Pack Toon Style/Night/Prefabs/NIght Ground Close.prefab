@@ -341,5 +341,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  parallaxEffect: 0.2
+  parallaxEffect: 0.3
   yAxis: 0

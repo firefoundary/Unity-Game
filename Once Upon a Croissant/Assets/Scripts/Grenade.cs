@@ -51,7 +51,7 @@ public class Grenade : MonoBehaviour
         }
     }
 
-    void Explode () {
+    public void Explode () {
 
         // show effect
         Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z + 1);
