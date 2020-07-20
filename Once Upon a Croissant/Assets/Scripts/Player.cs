@@ -8,8 +8,8 @@ public class Player : MonoBehaviour
     public SpriteRenderer body;
     public Color hurtColor;
     public bool hurt = false;
-    public GameObject hurtEffect;
-    public CameraShake2 cameraShake;
+
+    public GameObject hitEffect, hitEffect2, deathParticles;
 
     //health
     public float health = 10;
@@ -51,35 +51,42 @@ public class Player : MonoBehaviour
 
         GetComponent<TimeStop>().StopTime();
 
-        // StartCoroutine(cameraShake.Shake());
-        StartCoroutine(camera.Shake());
-
         health -= damage;
         if (health <= 0) {
             HealthBar();
-            Die();
+            StartCoroutine(Die());
             return;
         }
-            
 
-        hurt = true;
-        // Instantiate(hurtEffect, transform.position, Quaternion.identity);
+        StartCoroutine(camera.Shake(0.2f, 0.06f));
+        Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Vector3 pos = new Vector3 (transform.position.x, transform.position.y, hitEffect2.transform.position.z);
+        Instantiate(hitEffect2, pos, Quaternion.identity);
 
-        
+        hurt = true; 
         damageSound.Play();        
-
         StartCoroutine(Flash());
         
 
     }
 
- void Die()
+    IEnumerator Die() 
     {
-        //can add death particles here
+        StartCoroutine(camera.Shake(1f, 0.17f));
+        GetComponent<PlayerMovement>().enabled = false;
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true;
+        rb.velocity = Vector2.zero;
+
+        Instantiate(deathParticles, transform.position, Quaternion.identity);
+        //death animation here
+        yield return new WaitForSeconds(1f);
+
         Time.timeScale = 1f;
         gameObject.SetActive(false);
         FindObjectOfType<GameManager>().EndGame();
     }
+
 
     IEnumerator Flash() {
 

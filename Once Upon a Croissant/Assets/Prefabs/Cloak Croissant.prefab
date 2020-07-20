@@ -236,9 +236,10 @@ MonoBehaviour:
   body: {fileID: 8708805066297005960}
   hurtColor: {r: 0.9607843, g: 0.46666667, b: 0.46666667, a: 1}
   hurt: 0
-  hurtEffect: {fileID: 8086528507028459413, guid: cb44ecfb66736ff40a5fba60b6ac28cf,
+  hitEffect: {fileID: 8086528507028459413, guid: ad365be34be54164fb1cef214b362e92,
     type: 3}
-  cameraShake: {fileID: 0}
+  hitEffect2: {fileID: 8086528507028459413, guid: 9e3f67d5177a2b946b75df44d071c58d,
+    type: 3}
   health: 6
   numOfHearts: 6
   hearts:
@@ -363,10 +364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeTime: 0.1
   freezeTime: 0.4
-  hitEffect: {fileID: 8086528507028459413, guid: ad365be34be54164fb1cef214b362e92,
-    type: 3}
-  hitEffect2: {fileID: 8086528507028459413, guid: 9e3f67d5177a2b946b75df44d071c58d,
-    type: 3}
 --- !u!1 &8708805067912333182
 GameObject:
   m_ObjectHideFlags: 0
