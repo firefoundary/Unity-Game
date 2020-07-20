@@ -8,21 +8,31 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool isPaused = false;
 
-    public GameObject pauseMenuUI;
+    public GameObject pauseMenuUI, optionsMenu, quitMenu;
+
 
     // Update is called once per frame
     void Update() {
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (isPaused)
+            if (isPaused && pauseMenuUI.activeSelf)
                 Resume();
             else 
+                if (isPaused && optionsMenu.activeSelf) {
+                    optionsMenu.SetActive(false);
+                    pauseMenuUI.SetActive(true);
+                }
+            else 
+                if (isPaused && quitMenu.activeSelf) {
+                    quitMenu.SetActive(false);
+                    pauseMenuUI.SetActive(true);
+                }
+            else
                 Pause();
         }
     }
 
     public void Resume() {
-        Debug.Log("resume button clicked");
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -40,7 +50,6 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void QuitGame() {
-        Debug.Log("quitting game");
         Application.Quit();
     }
 }

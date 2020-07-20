@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject prefabManager;
+    public GameObject fade;
     private PrefabManager difficulty;
 
     void Start() {
@@ -14,7 +15,13 @@ public class MainMenu : MonoBehaviour
     }
 
     public void startGame() {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        StartCoroutine(startGameHelper());
+        fade.SetActive(true);
+    }
+
+    public void loadGame() {
+        StartCoroutine(loadGameHelper());
+        fade.SetActive(true);
     }
 
     public void QuitGame() {
@@ -33,5 +40,20 @@ public class MainMenu : MonoBehaviour
         difficulty.SetHard();
         
     }
+
+    IEnumerator startGameHelper() {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+     IEnumerator loadGameHelper() {
+        ProgressData data = SaveSystem.LoadProgress();
+
+        Debug.Log("loading game with sceneIndex " + data.progress);
+
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(data.progress);
+    }
+
     
 }

@@ -49,6 +49,7 @@ public class LevelLoader : MonoBehaviour
 	public void LoadNextLevel()
 	{
 		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+		SaveSystem.SaveProgress();
 	}
 
 	IEnumerator LoadLevel(int levelIndex)
@@ -64,7 +65,6 @@ public class LevelLoader : MonoBehaviour
 	}
 
 	public void LoadSparedScene() {
-		Debug.Log("loaded spared scene");
 		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
 	}
 
