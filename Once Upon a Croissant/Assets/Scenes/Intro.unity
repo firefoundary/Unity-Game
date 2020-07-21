@@ -4387,7 +4387,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612449822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.91, y: 1.01, z: 16.225046}
+  m_LocalPosition: {x: 15.29, y: 0.48, z: 16.225046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078553540}
@@ -4422,13 +4422,12 @@ MonoBehaviour:
   dialogue:
     name: ???
     sentences:
-    - You know, you deserve much more than those bakers could ever give you
-    - "Now you might be wondering: \u2018Where can I find my purpose? What do I do
-      now?\u2019"
-    - "Kiddo, I will give you your purpose AND your mission. I\u2019m vibing at the
-      end of this path, waiting for you to get here :)"
-    - All you have to do is let me wrap my arms around you, and you will feel like
-      a whole new croissant
+    - "...Why should you trust me? Well I don\u2019t think you can be getting revenge
+      in the state you\u2019re in right now can you?"
+    - "You\u2019re as slow as a snail and as heavy as a dead donkey"
+    - Listen, you deserve much more than those bakers could ever give you
+    - Just put your trust in me, and you will be rewarded. I can show you a whole
+      new world
   freezePlayer: 1
   boss: 0
 --- !u!61 &612449826
@@ -6667,10 +6666,11 @@ MonoBehaviour:
     sentences:
     - Aw poor boy, the bakers did you dirty and burnt you
     - You were going to be such a soft scrumptious croissant
-    - Thinking about you made my mouth water :P
-    - "Hey hey don\u2019t be so depressed I\u2019ll help you get back at those donkey
-      bakers"
-    - "...They don\u2019t deserve to be running their dinky bakery anyways.."
+    - You had so much to live for... such as feeding the mouths of hungry customers
+      heh
+    - "Hey don\u2019t be so depressed, I\u2019ll help you get back at those bakersm,
+      especially the one who burnt you"
+    - "I\u2019ll be waiting for you at the end of this path"
   freezePlayer: 1
   boss: 0
 --- !u!61 &889368020
@@ -6821,7 +6821,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 898343029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 33.2, y: -0.66, z: 16.225046}
+  m_LocalPosition: {x: 27.97, y: -0.66, z: 16.225046}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078553540}
@@ -10156,11 +10156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Cloak Bae <33
+    name: Mysterious Cloak
     sentences:
-    - "Hey WADDUP BOO IT\u2019S SO NICE TO WRAP AROUND YOU"
-    - "Don\u2019t you feel like a whole new croissant? You run faster and jump higher
-      too!!!"
+    - "Finally! Doesn\u2019t it feel nice? All speedy and agile. Don\u2019t you just
+      feel like a whole new croissant? "
+    - "Take that portal and we\u2019ll prepare you for your journey."
   freezePlayer: 1
   boss: 0
 --- !u!1 &1160940556

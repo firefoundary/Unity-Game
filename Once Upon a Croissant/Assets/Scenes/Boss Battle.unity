@@ -3893,15 +3893,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: BAKER PAPI
+    name: THE Baker
     sentences:
-    - HEY I HEAR YOU BEEN MESSING WITH MY BOYS
-    - There's no one left to help me with my baking business all cause you whooped
-      their asses
-    - Why are you doing this? Who even are you?
+    - AT LAST, THE ONE WHO HAS BEEN ROUGHING UP MY BOYS IS FINALLY HERE
+    - There's no more boys to help me with my baking business because you gave them
+      all a good smacking
+    - Who even are you, why are you doing this? What do you have against my bakery?
     - .....
-    - Ah.. I see.. so you're the crusty croissant I tossed out a while ago..
-    - WELL big boi, you want revenge that badly? LEMME ATTEM
+    - "Ah\u2026 ichowitis\u2026 so you're the crusty burnt boy I tossed out a while
+      ago.."
+    - "Here to get revenge eh? Well boy, I won\u2019t stop you from trying. I\u2019ll
+      teach you to stay in the organics bin where you BELONG"
+    - LEMME ATTEM BOY!
   freezePlayer: 1
   boss: 0
 --- !u!61 &425616213
@@ -6435,8 +6438,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -78.3, y: 64.000015}
-  m_SizeDelta: {x: 265.33972, y: 50}
+  m_AnchoredPosition: {x: -21.2, y: 64.000015}
+  m_SizeDelta: {x: 379.60425, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &823079107
 MonoBehaviour:
@@ -15600,12 +15603,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: BAKER PAPI
+    name: THE Baker got clapped
     sentences:
-    - Okay okay... you win
-    - Sorry for throwing you out, it was a baddie move of me
-    - Go on.. get your revenge that's what you want right? End my bloodline right
-      here...
+    - Okay okay... you win...
+    - "Sorry for throwing you out. I admit it wasn\u2019t very moral of me."
+    - But what is a baker to do when he makes a mistake and burns his food? I have
+      to save my face you know...
+    - "...I wanted to run my bakery perfectly and never burn any food because I don\u2019t
+      want to hurt anyone\u2026"
+    - "But I guess it\u2019s harder than it looks\u2026"
+    - "Go on, get your revenge, that's what you want right? End me right here I\u2019ve
+      had enough of trying to be someone I\u2019m not"
   freezePlayer: 1
   boss: 1
 --- !u!1001 &1912755864

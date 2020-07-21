@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -806,22 +806,22 @@ PrefabInstance:
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
@@ -836,7 +836,7 @@ PrefabInstance:
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
@@ -846,7 +846,7 @@ PrefabInstance:
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.3
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
         type: 3}
@@ -1026,7 +1026,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &192465095
 MonoBehaviour:
@@ -1731,12 +1731,12 @@ PrefabInstance:
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.2
+      value: -35.56
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 25.1
+      value: -5.98
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
@@ -2346,7 +2346,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &335506349
 MonoBehaviour:
@@ -2378,11 +2378,10 @@ MonoBehaviour:
     name: Cloak Bae
     sentences:
     - Cool beans. Another weapon in your arsenal is butter GRENADES
-    - 'I know right! So cool much wow. Just simply aim with your mouse and press
-      Q to shoot em out. '
-    - The nade will explode on contact with an enemy, or by default after 2 seconds.
+    - I know, so cool right?! Just simply aim with your mouse and press Q wreak some
+      havoc
+    - The nade will explode on contact with an enemy, or on its own after a few seconds.
       Try it on these bakers!
-    - After, jump on that button to open the next stage
   freezePlayer: 1
   boss: 0
 --- !u!61 &335506351
@@ -4527,63 +4526,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1921775788}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &481841368
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 481841369}
-  - component: {fileID: 481841370}
-  m_Layer: 0
-  m_Name: Boundary Line (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &481841369
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481841368}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.8533058, y: 4.230798, z: 14.643127}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1077255184}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &481841370
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481841368}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -3.919448, y: -0.11341858}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 20.560457, y: 0.77316284}
-  m_EdgeRadius: 0
 --- !u!1001 &487718286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5094,7 +5036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 42.2, y: 26.013, z: -10}
+  m_LocalPosition: {x: -35.56, y: -5.067, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5177,11 +5119,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528674158}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.13, y: 11.21, z: 10}
+  m_LocalPosition: {x: 5.08, y: 11.21, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &528674160
 MonoBehaviour:
@@ -5212,11 +5154,12 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - Another cool thing you can do is shoot enemy bullets to collide with em and
-      destroy em
-    - Try it out on this boi on the left, it can really save you if a bullet is coming
-      and you can't dodge in time
-  freezePlayer: 1
+    - Another thing that might come in handy is you can shoot enemy bullets to destroy
+      them
+    - Try it out on this boi on the left, it can really save you in dire times
+    - "Especially if you don\u2019t have a friend who\u2019s willing to take a bullet
+      for you :\u2019)"
+  freezePlayer: 0
   boss: 0
 --- !u!61 &528674162
 BoxCollider2D:
@@ -6915,7 +6858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &684609520
 MonoBehaviour:
@@ -6946,9 +6889,10 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - Alright!! Now with my godly powers, you can also press shift to dash in the
-      direction you are facing
-    - Make the most of your double jumps and dash to make it across this space!
+    - "Alright, now let\u2019s teach you what I like to call ZOOM, and I\u2019m not
+      talking about the video communication company!"
+    - Simply press Q to dash in the direction you are facing, make the most of your
+      double jumps and dash to make it across this space!
   freezePlayer: 1
   boss: 0
 --- !u!61 &684609522
@@ -7008,7 +6952,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687697728
 MonoBehaviour:
@@ -7039,9 +6983,10 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - NICE JOB BRO I KNEW YOU COULD DO IT!!
-    - Now you're ready to get some revenge on the homies who didn't see your worth
-    - Go through this portal and slay sum papis
+    - Wow nice job, you actually got it pretty quick :o
+    - "...Hey what I said earlier... you didn\u2019t hear that right?"
+    - "Okay that\u2019s good.. ANYWAYS! Now we're ready to get back at those bois
+      who did you dirty, lemme attem"
   freezePlayer: 1
   boss: 0
 --- !u!61 &687697730
@@ -7177,63 +7122,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 689762592}
   m_CullTransparentMesh: 0
---- !u!1 &711263134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 711263135}
-  - component: {fileID: 711263136}
-  m_Layer: 0
-  m_Name: Boundary Line (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &711263135
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711263134}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 27.01, y: 5.37, z: 14.643127}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1077255184}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &711263136
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711263134}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -6.013736, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 24.749033, y: 1}
-  m_EdgeRadius: 0
 --- !u!4 &746315370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5563062839666318111, guid: 616c052b6278e974b878b22d0402c90d,
@@ -9428,7 +9316,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1077255184}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1010136704
 GameObject:
@@ -10366,13 +10254,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077255183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.313305, y: 11.066044, z: -82.88732}
+  m_LocalPosition: {x: -24.313305, y: 11.066044, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1873266384}
   - {fileID: 1938397637}
-  - {fileID: 481841369}
-  - {fileID: 711263135}
   - {fileID: 1005274684}
   m_Father: {fileID: 0}
   m_RootOrder: 17
@@ -10408,7 +10294,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1098619199
 MonoBehaviour:
@@ -10439,14 +10325,19 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - yuhyeet aight now last but not least... you have to climb this SINGLE wall.
-    - that shouldn't be too hard eh? you already climbed the ones from before
-    - since this is only one wall, you will HAVE TO jump away from the wall, then
+    - Oh I almost forgot to mention, under your hp bar there are cooldown indicators
+      for your abilities so keep that in mind..
+    - "Aight! Now your final test\u2026 you have to climb this wall"
+    - ...You already practiced climbing walls? Well too bad because practice makes
+      perfect bro
+    - Since this is only one wall, you will HAVE TO jump away from the wall, then
       back to the wall to reset ur wall jumps
     - If you double jump twice without leaving contact with the wall, you will not
-      be able to reset your jumps and fall to your DOOM
-    - REMEMBER!!! you can take your time by wall sliding. You can wall slide by moving
-      towards the wall!
+      be able to reset your jumps and just fall
+    - "That sounds kinda sad doesn\u2019t it? Too bad many other croissants had a
+      hard time doing this as well..."
+    - OH I mean, haha.. Hey! Remember you can take your time by wall sliding, good
+      luck!
   freezePlayer: 1
   boss: 0
 --- !u!61 &1098619201
@@ -10621,6 +10512,10 @@ MonoBehaviour:
     name: Cloak Bae
     sentences:
     - Aim with your mouse and left click to shoot this BAKER BOI
+    - "... Oh, why is he wearing black? Hey I don\u2019t know this is YOUR subconsciousness"
+    - "Maybe it\u2019s cause you\u2019re burnt and on a subconscious level you want
+      em to be burnt to-"
+    - Nevermind, just shoot the baker dude
   freezePlayer: 1
   boss: 0
 --- !u!61 &1125381275
@@ -10636,7 +10531,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.48156738, y: -1.3688734}
+  m_Offset: {x: 1.6978683, y: 1.0198925}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -10647,7 +10542,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.6502876, y: 0.1136899}
+  m_Size: {x: 0.2176857, y: 4.8912215}
   m_EdgeRadius: 0
 --- !u!4 &1125381276
 Transform:
@@ -10657,11 +10552,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1125381272}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.298223, y: 2.62, z: 10}
+  m_LocalPosition: {x: -15.17, y: 2.62, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1149179175
 PrefabInstance:
@@ -11677,7 +11572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1316546961
 MonoBehaviour:
@@ -12932,6 +12827,7 @@ Transform:
   m_LocalPosition: {x: -10.61, y: -3.35, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 192465094}
   - {fileID: 1125381276}
   - {fileID: 1668674138}
   - {fileID: 528674159}
@@ -12942,7 +12838,6 @@ Transform:
   - {fileID: 1958295969}
   - {fileID: 1098619198}
   - {fileID: 687697727}
-  - {fileID: 192465094}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13570,7 +13465,7 @@ PrefabInstance:
     - target: {fileID: 5558375336085662791, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 323.69012
+      value: 324.67
       objectReference: {fileID: 0}
     - target: {fileID: 5558375336085662791, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -14473,12 +14368,12 @@ PrefabInstance:
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.2
+      value: -35.56
       objectReference: {fileID: 0}
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26.013
+      value: -5.067
       objectReference: {fileID: 0}
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}
@@ -15558,7 +15453,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1668674139
 MonoBehaviour:
@@ -15589,8 +15484,11 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - Moving into walls will allow you to wall slide. Resetting your double jump
-    - Jump from wall to wall to climb any cliff that comes your way :))
+    - Moving into walls will allow you to slowly slide down it, Coming into contact
+      with a wall also resets your double jump
+    - Keep in mind, that double jumping without leaving contact with the wall will
+      not reset your jumps
+    - Now, do some mad hops and jump from wall to wall to climb this cliff
   freezePlayer: 1
   boss: 0
 --- !u!61 &1668674141
@@ -15606,7 +15504,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.35704136, y: 0.21079373}
+  m_Offset: {x: -0.21459198, y: 0.21079373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -15617,7 +15515,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.97307014, y: 3.273024}
+  m_Size: {x: 0.6881714, y: 3.273024}
   m_EdgeRadius: 0
 --- !u!1 &1669380336
 GameObject:
@@ -18353,7 +18251,7 @@ PrefabInstance:
     - target: {fileID: 5558375336085662791, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -56.93
+      value: -59
       objectReference: {fileID: 0}
     - target: {fileID: 5558375336085662791, guid: 5bf6a02e071ded245aa2de0564114cae,
         type: 3}
@@ -18553,7 +18451,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90.356}
 --- !u!114 &1958295970
 MonoBehaviour:
@@ -18587,7 +18485,7 @@ MonoBehaviour:
     - For harder to reach enemies, try bouncing your butter grenade off the wall.
     - Stand where the gray arrow is under you is and aim up top to where the yellow
       arrow is, then...
-    - Kill the baker by bouncing your juicy butter nade!
+    - "Cover the baker in butter! They won\u2019t even see what\u2019s coming"
   freezePlayer: 1
   boss: 0
 --- !u!61 &1958295972
@@ -19218,7 +19116,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363084102}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2033865659
 MonoBehaviour:
@@ -19249,8 +19147,9 @@ MonoBehaviour:
   dialogue:
     name: Cloak Bae
     sentences:
-    - Nice! These dashes can really come in handy to get you out of a pinch!
-    - By the way, under your hp bar there are cooldown indicators for your abilities
+    - "Nice! Don\u2019t you feel like a superhero with your cape-"
+    - "I mean, I guess I\u2019m the cape haha, but doesn\u2019t it feel great to
+      zoom zoom?"
     - Now,  you can jump down to the left for the next training!
   freezePlayer: 1
   boss: 0
