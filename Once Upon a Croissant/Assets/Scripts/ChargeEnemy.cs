@@ -38,8 +38,6 @@ public class ChargeEnemy : MonoBehaviour
             isFlipped = true;
         }
 
-        
-
     }
 
     void OnDrawGizmosSelected() {

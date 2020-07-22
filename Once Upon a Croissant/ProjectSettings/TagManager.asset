@@ -53,15 +53,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Baker
+    uniqueID: 548461351
+    locked: 0
   - name: Player
     uniqueID: 1551806515
-    locked: 0
-  - name: healthbar
-    uniqueID: 4142418369
     locked: 0
   - name: Boss
     uniqueID: 821221471
     locked: 0
-  - name: Baker
-    uniqueID: 548461351
+  - name: healthbar
+    uniqueID: 4142418369
     locked: 0

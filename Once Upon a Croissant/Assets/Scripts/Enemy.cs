@@ -72,11 +72,13 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
-        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
-
         // death particles
+        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
         Instantiate(effect, position, Quaternion.identity);
-        Destroy(gameObject);
+
+        GetComponent<Patrol>().enabled = false;
+        GetComponent<Animator>().SetTrigger("dead");
+        this.enabled = false;
     }
     
     IEnumerator Flash() {
@@ -87,10 +89,10 @@ public class Enemy : MonoBehaviour
 
 
     // player collision damage
-    // void OnCollisionEnter2D(Collision2D col) {
-    //     if (col.gameObject.CompareTag("Player")) {
-    //         col.gameObject.GetComponent<Player>().TakeDamage(colDamage);
-    //     }
-    // }
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.CompareTag("Player")) {
+            col.gameObject.GetComponent<Player>().TakeDamage(colDamage);
+        }
+    }
 
 }

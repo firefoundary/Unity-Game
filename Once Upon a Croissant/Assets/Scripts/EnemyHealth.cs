@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public float health = 4;
-    public float colDamage = 1;
+    public float health;
 
     //death particles and damage effects
     public GameObject effect;
@@ -24,7 +23,6 @@ public class EnemyHealth : MonoBehaviour
 
         health -= damage;
 
-
         if (health <= 0)
             Die();
 
@@ -35,11 +33,13 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
-
         // death particles
+        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
         Instantiate(effect, position, Quaternion.identity);
-        Destroy(gameObject);
+
+        GetComponent<PatrolCharge>().enabled = false;
+        GetComponent<Animator>().SetTrigger("dead");
+        this.enabled = false;
     }
     
     IEnumerator Flash() {
@@ -56,9 +56,9 @@ public class EnemyHealth : MonoBehaviour
     }
 
     // player collision damage
-    void OnCollisionEnter2D(Collision2D col) {
+    void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.CompareTag("Player")) {
-            col.gameObject.GetComponent<Player>().TakeDamage(colDamage);
+            col.gameObject.GetComponent<Player>().TakeDamage(1);
         }
     }
 }

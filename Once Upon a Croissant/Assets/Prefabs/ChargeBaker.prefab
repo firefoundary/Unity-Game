@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 6
   m_Sprite: {fileID: -7030218197719465005, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -180,7 +180,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -6540290982685677283, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -319,7 +319,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 2
   m_Sprite: {fileID: -4637955971108052147, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -401,7 +401,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 7
   m_Sprite: {fileID: 1748346748567379093, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -485,7 +485,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 5
   m_Sprite: {fileID: 5948804516433081314, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -567,7 +567,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 548461351
-  m_SortingLayer: 4
+  m_SortingLayer: 1
   m_SortingOrder: 4
   m_Sprite: {fileID: -3929188348403624297, guid: 703ed7afa5d07614b9a31220dd177d7b,
     type: 3}
@@ -749,10 +749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  colDamage: 1
   effect: {fileID: 8468900679097125696, guid: 89ca91201de132d49b56b47201849643, type: 3}
-  bloodSplash: {fileID: 4790732847673131731, guid: 5e1f664759127fe4da059731e97ab40c,
-    type: 3}
   hurtEffect: {fileID: 8086528507028459413, guid: b5374987a278e144a8b5339be4604d25,
     type: 3}
   body:
