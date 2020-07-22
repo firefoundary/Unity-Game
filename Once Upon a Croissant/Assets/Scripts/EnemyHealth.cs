@@ -9,7 +9,6 @@ public class EnemyHealth : MonoBehaviour
 
     //death particles and damage effects
     public GameObject effect;
-    public GameObject bloodSplash;
     public GameObject hurtEffect;
     public SpriteRenderer[] body;
     public Color hurtColor;
@@ -36,11 +35,10 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        Vector3 position = new Vector3(transform.position.x, transform.position.y - 1, -8.8f);
+        Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
 
         // death particles
         Instantiate(effect, position, Quaternion.identity);
-        Instantiate(bloodSplash, position, Quaternion.identity);
         Destroy(gameObject);
     }
     

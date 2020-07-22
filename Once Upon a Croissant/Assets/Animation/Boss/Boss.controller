@@ -297,8 +297,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 14
-  chargeOffSet: 3
-  readyUpTime: 0.5
+  chargeOffSet: 2
+  readyUpTime: 0.3
 --- !u!114 &-5160033482410556620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,9 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 630cf14c2ae79f340be019092f0b9593, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 9
   chargeOffSet: 3
-  readyUpTime: 0.8
+  readyUpTime: 0.6
 --- !u!1101 &-4703841049598039015
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -988,7 +988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05da905ecd96aff43b7d87fc2a395ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartTimer: 1.5
+  StartTimer: 0.8
 --- !u!1102 &4553276820786323586
 AnimatorState:
   serializedVersion: 5
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05da905ecd96aff43b7d87fc2a395ea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartTimer: 1.5
+  StartTimer: 0.8
 --- !u!1101 &8578362971587912024
 AnimatorStateTransition:
   m_ObjectHideFlags: 1

@@ -58,6 +58,13 @@ public class Boss : MonoBehaviour
 
     }
 
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Player") {
+            col.gameObject.GetComponent<Player>().TakeDamage(1);
+        }
+    }
+
+
     //
     //animation event functions
     //

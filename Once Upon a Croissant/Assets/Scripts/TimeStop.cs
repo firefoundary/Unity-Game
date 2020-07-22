@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class TimeStop : MonoBehaviour
 {
-    public float changeTime;
-    public float freezeTime;
-    // public GameObject hitEffect;
-    // public GameObject hitEffect2;
+    public float changeTime, freezeTime;
+    private Animator anim;
 
     void Start() {
+        anim = GetComponent<Animator>();
     }
 
     public void StopTime() {
@@ -17,18 +16,14 @@ public class TimeStop : MonoBehaviour
         StopCoroutine(StartTimeAgain());
         StartCoroutine(StartTimeAgain());
 
-
-        // Instantiate(hitEffect, transform.position, Quaternion.identity);
-
-        // Vector3 pos = new Vector3 (transform.position.x, transform.position.y, hitEffect2.transform.position.z);
-        // Instantiate(hitEffect2, pos, Quaternion.identity);
-
+        anim.SetBool("Damaged", true);
 
         Time.timeScale = changeTime;
     }
 
     IEnumerator StartTimeAgain() {
         yield return new WaitForSecondsRealtime(freezeTime);
+        anim.SetBool("Damaged", false);
         Time.timeScale = 1f;
 
     }

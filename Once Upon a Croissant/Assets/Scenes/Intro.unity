@@ -4373,7 +4373,7 @@ GameObject:
   - component: {fileID: 612449825}
   - component: {fileID: 612449824}
   m_Layer: 0
-  m_Name: DialogueTrigger (3rd)
+  m_Name: DialogueTrigger (2nd)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4391,7 +4391,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078553540}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &612449824
 MonoBehaviour:
@@ -4425,7 +4425,6 @@ MonoBehaviour:
     - "...Why should you trust me? Well I don\u2019t think you can be getting revenge
       in the state you\u2019re in right now can you?"
     - "You\u2019re as slow as a snail and as heavy as a dead donkey"
-    - Listen, you deserve much more than those bakers could ever give you
     - Just put your trust in me, and you will be rewarded. I can show you a whole
       new world
   freezePlayer: 1
@@ -6664,11 +6663,10 @@ MonoBehaviour:
   dialogue:
     name: ???
     sentences:
-    - Aw poor boy, the bakers did you dirty and burnt you
-    - You were going to be such a soft scrumptious croissant
-    - You had so much to live for... such as feeding the mouths of hungry customers
-      heh
-    - "Hey don\u2019t be so depressed, I\u2019ll help you get back at those bakersm,
+    - Aw poor boy, the bakers did you dirty and burnt you. You were going to be such
+      a soft scrumptious croissant
+    - You had so much to live for.. feeding the mouths of hungry customers heh
+    - "Hey don\u2019t be so depressed, I\u2019ll help you get back at those bakers,
       especially the one who burnt you"
     - "I\u2019ll be waiting for you at the end of this path"
   freezePlayer: 1
@@ -6807,7 +6805,7 @@ GameObject:
   - component: {fileID: 898343032}
   - component: {fileID: 898343031}
   m_Layer: 0
-  m_Name: DialogueTrigger (4th)
+  m_Name: DialogueTrigger (3rd)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6825,7 +6823,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1078553540}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &898343031
 MonoBehaviour:
@@ -9666,7 +9664,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 889368021}
-  - {fileID: 1583069044}
   - {fileID: 612449823}
   - {fileID: 898343030}
   m_Father: {fileID: 0}
@@ -12116,97 +12113,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1570035476}
   m_CullTransparentMesh: 0
---- !u!1 &1583069043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1583069044}
-  - component: {fileID: 1583069047}
-  - component: {fileID: 1583069046}
-  - component: {fileID: 1583069045}
-  m_Layer: 0
-  m_Name: DialogueTrigger (2nd)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1583069044
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583069043}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.62, y: -0.13, z: 16.225046}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1078553540}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1583069045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583069043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6855768745767634d97a7f9be261519a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstDialogue: {fileID: 1583069046}
-  delayTime: 0
---- !u!114 &1583069046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583069043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a29f620bc4a114abfb09084432561e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: ???
-    sentences:
-    - Press 'W' to jump, and double press it to double jump!
-  freezePlayer: 0
-  boss: 0
---- !u!61 &1583069047
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583069043}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.0657109, y: 1.1084936}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.18038917, y: 2.1808639}
-  m_EdgeRadius: 0
 --- !u!1001 &1585145120
 PrefabInstance:
   m_ObjectHideFlags: 0
