@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatrolCharge : MonoBehaviour
+public class Patrol : MonoBehaviour
 {
     public float speed;
     public float groundDistance;
@@ -31,12 +31,10 @@ public class PatrolCharge : MonoBehaviour
                 // transform.eulerAngles = new Vector3(0, 180, 0);
                 transform.Rotate(0, 180, 0);
                 movingRight = false;
-                GetComponent<ChargeEnemy>().isFlipped = !GetComponent<ChargeEnemy>().isFlipped;
             } else {
                 // transform.eulerAngles = new Vector3(0, 0, 0);
                 transform.Rotate(0, 180, 0);
-                movingRight = true;
-                GetComponent<ChargeEnemy>().isFlipped = !GetComponent<ChargeEnemy>().isFlipped;
+                movingRight = true;;
             }
         }
 
@@ -57,7 +55,7 @@ public class PatrolCharge : MonoBehaviour
 
             if (wallInfo.collider && wallInfo.collider.CompareTag("Ground"))
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
+                transform.eulerAngles = new Vector3(0, 180, 0);
                 movingRight = true;
             }
     

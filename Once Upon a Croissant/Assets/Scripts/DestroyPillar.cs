@@ -11,7 +11,7 @@ public class DestroyPillar : MonoBehaviour
 
     void Update() {
         if (onEnemyDeath) {
-            if (!enemy)
+            if (enemy.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("dead"))
                 Destroy(gameObject);
         }
     }
