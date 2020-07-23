@@ -63,6 +63,8 @@ public class runBehaviour : StateMachineBehaviour
         animator.ResetTrigger("Attack");
         animator.ResetTrigger("Charge");
         animator.ResetTrigger("Run");
+        animator.ResetTrigger("Shoot");
+
 
 
     }

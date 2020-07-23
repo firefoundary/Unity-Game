@@ -17428,10 +17428,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ebdb33256745484f86087917f85ba05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1148063506}
   isFlipped: 0
   EggSpawner: {fileID: 776462871}
-  eggsDuration: 5
+  eggsDuration: 4
   killedParticles: {fileID: 8086528507028459413, guid: a64d9db14b71e7c4d93d4bb609d8fe49,
     type: 3}
   portal: {fileID: 896790989}

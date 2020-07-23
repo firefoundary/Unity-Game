@@ -298,7 +298,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 14
   chargeOffSet: 2
-  readyUpTime: 0.3
+  readyUpTime: 0.6
 --- !u!114 &-5160033482410556620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -582,7 +582,7 @@ MonoBehaviour:
   speed: 5
   attackRange: 3
   chargeRange: 5
-  minShootTime: 1
+  minShootTime: 1.75
   maxShootTime: 2.25
 --- !u!1101 &-428333748408624076
 AnimatorStateTransition:
