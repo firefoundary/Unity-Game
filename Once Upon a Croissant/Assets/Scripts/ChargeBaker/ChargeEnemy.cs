@@ -12,6 +12,7 @@ public class ChargeEnemy : MonoBehaviour
     public bool canCharge = false;
 
 
+
     // Start is called before the first frame update
     void Start()
     {

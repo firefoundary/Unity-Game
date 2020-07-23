@@ -49,7 +49,7 @@ public class Player : MonoBehaviour
         if (isInvulnernable)
             return;
 
-        GetComponent<TimeStop>().StopTime();
+
 
         health -= damage;
         if (health <= 0) {
@@ -57,6 +57,8 @@ public class Player : MonoBehaviour
             StartCoroutine(Die());
             return;
         }
+
+        GetComponent<TimeStop>().StopTime();
 
         StartCoroutine(camera.Shake(0.2f, 0.06f));
         Instantiate(hitEffect, transform.position, Quaternion.identity);
@@ -72,9 +74,11 @@ public class Player : MonoBehaviour
 
     IEnumerator Die() 
     {
-        Debug.Log("called die");
+        
+        
         StartCoroutine(camera.Shake(1f, 0.17f));
         GetComponent<PlayerMovement>().enabled = false;
+        GetComponent<WeaponScript>().enabled = false;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.isKinematic = true;
         rb.velocity = Vector2.zero;

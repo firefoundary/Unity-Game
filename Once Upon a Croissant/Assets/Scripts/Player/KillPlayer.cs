@@ -35,6 +35,11 @@ public class KillPlayer : MonoBehaviour
             Invoke("respawnPlayer", 1);
 
         }
+
+        //kill baker too
+        if (col.gameObject.CompareTag("Enemy")) {
+            col.gameObject.GetComponent<Enemy>().Die();
+        }
     }
 
     void respawnPlayer() {

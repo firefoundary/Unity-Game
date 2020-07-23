@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4247833531268415118}
   m_Layer: 0
-  m_Name: ChargeBaker 1
+  m_Name: ChargeBaker(Wrapped)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,6 +252,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722829294657529583, guid: 13c68e723279db841af4903c9a060251,
+        type: 3}
+      propertyPath: m_Pitch
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722829294657529583, guid: 13c68e723279db841af4903c9a060251,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 600b5b3cc3f464349b31a992f5db4f94, type: 3}
+    - target: {fileID: 8722829294657529583, guid: 13c68e723279db841af4903c9a060251,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13c68e723279db841af4903c9a060251, type: 3}

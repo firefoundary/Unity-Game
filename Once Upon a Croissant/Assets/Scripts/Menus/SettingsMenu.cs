@@ -7,6 +7,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 
 
+
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
@@ -57,6 +58,11 @@ public class SettingsMenu : MonoBehaviour
         Resolution resolution = resolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
 
+    }
+
+    public void SetJump () {
+        Debug.Log("jump key set");
+        // InputManager.SetKey(KeyCode.w, "Jump");
     }
 
 }

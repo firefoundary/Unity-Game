@@ -55,7 +55,7 @@ public class Patrol : MonoBehaviour
 
             if (wallInfo.collider && wallInfo.collider.CompareTag("Ground"))
             {
-                transform.eulerAngles = new Vector3(0, 180, 0);
+                transform.eulerAngles = new Vector3(0, 0, 0);
                 movingRight = true;
             }
     

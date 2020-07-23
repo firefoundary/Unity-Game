@@ -12,6 +12,8 @@ public class EnemyHealth : MonoBehaviour
     public SpriteRenderer[] body;
     public Color hurtColor;
 
+    public AudioSource deathSound;
+
     //audio
     public AudioSource hurtSound;
 
@@ -19,23 +21,27 @@ public class EnemyHealth : MonoBehaviour
     {	
         StartCoroutine(Flash());
 
-        hurtSound.Play();
-
         health -= damage;
 
-        if (health <= 0)
+        if (health <= 0) {
             Die();
+            return;
+        }
 
+        hurtSound.Play();
         Instantiate(hurtEffect, transform.position, Quaternion.identity);
 
         
     }
 
-    void Die()
+    public void Die()
     {
         //decrement death counter
         GameObject enemies = GameObject.Find("Enemies");
         enemies.GetComponent<OpenPortal>().deathCounter -= 1;
+
+        //death sound
+        deathSound.Play();
 
         // death particles
         Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);

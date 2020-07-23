@@ -27,7 +27,6 @@ public class PatrolCharge : MonoBehaviour
         //ground detection
         RaycastHit2D groundInfo = Physics2D.Raycast(groundDetection.position, Vector2.down, groundDistance);
         if (!groundInfo.collider) {
-            Debug.Log("no ground");
             if(movingRight) {
                 // transform.eulerAngles = new Vector3(0, 180, 0);
                 transform.Rotate(0, 180, 0);
