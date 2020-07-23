@@ -5,18 +5,24 @@ using UnityEngine;
 public class OpenPortal : MonoBehaviour
 {
     public GameObject portal;
+    public int deathCounter;
+
+    private GameObject[] enemies;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        deathCounter = enemies.Length;
     }
 
     // Update is called once per frame
     void Update()
     {
-        GameObject enemy = GameObject.FindGameObjectWithTag("Enemy");
-        if (!enemy)
+        if (deathCounter == 0) {
             portal.SetActive(true);
+        }
     }
 }

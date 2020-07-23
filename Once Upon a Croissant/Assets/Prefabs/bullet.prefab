@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   damage: 1
-  destroyTime: 0.6
+  destroyTime: 0.75
   collisionEffect: {fileID: 8086528507028459413, guid: 033582f9c6e18e645bfe3e5aa9339de4,
     type: 3}
   bossEffect: {fileID: 8086528507028459413, guid: 3bb6c683410ef1841a71cf877d3293c2,

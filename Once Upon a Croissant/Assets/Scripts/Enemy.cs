@@ -72,6 +72,10 @@ public class Enemy : MonoBehaviour
 
     void Die()
     {
+        //decrement death counter
+        GameObject enemies = GameObject.Find("Enemies");
+        enemies.GetComponent<OpenPortal>().deathCounter -= 1;
+
         // death particles
         Vector3 position = new Vector3(transform.position.x, transform.position.y, -8.8f);
         Instantiate(effect, position, Quaternion.identity);
