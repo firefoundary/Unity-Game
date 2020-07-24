@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class SwitchMusic : MonoBehaviour
 {
@@ -8,6 +10,6 @@ public class SwitchMusic : MonoBehaviour
     void Start()
     {
         Destroy(GameObject.Find("BG Music"));
+        Destroy(GameObject.Find("BGM"));
     }
-
 }

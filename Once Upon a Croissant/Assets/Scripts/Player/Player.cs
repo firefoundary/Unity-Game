@@ -75,7 +75,6 @@ public class Player : MonoBehaviour
     IEnumerator Die() 
     {
         
-        
         StartCoroutine(camera.Shake(1f, 0.17f));
         GetComponent<PlayerMovement>().enabled = false;
         GetComponent<WeaponScript>().enabled = false;

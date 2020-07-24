@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PrefabManager : MonoBehaviour
 {
@@ -33,4 +34,23 @@ public class PrefabManager : MonoBehaviour
         Prefab.GetComponent<Player>().numOfHearts = 3;
         Prefab.GetComponent<Player>().health = 3;
     }
+
+    //
+    //in game methods
+    //
+    public void SetEasyMidGame() {
+        Prefab.GetComponent<Player>().numOfHearts = 10;
+        Prefab.GetComponent<Player>().health = 10;
+    }
+    
+    public void SetNormalMidGame() {
+        Prefab.GetComponent<Player>().numOfHearts = 6;
+        Prefab.GetComponent<Player>().health = 6;
+    }
+
+    public void SetHardMidGame() {
+        Prefab.GetComponent<Player>().numOfHearts = 3;
+        Prefab.GetComponent<Player>().health = 3;
+    }
+
 }

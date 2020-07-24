@@ -16,9 +16,18 @@ public class SettingsMenu : MonoBehaviour
 
     Resolution[] resolutions;
 
+    //difficulties
+    public GameObject prefabManager;
+    public GameObject OptionsMenu;
+    public GameObject canvas;
+    private PrefabManager difficulty;
+
+
 
     void Start() 
     {
+        difficulty = prefabManager.GetComponent<PrefabManager>();
+
         resolutions = Screen.resolutions;
 
         resolutionDropdown.ClearOptions();
@@ -60,9 +69,28 @@ public class SettingsMenu : MonoBehaviour
 
     }
 
-    public void SetJump () {
-        Debug.Log("jump key set");
-        // InputManager.SetKey(KeyCode.w, "Jump");
+    public void setEasy() {
+        difficulty.SetEasyMidGame();
+        OptionsMenu.SetActive(false);
+        canvas.GetComponent<GameOverMenu>().respawn();
+        canvas.GetComponent<PauseMenu>().Resume();
+
     }
+
+    public void setNormal() {
+        difficulty.SetNormalMidGame();
+        OptionsMenu.SetActive(false);
+        canvas.GetComponent<GameOverMenu>().respawn();
+        canvas.GetComponent<PauseMenu>().Resume();
+    }
+
+    public void setHard() {
+        difficulty.SetHardMidGame();
+        OptionsMenu.SetActive(false);
+        canvas.GetComponent<GameOverMenu>().respawn();
+        canvas.GetComponent<PauseMenu>().Resume();
+
+    }
+    
 
 }
