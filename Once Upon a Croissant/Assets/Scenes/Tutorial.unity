@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5777,6 +5777,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Options Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 5998161625729206196, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5998161625729206197, guid: b749e1a941ec49342b19ce95b21e62a8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5827,6 +5832,21 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetQuality
       objectReference: {fileID: 0}
+    - target: {fileID: 5998161625969085215, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998161625969085215, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998161625969085215, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5998161625972360252, guid: b749e1a941ec49342b19ce95b21e62a8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
@@ -5846,6 +5866,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SetVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998161626037800782, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998161626715846057, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5998161626715846057, guid: b749e1a941ec49342b19ce95b21e62a8,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5998161626950660725, guid: b749e1a941ec49342b19ce95b21e62a8,
         type: 3}
