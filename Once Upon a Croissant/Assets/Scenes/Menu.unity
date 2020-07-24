@@ -1117,7 +1117,7 @@ GameObject:
   - component: {fileID: 287341928}
   - component: {fileID: 287341930}
   m_Layer: 0
-  m_Name: BGM
+  m_Name: BGMmenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
