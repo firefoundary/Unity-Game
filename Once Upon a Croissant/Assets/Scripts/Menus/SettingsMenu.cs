@@ -71,6 +71,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void setEasy() {
         difficulty.SetEasyMidGame();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().numOfHearts = 10;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().health = 10;
         OptionsMenu.SetActive(false);
         canvas.GetComponent<GameOverMenu>().respawn();
         canvas.GetComponent<PauseMenu>().Resume();
@@ -79,6 +81,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void setNormal() {
         difficulty.SetNormalMidGame();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().numOfHearts = 6;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().health = 6;
         OptionsMenu.SetActive(false);
         canvas.GetComponent<GameOverMenu>().respawn();
         canvas.GetComponent<PauseMenu>().Resume();
@@ -86,6 +90,8 @@ public class SettingsMenu : MonoBehaviour
 
     public void setHard() {
         difficulty.SetHardMidGame();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().numOfHearts = 3;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().health = 3;
         OptionsMenu.SetActive(false);
         canvas.GetComponent<GameOverMenu>().respawn();
         canvas.GetComponent<PauseMenu>().Resume();
