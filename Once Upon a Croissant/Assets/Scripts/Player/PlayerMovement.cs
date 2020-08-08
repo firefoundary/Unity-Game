@@ -25,6 +25,12 @@ public class PlayerMovement : MonoBehaviour
     bool wallSliding;
     public float wallSlidingSpeed;
 
+    //wall jump
+    bool wallJumping;
+    public float xWallForce;
+    public float yWallForce;
+    public float wallJumpTime;
+
     //dust particles
     public ParticleSystem dust;
     public bool spawnDust;
@@ -95,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isLanding", false);
         }
 
-        //wall jump logic
+        //wall slide logic
         isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
 
         if (isTouchingFront && !isGrounded && moveInput != 0)
@@ -106,9 +112,20 @@ public class PlayerMovement : MonoBehaviour
         if (wallSliding)
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         
+        //wall jump logic
+        if (Input.GetButtonDown("Jump") && wallSliding) {
+            wallJumping = true;
+            Invoke("WallJumpFalse", wallJumpTime);
+        }
 
+        if (wallJumping)
+            rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
 
         spawnDustOnLand();         
+    }
+
+    void WallJumpFalse() {
+        wallJumping = false;
     }
 
     void OnCollisionEnter2D(Collision2D col)
