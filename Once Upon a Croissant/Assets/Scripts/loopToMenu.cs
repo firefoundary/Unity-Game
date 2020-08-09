@@ -27,14 +27,14 @@ public class loopToMenu : MonoBehaviour
         text2.SetActive(true);
         yield return new WaitForSeconds(3f);
         text2.SetActive(false);
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         //transition to end credits
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(1f);
         blackBackground.SetActive(true);
         endCredits.SetActive(true);
-        yield return new WaitForSeconds(12f);
+        yield return new WaitForSeconds(20f);
 
         //back to menu
         SceneManager.LoadScene(0);

@@ -289,7 +289,10 @@ MonoBehaviour:
     m_Bits: 512
   extraJumpsValue: 1
   frontCheck: {fileID: 2339214420573205243}
-  wallSlidingSpeed: 1
+  wallSlidingSpeed: 2
+  xWallForce: 7
+  yWallForce: 10
+  wallJumpTime: 0.1
   dust: {fileID: 8708805068161836648}
   spawnDust: 0
   animator: {fileID: 8708805066297005958}
