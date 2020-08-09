@@ -368,8 +368,8 @@ MonoBehaviour:
     type: 3}
   deathParticles: {fileID: 8086528507028459413, guid: aa93f9d203d352a43867357b324648f5,
     type: 3}
-  health: 8
-  numOfHearts: 8
+  health: 6
+  numOfHearts: 6
   hearts:
   - {fileID: 0}
   - {fileID: 0}

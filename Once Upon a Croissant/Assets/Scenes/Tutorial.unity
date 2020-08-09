@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1212,11 +1212,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8468900679097125696, guid: d7146563357322343ad9802f3a8a6335,
         type: 3}
-    - target: {fileID: 8708805066297005965, guid: 86533b62b8a973e4483db5012b2e5d01,
-        type: 3}
-      propertyPath: wallSlidingSpeed
-      value: 0.1
-      objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005965, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: jumpSound
@@ -8410,10 +8405,7 @@ MonoBehaviour:
     - "Aight! Now your final test\u2026 you have to climb this wall"
     - ...You already practiced climbing walls? Well too bad because practice makes
       perfect bro
-    - Just follow this shadow I made for you. Don't make the same mistakes as the
-      other croissants...
-    - OH I mean, haha.. Hey! Remember you can take your time by wall sliding, good
-      luck!
+    - Just follow this shadow I made for you. Good luck!
   freezePlayer: 1
   boss: 0
 --- !u!61 &1098619201
@@ -8588,9 +8580,10 @@ MonoBehaviour:
     name: Mysterious Cloak
     sentences:
     - Aim with your mouse and left click to shoot this BAKER BOI
-    - "... Oh, why is he wearing black? Hey I don\u2019t know this is YOUR subconsciousness"
+    - "... Oh, why is he wearing black instead of white? Hey I don\u2019t know this
+      is YOUR subconsciousness"
     - "Maybe it\u2019s cause you\u2019re burnt and on a subconscious level you want
-      em to be burnt to-"
+      em to be burnt as well-"
     - Nevermind, just shoot the baker dude
   freezePlayer: 1
   boss: 0
@@ -12851,9 +12844,7 @@ MonoBehaviour:
   dialogue:
     name: Mysterious Cloak
     sentences:
-    - Coming into contact with a wall resets your double jump.
-    - Keep in mind, that double jumping without leaving contact with the wall will
-      not reset your jumps
+    - Another ability you have is wall jumps!
     - Now, do some mad hops and jump from wall to wall to climb this cliff
   freezePlayer: 1
   boss: 0
@@ -14204,7 +14195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1834941307
 Animator:
   serializedVersion: 3

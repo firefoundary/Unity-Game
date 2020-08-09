@@ -927,16 +927,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8708805068161836648, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708805068161836648, guid: 86533b62b8a973e4483db5012b2e5d01,
-        type: 3}
-      propertyPath: InitialModule.startSize.minMaxState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708805068161836648, guid: 86533b62b8a973e4483db5012b2e5d01,
-        type: 3}
       propertyPath: InitialModule.startSizeY.minMaxState
       value: 0
       objectReference: {fileID: 0}
@@ -949,11 +939,6 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 8708805068161836648, guid: 86533b62b8a973e4483db5012b2e5d01,
-        type: 3}
-      propertyPath: stopAction
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8708805068161836653, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
