@@ -28,6 +28,8 @@ public class DialogueManager : MonoBehaviour
                 player.GetComponent<PlayerMovement>().dialogueFreeze = true;
             else
                 player.GetComponent<TutorialMovement>().dialogueFreeze = true;
+
+            player.GetComponent<GrenadeThrower>().enabled = false;
         }
 
         animator.SetBool("IsOpen", true);
@@ -60,6 +62,8 @@ public class DialogueManager : MonoBehaviour
             else
                 player.GetComponent<TutorialMovement>().enabled = true;
 
+            player.GetComponent<GrenadeThrower>().enabled = true;
+            
             EndDialogue();
             return;
         }

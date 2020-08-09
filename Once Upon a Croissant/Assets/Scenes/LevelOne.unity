@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1463,6 +1463,11 @@ PrefabInstance:
       propertyPath: shootSound
       value: 
       objectReference: {fileID: 747443205}
+    - target: {fileID: 4472971705524499947, guid: 86533b62b8a973e4483db5012b2e5d01,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7450473016587122618, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: nadeIndicator
@@ -1568,12 +1573,12 @@ PrefabInstance:
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.22
+      value: -2.67
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -17.91
+      value: -18.01
       objectReference: {fileID: 0}
     - target: {fileID: 8708805066297005961, guid: 86533b62b8a973e4483db5012b2e5d01,
         type: 3}
@@ -4128,7 +4133,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.21999973, y: -16.997, z: -11}
+  m_LocalPosition: {x: -2.6699998, y: -17.097, z: -11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -10019,12 +10024,12 @@ PrefabInstance:
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.21999973
+      value: -2.6699998
       objectReference: {fileID: 0}
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.997
+      value: -17.097
       objectReference: {fileID: 0}
     - target: {fileID: 3258588831239192006, guid: 0cdbdc9ad21383c458bf557236395ae2,
         type: 3}

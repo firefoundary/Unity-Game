@@ -23,6 +23,9 @@ public class OpenPortal : MonoBehaviour
     {
         if (deathCounter == 0) {
             portal.SetActive(true);
+
+            //enables portal pointer
+            GameObject.FindWithTag("Player").transform.Find("Portal Pointer").gameObject.SetActive(true);
         }
     }
 }

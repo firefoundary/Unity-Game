@@ -166,6 +166,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(isGrounded) 
             dust.Play();
+
+        //don't flip portal arrow
+        transform.Find("Portal Pointer").Rotate(0, 180, 0);
     }
 
     void spawnDustOnLand() {
