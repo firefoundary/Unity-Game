@@ -24,12 +24,13 @@ public class DialogueManager : MonoBehaviour
     {
 
         if (freezePlayer) {
-            if (player.GetComponent<PlayerMovement>())
+            if (player.GetComponent<PlayerMovement>()) {
                 player.GetComponent<PlayerMovement>().dialogueFreeze = true;
+                player.GetComponent<GrenadeThrower>().enabled = false;
+            }
             else
                 player.GetComponent<TutorialMovement>().dialogueFreeze = true;
 
-            player.GetComponent<GrenadeThrower>().enabled = false;
         }
 
         animator.SetBool("IsOpen", true);
@@ -57,12 +58,12 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == 0)
         {
-            if (player.GetComponent<PlayerMovement>())
+            if (player.GetComponent<PlayerMovement>()) {
                 player.GetComponent<PlayerMovement>().enabled = true;
+                player.GetComponent<GrenadeThrower>().enabled = true;
+            }
             else
                 player.GetComponent<TutorialMovement>().enabled = true;
-
-            player.GetComponent<GrenadeThrower>().enabled = true;
             
             EndDialogue();
             return;

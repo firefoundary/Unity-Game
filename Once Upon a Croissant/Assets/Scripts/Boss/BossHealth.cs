@@ -60,6 +60,9 @@ public class BossHealth : MonoBehaviour
         
         if (health <= 0) {
             Defeated();
+
+            //unlocks repeat boss fight on menu screen
+            SaveSystem.SaveProgress(true);
         }
     }
 

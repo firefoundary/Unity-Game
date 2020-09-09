@@ -49,7 +49,7 @@ public class LevelLoader : MonoBehaviour
 	public void LoadNextLevel()
 	{
 		StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
-		SaveSystem.SaveProgress();
+		SaveSystem.SaveProgress(false);
 	}
 
 	IEnumerator LoadLevel(int levelIndex)

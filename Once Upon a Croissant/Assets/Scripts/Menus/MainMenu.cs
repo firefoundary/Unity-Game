@@ -6,12 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject prefabManager;
     public GameObject fade;
-    private PrefabManager difficulty;
+    public GameObject bossButton;
 
-    void Start() {
-        difficulty = prefabManager.GetComponent<PrefabManager>();
+    void Awake() {
+        ProgressData data = SaveSystem.LoadProgress();
+        if (data.beatBoss)
+            bossButton.SetActive(true);
     }
 
     public void startGame() {
@@ -28,17 +29,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void setEasy() {
-        difficulty.SetEasy();
+    public void loadBossBattle() {
+        StartCoroutine(loadBossHelper());
+        fade.SetActive(true);
     }
 
-    public void setNormal() {
-        difficulty.SetNormal();
-    }
-
-    public void setHard() {
-        difficulty.SetHard();
-        
+    IEnumerator loadBossHelper() {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene("Boss Battle");
     }
 
     IEnumerator startGameHelper() {

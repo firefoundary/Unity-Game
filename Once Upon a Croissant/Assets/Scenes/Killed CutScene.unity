@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6652,8 +6652,13 @@ MonoBehaviour:
     Evan
     King - Portlight
 
+    https://www.youtube.com/channel/UCT1ZkP03V18LmOj8zbyP-Dw?
 
-    Homie Cat - Flows Inside Me'
+    https://www.twitter.com/evankingaudio
+
+
+    Homie
+    Cat - Flows Inside Me'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da1e6cc462a32f9419d12d52354293be, type: 2}
   m_sharedMaterial: {fileID: -435766671678362415, guid: da1e6cc462a32f9419d12d52354293be,
@@ -6682,8 +6687,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6723,12 +6728,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2013954307}
-    characterCount: 280
+    characterCount: 377
     spriteCount: 0
-    spaceCount: 44
-    wordCount: 42
+    spaceCount: 46
+    wordCount: 53
     linkCount: 0
-    lineCount: 14
+    lineCount: 17
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0

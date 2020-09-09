@@ -5763,7 +5763,7 @@ PrefabInstance:
     - target: {fileID: 5947961699457928143, guid: f86317099d88c8b4a8b20cc4c1f8a85f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.3
+      value: 33.6
       objectReference: {fileID: 0}
     - target: {fileID: 5947961699457928143, guid: f86317099d88c8b4a8b20cc4c1f8a85f,
         type: 3}
@@ -5879,6 +5879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.minColor.b
       value: 0.8392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6748276642459071489, guid: f86317099d88c8b4a8b20cc4c1f8a85f,
+        type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 45.3
       objectReference: {fileID: 0}
     - target: {fileID: 7239584196665167727, guid: f86317099d88c8b4a8b20cc4c1f8a85f,
         type: 3}

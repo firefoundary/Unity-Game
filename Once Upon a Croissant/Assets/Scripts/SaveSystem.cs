@@ -4,13 +4,18 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class SaveSystem {
     
-    public static void SaveProgress () 
+    public static void SaveProgress (bool beatBoss) 
     {
         BinaryFormatter formatter = new BinaryFormatter();
         string path = Application.persistentDataPath + "/progress.lel";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         ProgressData data = new ProgressData();
+        
+        if (beatBoss) {
+            data.beatBoss = true;
+        }
+        
 
         formatter.Serialize(stream, data);
         stream.Close();

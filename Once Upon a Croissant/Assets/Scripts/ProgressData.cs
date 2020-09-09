@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class ProgressData
 {
     public int progress;
+    public bool beatBoss;
 
     public ProgressData() {
         progress = SceneManager.GetActiveScene().buildIndex + 1;
+
         Debug.Log("created progress with sceneIndex: " + progress);
     }
 
