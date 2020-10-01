@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
     public GameObject transformParticles;
 
     //test
-    public new CameraShakeBrackeys camera;
+    public CameraShakeBrackeys camera;
 
     void Start() {
         healthParticles.Stop();

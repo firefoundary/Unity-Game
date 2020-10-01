@@ -7,7 +7,7 @@ using Cinemachine;
 public class CameraShakeBrackeys : MonoBehaviour
 {
 
-    public new CinemachineVirtualCamera camera;
+    public CinemachineVirtualCamera camera;
 
 
     public IEnumerator Shake (float duration, float magnitude) 
